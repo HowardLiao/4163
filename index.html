@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>廖倫豪 博士 × 鐿鈦科技（4163）｜資訊長暨資安長自薦專案</title>
-  <meta name="description" content="廖倫豪 博士 (Howard Liao, Ph.D.) 爭取鐿鈦科技 (4163.TWO) 資訊長暨資安長 (CIO/CISO) 候選人自薦專案網頁。以數據治理與高韌性資安，支撐醫材精密製造下一條成長曲線。">
+  <title>廖倫豪 博士 × 鐿鈦科技（4163）｜資訊經理自薦專案</title>
+  <meta name="description" content="廖倫豪 博士 (Howard Liao, Ph.D.) 爭取鐿鈦科技 (4163.TWO) 資訊經理候選人自薦專案網頁。以系統整合、Lotus Notes 漸進移轉、負責任 AI 導入與穩定帶人，扎根精密醫材數位營運。">
   
   <!-- OpenGraph -->
-  <meta property="og:title" content="廖倫豪 博士 × 鐿鈦科技（4163）｜資訊長暨資安長自薦">
-  <meta property="og:description" content="以數據治理與資安，支撐醫材精密製造的下一條成長曲線。可常駐台中（南屯總部・后里廠）。">
+  <meta property="og:title" content="廖倫豪 博士 × 鐿鈦科技（4163）｜資訊經理自薦專案">
+  <meta property="og:description" content="系統整合・Lotus Notes 漸進移轉・AI 導入各部門・團隊穩健帶領。住家鄰近、深耕台中、認同醫材。">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="img/cover_photo.jpg">
+  <meta property="og:image" content="img/avatar_conclusion.jpg">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,6 +25,12 @@
               900: '#111827',
               800: '#1F2937',
               700: '#374151'
+            },
+            copper: {
+              400: '#FB923C',
+              500: '#F97316',
+              600: '#EA580C',
+              700: '#C2410C'
             },
             intai: {
               copper: '#C27803',
@@ -55,7 +61,6 @@
       font-family: 'Plus Jakarta Sans', 'Noto Sans TC', 'PingFang TC', sans-serif;
     }
     
-    /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
       height: 8px;
@@ -71,18 +76,9 @@
       background: rgba(217, 119, 6, 0.8);
     }
 
-    /* Print styles */
     @media print {
-      .no-print {
-        display: none !important;
-      }
-      body {
-        background: white !important;
-        color: black !important;
-      }
-      .page-break {
-        page-break-before: always;
-      }
+      .no-print { display: none !important; }
+      body { background: white !important; color: black !important; }
     }
   </style>
 </head>
@@ -94,19 +90,19 @@
       <div class="flex items-center space-x-3">
         <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/40 rounded text-xs font-bold tracking-wider">4163.TWO</span>
         <a href="#" class="font-bold text-sm sm:text-base text-slate-100 hover:text-amber-400 transition">廖倫豪 博士 × 鐿鈦科技</a>
-        <span class="hidden md:inline-block text-xs text-slate-400 border-l border-slate-700 pl-3">資訊長暨資安長 (CIO / CISO) 自薦</span>
+        <span class="hidden md:inline-block text-xs text-amber-300/80 border-l border-slate-700 pl-3">資訊經理（系統整合與 AI 導入）自薦</span>
       </div>
       
       <!-- Nav Links -->
       <nav class="hidden lg:flex items-center space-x-5 text-xs font-medium text-slate-300">
-        <a href="#sec-01" class="hover:text-amber-400 transition">01 致團隊</a>
+        <a href="#sec-01" class="hover:text-amber-400 transition">01 轉職緣由</a>
         <a href="#sec-02" class="hover:text-amber-400 transition">02 鐿鈦處境</a>
-        <a href="#sec-03" class="hover:text-amber-400 transition">03 資訊課題</a>
-        <a href="#sec-04" class="hover:text-amber-400 transition">04 實績對照</a>
-        <a href="#sec-06" class="hover:text-amber-400 transition">06 代表案例</a>
-        <a href="#sec-08" class="hover:text-amber-400 transition">08 三大方案</a>
-        <a href="#sec-10" class="hover:text-amber-400 transition">10 媒體佐證</a>
-        <a href="#sec-downloads" class="hover:text-amber-400 text-amber-400 font-bold transition">PDF下載</a>
+        <a href="#sec-03" class="hover:text-amber-400 transition">03 核心課題</a>
+        <a href="#sec-04" class="hover:text-amber-400 transition">04 實績與Notes</a>
+        <a href="#sec-06" class="hover:text-amber-400 transition">06 四大方案</a>
+        <a href="#sec-07" class="hover:text-amber-400 transition">07 帶領團隊</a>
+        <a href="#sec-08" class="hover:text-amber-400 transition">08 到任計畫與KPI</a>
+        <a href="#sec-downloads" class="hover:text-amber-400 text-amber-400 font-bold transition">文檔下載</a>
       </nav>
 
       <!-- Action Buttons -->
@@ -121,48 +117,47 @@
 
   <!-- Hero Section -->
   <section class="relative pt-12 pb-16 lg:pt-20 lg:pb-24 overflow-hidden border-b border-slate-800/80 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
-    <!-- Subtle glow background -->
     <div class="absolute -top-40 -left-40 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute top-1/2 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Left Column: Title & Credentials -->
+        <!-- Left Column: Title & Alignment -->
         <div class="lg:col-span-7 space-y-6 text-left">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-amber-500/10 text-amber-400 border border-amber-500/30">
             <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-            致鐿鈦科技（4163）董事長暨經營團隊
+            致鐿鈦科技（4163）用人主管暨面試長官
           </div>
           
           <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
             廖倫豪 <span class="text-xl sm:text-2xl font-light text-slate-400">博士</span><br>
             <span class="text-2xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500">
-              資訊長暨資安長 (CIO / CISO)
+              資訊經理候選人｜系統整合與 AI 導入
             </span>
           </h1>
           
           <p class="text-lg sm:text-xl text-slate-300 font-medium leading-relaxed">
-            以數據治理與高韌性資安，支撐醫材精密製造的下一條成長曲線。
+            以務實系統串接、平穩 Notes 轉移與負責任 AI 導入，扎根精密醫材數位營運。
           </p>
 
-          <!-- Badges -->
+          <!-- Badges reflecting the 3 core reasons & real background -->
           <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-300">
-            <span class="px-3 py-1.5 bg-slate-900 border border-slate-700/80 rounded-md flex items-center gap-1.5">
+            <span class="px-3 py-1.5 bg-slate-900 border border-amber-500/40 text-amber-300 rounded-md flex items-center gap-1.5">
               <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-              可常駐台中（南屯總部・后里廠）
+              住家鄰近・可常駐台中・通勤便利
             </span>
             <span class="px-3 py-1.5 bg-slate-900 border border-slate-700/80 rounded-md flex items-center gap-1.5">
-              <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/></svg>
-              25+ 年跨國與製造業資訊經歷
+              <svg class="w-3.5 h-3.5 text-rose-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+              長期在台中榮總擔任顧問・看好醫材與認同鐿鈦
             </span>
             <span class="px-3 py-1.5 bg-slate-900 border border-slate-700/80 rounded-md flex items-center gap-1.5">
-              <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              ISO 27001 主導稽核員
+              <svg class="w-3.5 h-3.5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg>
+              現職常年跨國出差・盼專注深耕單一在地團隊
             </span>
             <span class="px-3 py-1.5 bg-slate-900 border border-slate-700/80 rounded-md flex items-center gap-1.5">
-              <svg class="w-3.5 h-3.5 text-purple-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a10.97 10.97 0 01-.25 2.949c0 .604.062 1.2.181 1.777L2.606 14.08a1 1 0 00.788 1.84l7 3a1 1 0 00.788 0l7-3a1 1 0 000-1.84l-2.575-1.303c.12-.577.181-1.173.181-1.777 0-1.02-.087-2.01-.25-2.949l2.644-1.131a1 1 0 000-1.84l-7-3z"/></svg>
-              ISO 42001 AI 治理認證
+              <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/></svg>
+              健信科技 (4502) 帶過 Lotus Notes 經驗
             </span>
             <span class="px-3 py-1.5 bg-slate-900 border border-slate-700/80 rounded-md flex items-center gap-1.5">
               <svg class="w-3.5 h-3.5 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a10.97 10.97 0 01-.25 2.949c0 .604.062 1.2.181 1.777L2.606 14.08a1 1 0 00.788 1.84l7 3a1 1 0 00.788 0l7-3a1 1 0 000-1.84l-2.575-1.303c.12-.577.181-1.173.181-1.777 0-1.02-.087-2.01-.25-2.949l2.644-1.131a1 1 0 000-1.84l-7-3z"/></svg>
@@ -173,7 +168,7 @@
           <!-- Quick Action Buttons -->
           <div class="pt-2 flex flex-wrap gap-3">
             <a href="#sec-01" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-sm transition shadow-lg shadow-amber-500/20">
-              閱讀致經營團隊信函
+              閱讀求職初衷與三點緣由
             </a>
             <a href="mailto:Liao.Howard@gmail.com" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-sm border border-slate-700 transition flex items-center gap-2">
               <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -182,16 +177,21 @@
           </div>
         </div>
 
-        <!-- Right Column: Professional Portrait Card -->
+        <!-- Right Column: Requested CIRCULAR Avatar Photo Card -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative group max-w-sm w-full">
-            <div class="absolute -inset-1 bg-gradient-to-r from-amber-600 to-amber-400 rounded-2xl blur-lg opacity-30 group-hover:opacity-60 transition duration-300"></div>
-            <div class="relative rounded-2xl bg-slate-900 border border-slate-800 p-3 shadow-2xl overflow-hidden">
-              <img src="img/cover_photo.jpg" alt="廖倫豪 博士 形象照" class="w-full h-auto rounded-xl object-cover aspect-[3/4] cursor-pointer hover:scale-[1.02] transition duration-300" onclick="openLightbox('img/cover_photo.jpg', '廖倫豪 博士 形象照')">
-              <div class="pt-3 pb-1 px-2 text-center">
-                <div class="text-sm font-bold text-slate-200">廖倫豪 博士 (Howard Liao, Ph.D.)</div>
-                <div class="text-xs text-amber-400/90 font-medium mt-0.5">C-Level 實戰型架構長與數位治理專家</div>
-              </div>
+          <div class="relative group flex flex-col items-center">
+            <!-- Circular glow effect -->
+            <div class="absolute -inset-2 bg-gradient-to-r from-amber-500 via-amber-300 to-amber-600 rounded-full blur-xl opacity-40 group-hover:opacity-75 transition duration-500"></div>
+            
+            <!-- Circular Profile Photo -->
+            <div class="relative p-1.5 rounded-full bg-gradient-to-b from-amber-400 via-amber-600 to-slate-900 shadow-2xl">
+              <img src="img/avatar_conclusion.jpg" alt="廖倫豪 博士 專業大頭照" class="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover border-4 border-slate-950 shadow-inner cursor-pointer hover:scale-105 transition duration-300" onclick="openLightbox('img/avatar_conclusion.jpg', '廖倫豪 博士 形象照')">
+            </div>
+
+            <div class="mt-5 text-center space-y-1">
+              <div class="text-lg font-bold text-white tracking-wide">廖倫豪 博士 (Howard Liao, Ph.D.)</div>
+              <div class="text-xs text-amber-400 font-semibold">資訊經理候選人｜系統整合與 AI 導入</div>
+              <div class="text-[11px] text-slate-400">務實・具耐心・注重傳承・長期深耕台中</div>
             </div>
           </div>
         </div>
@@ -200,43 +200,31 @@
 
       <!-- Bento Key Metrics Grid -->
       <div class="mt-14 pt-10 border-t border-slate-800/80">
-        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">六個關鍵指標・實證可量化的交付結果</div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">務實交付指標・實績可量化的製造業與平台歷練</div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           
           <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl hover:border-amber-500/40 transition">
             <div class="text-2xl lg:text-3xl font-extrabold text-amber-400">+15%</div>
             <div class="text-xs font-bold text-slate-200 mt-1">產線良率提升</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">泓晏科技・跨廠數據透明化</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">泓晏科技・PLM/ERP/MES 數據貫通</div>
           </div>
 
           <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl hover:border-amber-500/40 transition">
             <div class="text-2xl lg:text-3xl font-extrabold text-emerald-400">−25%</div>
-            <div class="text-xs font-bold text-slate-200 mt-1">IT 維運成本</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">泓晏科技・併購後系統整併</div>
-          </div>
-
-          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl hover:border-amber-500/40 transition">
-            <div class="text-2xl lg:text-3xl font-extrabold text-cyan-400">−30%</div>
-            <div class="text-xs font-bold text-slate-200 mt-1">年度雲端支出</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">隆中網絡・GKE 與 FinOps</div>
-          </div>
-
-          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl hover:border-amber-500/40 transition">
-            <div class="text-2xl lg:text-3xl font-extrabold text-amber-300">100%</div>
-            <div class="text-xs font-bold text-slate-200 mt-1">核心零停機</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">隆中網絡・MongoDB Atlas 全球平台</div>
-          </div>
-
-          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl hover:border-amber-500/40 transition">
-            <div class="text-2xl lg:text-3xl font-extrabold text-rose-400">−30%</div>
-            <div class="text-xs font-bold text-slate-200 mt-1">資安事故年減</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">盛欣網絡・零信任架構落地</div>
+            <div class="text-xs font-bold text-slate-200 mt-1">IT 維運成本降低</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">跨廠系統整併與技術債消除</div>
           </div>
 
           <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl hover:border-amber-500/40 transition">
             <div class="text-2xl lg:text-3xl font-extrabold text-purple-400">+55%</div>
-            <div class="text-xs font-bold text-slate-200 mt-1">自動化效率</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">盛欣網絡・Agentic AI 工作流</div>
+            <div class="text-xs font-bold text-slate-200 mt-1">流程自動化效率</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">盛欣網絡・Agentic AI 嵌入各部門</div>
+          </div>
+
+          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl hover:border-amber-500/40 transition">
+            <div class="text-2xl lg:text-3xl font-extrabold text-cyan-400">100%</div>
+            <div class="text-xs font-bold text-slate-200 mt-1">核心零停機 / 合規</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">資安與合規作為營運防護底線</div>
           </div>
 
         </div>
@@ -250,9 +238,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">正式自薦資料</span>
-          <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">完整求職文檔與簡報下載</h2>
-          <p class="text-xs sm:text-sm text-slate-400 mt-0.5">已完整收錄於 GitHub 原始碼，提供董事長、總經理與高階評審委員隨時離線審閱</p>
+          <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">正式應徵資料</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">自薦文檔與 25 頁簡報下載</h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-0.5">完整收錄於 GitHub 專案，供主管與評審長官隨時離線審閱</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full md:w-auto">
           
@@ -262,7 +250,7 @@
             </div>
             <div class="text-left">
               <div class="text-xs font-bold text-slate-200 group-hover:text-amber-400 transition">網頁版完整報告</div>
-              <div class="text-[10px] text-slate-400">PDF 檔案 (4.2 MB)</div>
+              <div class="text-[10px] text-slate-400">PDF 檔案</div>
             </div>
           </a>
 
@@ -271,8 +259,8 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
             </div>
             <div class="text-left">
-              <div class="text-xs font-bold text-slate-200 group-hover:text-amber-400 transition">書面完整自薦書</div>
-              <div class="text-[10px] text-slate-400">PDF 檔案 (3.2 MB)</div>
+              <div class="text-xs font-bold text-slate-200 group-hover:text-amber-400 transition">書面自薦書 (20頁)</div>
+              <div class="text-[10px] text-slate-400">PDF 檔案</div>
             </div>
           </a>
 
@@ -281,8 +269,8 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
             </div>
             <div class="text-left">
-              <div class="text-xs font-bold text-slate-200 group-hover:text-amber-400 transition">精緻簡報 (24 頁)</div>
-              <div class="text-[10px] text-slate-400">PDF 簡報 (3.4 MB)</div>
+              <div class="text-xs font-bold text-slate-200 group-hover:text-amber-400 transition">精緻簡報 (25 頁)</div>
+              <div class="text-[10px] text-slate-400">PDF 簡報</div>
             </div>
           </a>
 
@@ -294,29 +282,40 @@
   <!-- Main Content Chapters Container -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
 
-    <!-- Chapter 01: 致經營團隊 -->
+    <!-- Chapter 01: 致用人主管與三項轉職原因 -->
     <section id="sec-01" class="scroll-mt-24">
       <div class="border-l-4 border-amber-500 pl-4 mb-6">
         <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 01</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">致經營團隊：我爭取的是資訊長暨資安長，並可常駐台中</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">致用人主管：我爭取的是資訊經理，並以誠意扎根台中</h2>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div class="lg:col-span-8 bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-5 text-slate-300 leading-relaxed">
           <p class="font-medium text-slate-200">
-            鍾董事長、林總經理暨經營團隊 鈞鑒：
+            用人主管暨面試長官 鈞鑒：
           </p>
           <p>
-            鐿鈦在 2026 年進入新的成長階段。醫療器材穩居營收七成以上，微波開關切入 AI 與矽光子高速測試，半導體設備零組件也進入先進製程供應鏈。公司同時規劃美國設廠、深化日本市場，並迎來可成科技成為策略股東。
+            感謝您撥冗審閱本自薦專案。鐿鈦在精密微創手術器械、微波開關與半導體設備零組件的成長有目共睹。我爭取的是貴公司<strong>資訊經理（專責系統整合與 AI 導入）</strong>職位。
           </p>
           <p>
-            每一條新成長線，都會帶來更嚴格的客戶稽核、更複雜的生產排程，以及更多需要保護的設計與製程資料。這些要求不會等公司準備好才出現。
+            此番主動爭取鐿鈦職缺，源自三個非常真實且篤定的轉職原因：
           </p>
+          <div class="space-y-3 pl-2">
+            <div class="p-3.5 bg-slate-950/80 rounded-xl border border-slate-800/80">
+              <span class="font-bold text-amber-400">一、住家鄰近，在地扎根：</span>
+              住家離貴公司南屯總部與台中各廠區非常近，通勤零負擔，能長期穩定投入，隨時抵達現場支援第一線廠區需求。
+            </div>
+            <div class="p-3.5 bg-slate-950/80 rounded-xl border border-slate-800/80">
+              <span class="font-bold text-amber-400">二、長期在台中榮總擔任顧問，深厚認同醫材前景與鐿鈦：</span>
+              我長期在台中榮民總醫院擔任諮詢顧問，深入了解醫療院所對手術安全、器械精度與臨床流程的高標準要求。這份經驗讓我深刻體認醫療器材產業對人類健康的巨大價值，亦對鐿鈦在微創與機器人器械的全球精密製造實力深感佩服與認同。
+            </div>
+            <div class="p-3.5 bg-slate-950/80 rounded-xl border border-slate-800/80">
+              <span class="font-bold text-amber-400">三、結束常年跨國出差，專注凝聚單一團隊：</span>
+              現職因業務需求需常年海外出差、負責跨國多據點與多時區協同。在步入人生成熟階段，我希望將全部心力與經驗集中深耕於單一優秀的在地團隊，與同仁並肩作戰，把鐿鈦的資訊底座扎穩。
+            </div>
+          </div>
           <p>
-            我在製造業、外商軟體與上市櫃雲端平台累積 <span class="text-amber-400 font-semibold">25 年以上資訊經驗</span>，做過兩次跨國併購的系統整合。我曾在跨國電子製造集團打通 ERP、MES、PLM、APS，讓產線良率提升 15%，化解數億元的呆滯庫存；也曾在上市櫃公司建立 ISO 27001 資訊安全管理系統並通過驗證，近年更導入 ISO 42001 AI 治理。
-          </p>
-          <p>
-            我希望把這些經驗帶到鐿鈦，協助公司建立經得起國際客戶檢驗的數位底座。
+            在二十多年前，我在<strong>健信科技（4502）帶過 Lotus Notes 系統</strong>，了解 Notes 應用的結構、欄位關聯與遷移時的難處；在製造業亦實際打通 ERP、MES、PLM。我希望將這些經驗貢獻給鐿鈦，扮演業務部門與系統間最值得信賴的橋樑。
           </p>
           <div class="pt-4 text-right">
             <span class="font-bold text-white text-base">廖倫豪 博士 敬上</span>
@@ -328,35 +327,31 @@
           <div>
             <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0v3a1 1 0 102 0v-3zm2-3a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm4-1a1 1 0 10-2 0v7a1 1 0 102 0V8z" clip-rule="evenodd"/></svg>
-              一頁摘要重點
+              一頁職位定位摘要
             </div>
             
-            <dl class="space-y-4 text-xs">
+            <dl class="space-y-3.5 text-xs">
               <div>
-                <dt class="text-slate-400 font-semibold">鐿鈦的處境</dt>
-                <dd class="text-slate-200 mt-0.5">醫材占營收 76%，美洲占醫材營收約 85%；微波開關、半導體零組件放量；規劃美國設廠</dd>
+                <dt class="text-slate-400 font-semibold">應徵職稱</dt>
+                <dd class="text-amber-400 font-bold mt-0.5">資訊經理（系統整合與 AI 導入）</dd>
               </div>
               <div>
-                <dt class="text-slate-400 font-semibold">五個資訊課題</dt>
-                <dd class="text-slate-200 mt-0.5">客戶稽核級資安、製造數據與庫存、費用效率、AI 護欄、多據點底座</dd>
+                <dt class="text-slate-400 font-semibold">核心四大任務</dt>
+                <dd class="text-slate-200 mt-0.5">1. 串接 PLM/SAP/MES<br>2. Notes 分批盤點移轉<br>3. 各部門務實導入 AI<br>4. 資安作為運作底線</dd>
               </div>
               <div>
-                <dt class="text-slate-400 font-semibold">對應實績</dt>
-                <dd class="text-slate-200 mt-0.5">良率 +15%、IT維運成本 -25%、雲端支出 -30%、資安事故年減 30%、自動化效率 +55%</dd>
+                <dt class="text-slate-400 font-semibold">團隊管理方針</dt>
+                <dd class="text-slate-200 mt-0.5">尊重十年累積，維持硬體與程式分工，增設整合窗口與 AI 種子</dd>
               </div>
               <div>
-                <dt class="text-slate-400 font-semibold">第一年方向</dt>
-                <dd class="text-slate-200 mt-0.5">ISO 27001 導入、訂單到現場數據串接、在可控風險下導入 AI</dd>
-              </div>
-              <div>
-                <dt class="text-slate-400 font-semibold">到任條件</dt>
-                <dd class="text-amber-400 font-medium mt-0.5">可常駐台中；到任 60 天內與經營團隊共同訂定 KPI 基準</dd>
+                <dt class="text-slate-400 font-semibold">到任承諾</dt>
+                <dd class="text-emerald-400 font-medium mt-0.5">長期穩定、常駐台中、無海外差旅羈絆</dd>
               </div>
             </dl>
           </div>
           
           <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-500">
-            * 本自薦書數據取自公開財報與資訊觀測站
+            * 本專案為量身打造之實戰自薦書，非通用公版
           </div>
         </div>
       </div>
@@ -366,8 +361,8 @@
     <section id="sec-02" class="scroll-mt-24">
       <div class="border-l-4 border-amber-500 pl-4 mb-6">
         <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 02</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">我理解的鐿鈦：以精密加工為核心的醫材供應鏈要角</h2>
-        <p class="text-slate-400 text-sm mt-1">2026 年前三季營收 20.82 億元、年增 13.94%，7 月單月營收逾 2.9 億元，新成長線開始放量。</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">我理解的鐿鈦：以精密加工為核心的醫材要角與新成長線</h2>
+        <p class="text-slate-400 text-sm mt-1">2026 年前三季營收 20.82 億元、年增 13.94%，7 月單月營收逾 2.9 億元，微波開關與半導體零組件放量。</p>
       </div>
 
       <!-- Financial Metrics Card Grid -->
@@ -375,12 +370,12 @@
         <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl text-center">
           <div class="text-3xl font-extrabold text-amber-400">76%</div>
           <div class="text-xs text-slate-300 font-bold mt-1">醫療器材營收占比</div>
-          <div class="text-[11px] text-slate-500">2026 Q1</div>
+          <div class="text-[11px] text-slate-500">穩健基石 (2026 Q1)</div>
         </div>
         <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl text-center">
           <div class="text-3xl font-extrabold text-amber-400">85%</div>
           <div class="text-xs text-slate-300 font-bold mt-1">美洲占醫材營收比重</div>
-          <div class="text-[11px] text-slate-500">2025 年度</div>
+          <div class="text-[11px] text-slate-500">國際大廠客戶認證</div>
         </div>
         <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl text-center">
           <div class="text-3xl font-extrabold text-emerald-400">20.8 億</div>
@@ -390,7 +385,7 @@
         <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl text-center">
           <div class="text-3xl font-extrabold text-amber-400">41.6%</div>
           <div class="text-xs text-slate-300 font-bold mt-1">毛利率 (2026 Q2)</div>
-          <div class="text-[11px] text-slate-500">展現極高技術護城河</div>
+          <div class="text-[11px] text-slate-500">高技術與驗證門檻</div>
         </div>
       </div>
 
@@ -402,7 +397,7 @@
           <div class="flex items-center justify-between mb-4">
             <div>
               <h3 class="text-base font-bold text-white">月營收走勢（新台幣百萬元）</h3>
-              <p class="text-xs text-slate-400">2025/06 ～ 2026/09 趨勢圖</p>
+              <p class="text-xs text-slate-400">2025/06 ～ 2026/09 走勢長條圖</p>
             </div>
             <span class="text-xs px-2.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded">7月逾 2.9億 年增近50%</span>
           </div>
@@ -417,7 +412,7 @@
         </div>
 
         <!-- Three Growth Drivers -->
-        <div class="lg:col-span-5 space-y-4">
+        <div class="lg:col-span-5 space-y-3.5">
           
           <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
             <div class="flex items-center gap-2 text-amber-400 font-bold text-sm mb-1">
@@ -425,54 +420,28 @@
               營收主力：醫療器材
             </div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              微創與機器人手術器械、心血管、內視鏡、活檢器材、連續血糖監測；脊椎導航自有品牌已在美國、墨西哥銷售。
-            </p>
-          </div>
-
-          <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-            <div class="flex items-center gap-2 text-cyan-400 font-bold text-sm mb-1">
-              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
-              高附加價值：工業應用
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              精密扣件與半導體設備零組件；已切入前段清洗製程，計畫往中後段製程延伸。
+              微創與機器人手術器械、心血管、內視鏡、活檢器材、連續血糖監測；脊椎導航自有品牌在海外拓展。
             </p>
           </div>
 
           <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl border-amber-500/30 bg-amber-500/5">
             <div class="flex items-center gap-2 text-amber-300 font-bold text-sm mb-1">
               <span class="w-2 h-2 rounded-full bg-amber-300 animate-ping"></span>
-              最大成長亮點：微波開關
+              成長亮點：微波開關
             </div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              應用於 AI 伺服器與矽光子高速測試，已完成客戶驗證，進入準量產階段。
+              切入 AI 伺服器與矽光子高速測試，進入準量產階段；帶動多品種小批量快速打樣與即時排程需求。
             </p>
           </div>
 
-          <!-- Financial Table Summary -->
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs">
-            <div class="text-slate-400 font-semibold mb-2">核心財務比率分析 (2026 公開資料)</div>
-            <div class="grid grid-cols-2 gap-2 text-[11px]">
-              <div class="flex justify-between border-b border-slate-800 pb-1">
-                <span class="text-slate-500">每股盈餘 (H1)</span>
-                <span class="text-slate-200 font-semibold">2.95 元 (+50%)</span>
-              </div>
-              <div class="flex justify-between border-b border-slate-800 pb-1">
-                <span class="text-slate-500">營業利益率 (Q2)</span>
-                <span class="text-slate-200 font-semibold">約 12.8%</span>
-              </div>
-              <div class="flex justify-between border-b border-slate-800 pb-1">
-                <span class="text-slate-500">存貨周轉天數 (Q1)</span>
-                <span class="text-amber-400 font-semibold">約 222 天 (改善空間)</span>
-              </div>
-              <div class="flex justify-between border-b border-slate-800 pb-1">
-                <span class="text-slate-500">員工人數</span>
-                <span class="text-slate-200 font-semibold">691 人</span>
-              </div>
+          <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
+            <div class="flex items-center gap-2 text-cyan-400 font-bold text-sm mb-1">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              半導體設備零組件
             </div>
-            <div class="text-[10px] text-slate-500 mt-2">
-              毛利率長期維持 41～44%，反映醫材的高驗證門檻；營業利益率在 10～13% 之間，費用效率與庫存周轉仍有顯著改善空間。
-            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              切入前段清洗製程並往中後段延伸，需配合半導體客戶的供應鏈資料交換規範與資安稽核要求。
+            </p>
           </div>
 
         </div>
@@ -480,726 +449,431 @@
       </div>
     </section>
 
-    <!-- Chapter 03: 成長帶來的資訊課題 -->
+    <!-- Chapter 03: 資訊部門核心課題 -->
     <section id="sec-03" class="scroll-mt-24">
       <div class="border-l-4 border-amber-500 pl-4 mb-6">
         <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 03</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">成長帶來的資訊課題：每一條新成長線，都對資訊與資安提出新要求</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">資訊經理的核心課題：系統斷點、舊系統負擔與 AI 需求</h2>
       </div>
 
-      <!-- Growth line vs IT requirement Table -->
-      <div class="overflow-x-auto mb-10 bg-slate-900 border border-slate-800 rounded-2xl">
-        <table class="min-w-full divide-y divide-slate-800 text-xs sm:text-sm">
-          <thead class="bg-slate-950/60">
-            <tr>
-              <th class="px-6 py-4 text-left font-bold text-amber-400">2026 年起的成長動能</th>
-              <th class="px-6 py-4 text-left font-bold text-slate-200">對資訊與資安的新要求</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-800/60 text-slate-300">
-            <tr class="hover:bg-slate-800/40 transition">
-              <td class="px-6 py-3.5 font-semibold text-slate-100">微波開關進入 AI ／矽光子測試準量產</td>
-              <td class="px-6 py-3.5">多品種小批量的排程、良率追蹤與快速打樣系統整合</td>
-            </tr>
-            <tr class="hover:bg-slate-800/40 transition">
-              <td class="px-6 py-3.5 font-semibold text-slate-100">半導體設備零組件往中後段製程延伸</td>
-              <td class="px-6 py-3.5">半導體客戶極為嚴苛的供應鏈資安稽核與跨企業資料交換規範</td>
-            </tr>
-            <tr class="hover:bg-slate-800/40 transition">
-              <td class="px-6 py-3.5 font-semibold text-slate-100">手術機器人器械、脊椎導航自有品牌</td>
-              <td class="px-6 py-3.5">設計資料保護、醫療器械 UDI 產品批號追溯與軟體安全生命週期管理</td>
-            </tr>
-            <tr class="hover:bg-slate-800/40 transition">
-              <td class="px-6 py-3.5 font-semibold text-slate-100">規劃美國設廠、日本子公司深化</td>
-              <td class="px-6 py-3.5">跨國據點系統架構一致、遠端治理、在地法遵與基礎設施即代碼 (IaC)</td>
-            </tr>
-            <tr class="hover:bg-slate-800/40 transition">
-              <td class="px-6 py-3.5 font-semibold text-slate-100">可成策略入股，集團綜效</td>
-              <td class="px-6 py-3.5">集團間的系統介接整合、資料安全交換與精準存取控管</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Five Key Questions for IT Department -->
-      <div class="space-y-4">
-        <div class="text-sm font-bold text-slate-200">未來三年，資訊部門必須清楚回答經營團隊的五個關鍵問題：</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          
-          <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl space-y-2">
-            <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
-              <span class="px-2 py-0.5 bg-amber-500/20 rounded text-xs">1</span>
-              客戶稽核級的資安治理
-            </div>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              國際醫材與半導體客戶以資安問卷與現場稽核檢視供應商；設計圖、製程參數與追溯紀錄若保護不足，可能直接影響接單。上市櫃公司亦須依規模落實專責主管。
-            </p>
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-xl space-y-2">
+          <div class="text-amber-400 font-bold text-sm flex items-center gap-1.5">
+            <span class="px-2 py-0.5 bg-amber-500/20 rounded text-xs">1</span>
+            PLM / SAP / MES 斷點
           </div>
-
-          <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl space-y-2">
-            <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
-              <span class="px-2 py-0.5 bg-amber-500/20 rounded text-xs">2</span>
-              製造數據與庫存透明化
-            </div>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              目前存貨周轉約 222 天。訂單、排程、現場工單與品質紀錄若分散在不同系統，管理層難以即時掌握南屯與后里廠在製品庫存與良率。
-            </p>
-          </div>
-
-          <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl space-y-2">
-            <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
-              <span class="px-2 py-0.5 bg-amber-500/20 rounded text-xs">3</span>
-              營運費用效率與技術債消除
-            </div>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              毛利率逾 41%，營業利益率約 12～13%。系統整併、雲端費用治理 (FinOps) 與作業流程自動化，都能實質釋放預算、降低營運費用。
-            </p>
-          </div>
-
-          <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl space-y-2">
-            <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
-              <span class="px-2 py-0.5 bg-amber-500/20 rounded text-xs">4</span>
-              AI 導入的合規護欄
-            </div>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              缺乏規範，客戶圖面與內部機密可能隨工程師使用公用 AI 而外流；全面禁止又會喪失競爭力。需要以 ISO 42001 先立規則、再擴大使用。
-            </p>
-          </div>
-
-          <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl space-y-2 md:col-span-2 lg:col-span-2">
-            <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
-              <span class="px-2 py-0.5 bg-amber-500/20 rounded text-xs">5</span>
-              多據點擴張的數位底座
-            </div>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              美國廠與日本子公司上線時，系統、帳號權限與資安標準若不一致，跨國管理與外部稽核成本會呈幾何級上升。必須具備跨國併購與多廠區複製經驗。
-            </p>
-          </div>
-
+          <p class="text-xs text-slate-300 leading-relaxed">
+            研發工程圖面 (PLM)、企業資源規劃 (SAP/ERP) 與現場生產報工 (MES) 之間若有斷點，排程調整與良率追蹤往往需人工重複謄寫，影響存貨周轉效率。
+          </p>
         </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-xl space-y-2">
+          <div class="text-amber-400 font-bold text-sm flex items-center gap-1.5">
+            <span class="px-2 py-0.5 bg-amber-500/20 rounded text-xs">2</span>
+            Lotus Notes 維護與遷移
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            企業內歷史悠久的 Lotus Notes 承載了大量簽核流程與歷史文件。維護人才斷層、資料庫關聯複雜，貿然推翻易引發混亂，必須具備深刻理解並分批替換。
+          </p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-xl space-y-2">
+          <div class="text-amber-400 font-bold text-sm flex items-center gap-1.5">
+            <span class="px-2 py-0.5 bg-amber-500/20 rounded text-xs">3</span>
+            各部門對 AI 的迫切期待
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            現場品檢想要影像輔助、業務想要加速報價規格整理、管理部想要合約與 SOP 檢索。資訊部門需要扮演賦能角色，提供可用、好用且安全的 AI 工具。
+          </p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-xl space-y-2">
+          <div class="text-amber-400 font-bold text-sm flex items-center gap-1.5">
+            <span class="px-2 py-0.5 bg-amber-500/20 rounded text-xs">4</span>
+            資安作為營運底線
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            國際客戶資安問卷越來越細，工廠 CNC 與量測設備聯網不能成為勒索破口。資安不走虛浮口號，而是專注於工廠分段、備份與圖面不外流。
+          </p>
+        </div>
+
       </div>
     </section>
 
-    <!-- Chapter 04: 需求與實績對照 -->
+    <!-- Chapter 04: 需求與實績對照 (含 Lotus Notes) -->
     <section id="sec-04" class="scroll-mt-24">
       <div class="border-l-4 border-amber-500 pl-4 mb-6">
         <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 04</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">需求與實績對照：五個課題，我都有做過、量得到的答案</h2>
-        <p class="text-slate-400 text-sm mt-1">多數資訊主管專長偏向傳統製造業 IT 或純雲端平台其中一邊；我在製造業處理過跨廠數據整合，也在上市櫃公司建立過嚴密資安與 AI 治理。</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">需求與實績對照：務實、量得到、帶過 Notes 的具體經歷</h2>
       </div>
 
       <div class="overflow-x-auto bg-slate-900 border border-slate-800 rounded-2xl shadow-xl">
         <table class="min-w-full divide-y divide-slate-800 text-xs sm:text-sm">
           <thead class="bg-slate-950/80">
             <tr>
-              <th class="px-6 py-4 text-left font-bold text-amber-400 w-1/4">鐿鈦課題</th>
-              <th class="px-6 py-4 text-left font-bold text-slate-200 w-1/2">我做過的事</th>
-              <th class="px-6 py-4 text-left font-bold text-emerald-400 w-1/4">可量化交付成果</th>
+              <th class="px-6 py-4 text-left font-bold text-amber-400 w-1/4">鐿鈦核心需求</th>
+              <th class="px-6 py-4 text-left font-bold text-slate-200 w-1/2">我做過的事（不誇大、誠實表述）</th>
+              <th class="px-6 py-4 text-left font-bold text-emerald-400 w-1/4">可量化交付成效</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-800 text-slate-300">
             <tr class="hover:bg-slate-800/40 transition">
               <td class="px-6 py-4 font-bold text-white flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                客戶稽核級資安
+                PLM / SAP / MES 整合
               </td>
-              <td class="px-6 py-4">隆中網絡全集團通過 ISO 27001 驗證；凌網科技負責亞太區合規稽核</td>
-              <td class="px-6 py-4 font-semibold text-emerald-400">資安事故年減 30%；稽核合規 100%</td>
-            </tr>
-            <tr class="hover:bg-slate-800/40 transition">
-              <td class="px-6 py-4 font-bold text-white flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                製造數據與庫存
-              </td>
-              <td class="px-6 py-4">泓晏科技跨國電子製造打通 ERP、MES、PLM、APS，建置即時行動 BI 戰情室</td>
+              <td class="px-6 py-4">在泓晏科技打通跨國廠區 ERP、MES、PLM、APS，以 API 串聯工程變更、現場工單與品質追溯</td>
               <td class="px-6 py-4 font-semibold text-emerald-400">產線良率 +15%；化解數億元呆滯庫存</td>
             </tr>
-            <tr class="hover:bg-slate-800/40 transition">
-              <td class="px-6 py-4 font-bold text-white flex items-center gap-2">
+            <tr class="hover:bg-slate-800/40 transition bg-amber-500/5">
+              <td class="px-6 py-4 font-bold text-amber-300 flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                費用效率
+                Lotus Notes 系統處理
               </td>
-              <td class="px-6 py-4">隆中網絡導入 FinOps 成本模型；泓晏科技併購後跨廠系統整併</td>
-              <td class="px-6 py-4 font-semibold text-emerald-400">年度雲端支出 −30%；IT 維運成本 −25%</td>
+              <td class="px-6 py-4">
+                <strong>二十多年前在健信科技（4502）帶過 Lotus Notes 系統</strong>，了解 Notes 文件的儲存邏輯、ACL 權限機制與表單遷移難處；了解推動新系統時同仁的抗拒，主張「分批盤點、分類替代、平穩淘汰」
+              </td>
+              <td class="px-6 py-4 font-semibold text-amber-300">確保核心業務無感過渡，歷史資料安全歸檔</td>
             </tr>
             <tr class="hover:bg-slate-800/40 transition">
               <td class="px-6 py-4 font-bold text-white flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                AI 導入護欄
+                AI 導入各部門
               </td>
-              <td class="px-6 py-4">盛欣網絡導入 ISO 42001 規範，開設主管特訓，落地 Agentic AI 工作流</td>
-              <td class="px-6 py-4 font-semibold text-emerald-400">流程自動化效率 +55%；機敏資料零外洩</td>
+              <td class="px-6 py-4">在盛欣網絡導入 ISO 42001 負責任 AI 規範，開辦非技術主管 AI 特訓班，將 Agentic AI 落地於日常作業</td>
+              <td class="px-6 py-4 font-semibold text-emerald-400">日常流程自動化效率 +55%，機敏資料 0 外洩</td>
             </tr>
             <tr class="hover:bg-slate-800/40 transition">
               <td class="px-6 py-4 font-bold text-white flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                多據點擴張底座
+                資安作為營運底線
               </td>
-              <td class="px-6 py-4">泓晏科技台深滬昆泰五地廠區；光男／豐辰集團跨國併購數據清洗與整併</td>
-              <td class="px-6 py-4 font-semibold text-emerald-400">大幅縮短併購後系統整併週期，營運零中斷</td>
+              <td class="px-6 py-4">隆中網絡通過 ISO 27001 認證；建置工廠機台微分段隔離、定期不可竄改備份與演練</td>
+              <td class="px-6 py-4 font-semibold text-emerald-400">資安事故年減 30%；重大稽核缺失 0 項</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="px-6 py-4 font-bold text-white flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                資訊團隊穩健帶領
+              </td>
+              <td class="px-6 py-4">曾帶領 15～30 人多元工程團隊，重視傾聽資深同仁經驗，建立技術輪調與種子制度</td>
+              <td class="px-6 py-4 font-semibold text-emerald-400">團隊留任率高，跨部門滿意度顯著提升</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    
-    <!-- Chapter 05: 職涯總覽 -->
-    <section id="sec-05" class="scroll-mt-24">
-      <div class="border-l-4 border-amber-500 pl-4 mb-6">
-        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 05</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">職涯總覽：25+ 年，橫跨外商軟體、製造業與雲端平台</h2>
-        <p class="text-slate-400 text-sm mt-1">從資料庫底層架構走到集團資訊主管；金銅色標示的是與鐿鈦需求最密切的三段經歷。</p>
-      </div>
-
-      <!-- Timeline Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        
-        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-          <div class="text-xs font-bold text-slate-500">2002 ～ 2008</div>
-          <div class="text-sm font-bold text-white mt-0.5">美商 Sybase</div>
-          <div class="text-xs text-amber-400/90 font-medium">IT Manager</div>
-          <p class="text-[11px] text-slate-400 mt-2">電信級資料庫效能調校與高可用架構，支援全球金融與電信大客戶關鍵系統穩定度與備援。</p>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-          <div class="text-xs font-bold text-slate-500">2008 ～ 2011</div>
-          <div class="text-sm font-bold text-white mt-0.5">美商 Borland</div>
-          <div class="text-xs text-amber-400/90 font-medium">IT Manager</div>
-          <p class="text-[11px] text-slate-400 mt-2">部署軟體開發生命週期 (ALM) 平台，建立標準化流程，提升跨國軟體團隊交付品質與效率。</p>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-          <div class="text-xs font-bold text-slate-500">2011 ～ 2014</div>
-          <div class="text-sm font-bold text-white mt-0.5">光男／豐辰集團</div>
-          <div class="text-xs text-amber-400/90 font-medium">IT 經理</div>
-          <p class="text-[11px] text-slate-400 mt-2">跨國併購期間數據清洗與 ERP 主檔整併，整合多套 POS/CRM，確保業務連續性與策略合作。</p>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-          <div class="text-xs font-bold text-slate-500">2014 ～ 2018</div>
-          <div class="text-sm font-bold text-white mt-0.5">凌網科技（5212）</div>
-          <div class="text-xs text-amber-400/90 font-medium">IT Manager</div>
-          <p class="text-[11px] text-slate-400 mt-2">亞太區資料中心整合、高可用備援、統一 AD；以 PMP 嚴謹控管專案，外部資安稽核合規 100%。</p>
-        </div>
-
-        <div class="bg-slate-900 border border-amber-500/50 bg-amber-500/5 p-4 rounded-xl lg:col-span-2">
-          <div class="flex items-center justify-between">
-            <div class="text-xs font-bold text-amber-400">2018.03 ～ 2022.08【精密製造】</div>
-            <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-bold">與鐿鈦關聯最高</span>
-          </div>
-          <div class="text-base font-bold text-white mt-1">泓晏科技 (Chiffon Group)</div>
-          <div class="text-xs text-amber-300 font-medium">IT Director ／數位轉型主管</div>
-          <p class="text-xs text-slate-300 mt-2">
-            跨五地廠區 (台、深、滬、昆、泰) 數據整合，打通 ERP、MES、PLM、APS，良率提升 15%、維運成本降 25%、化解數億元呆滯庫存。
-          </p>
-        </div>
-
-        <div class="bg-slate-900 border border-cyan-500/50 bg-cyan-500/5 p-4 rounded-xl">
-          <div class="flex items-center justify-between">
-            <div class="text-xs font-bold text-cyan-400">2022.09 ～ 2025.04</div>
-            <span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded font-bold">上市櫃資安</span>
-          </div>
-          <div class="text-sm font-bold text-white mt-1">隆中網絡 (6542)</div>
-          <div class="text-xs text-cyan-300 font-medium">資訊技術處處長</div>
-          <p class="text-[11px] text-slate-300 mt-2">
-            通過 ISO 27001 驗證，微服務遷移 GKE，MongoDB Atlas 零停機，年度雲端支出降低 30%。
-          </p>
-        </div>
-
-        <div class="bg-slate-900 border border-purple-500/50 bg-purple-500/5 p-4 rounded-xl">
-          <div class="flex items-center justify-between">
-            <div class="text-xs font-bold text-purple-400">2025.05 ～ 至今</div>
-            <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded font-bold">AI 治理落地</span>
-          </div>
-          <div class="text-sm font-bold text-white mt-1">盛欣／盛碁網絡</div>
-          <div class="text-xs text-purple-300 font-medium">技術副總／CIO</div>
-          <p class="text-[11px] text-slate-300 mt-2">
-            導入 ISO 42001 負責任 AI 護欄，推動 Agentic AI 工作流，自動化效率提升 55%，資安事故年減 30%。
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-<!-- Chapter 06: 代表案例 -->
+    <!-- Chapter 06: 為鐿鈦規劃的四大務實方案 -->
     <section id="sec-06" class="scroll-mt-24">
       <div class="border-l-4 border-amber-500 pl-4 mb-8">
         <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 06</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">代表案例：三個案例，分別對應製造數據、資安治理與 AI 導入</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">為鐿鈦規劃的四大方案：整合、Notes、AI 各部落地、資安底線</h2>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        <!-- Case 1: 泓晏科技 (精密製造) -->
-        <div class="bg-slate-900 border border-amber-500/40 rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-3 py-1 rounded-bl-lg tracking-wider uppercase">
-            與鐿鈦關聯度最高
-          </div>
+        <!-- Scheme 1: 串接 PLM、SAP、MES -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
           <div>
-            <div class="text-xs text-amber-400 font-bold mb-1">跨國電子製造的數據整合</div>
-            <h3 class="text-lg font-bold text-white mb-1">泓晏科技 (Chiffon Group)</h3>
-            <p class="text-xs text-slate-400 mb-4">IT Director ／數位轉型主管｜台灣、深圳、上海、昆山、泰國｜2018.03～2022.08</p>
-            
-            <div class="space-y-3 text-xs text-slate-300">
-              <div>
-                <span class="font-bold text-amber-300">【處境】</span>
-                併購後各廠區獨立運作，產能不透明，形成數據孤島，甚至引發數億元的呆滯庫存危機。
-              </div>
-              <div>
-                <span class="font-bold text-amber-300">【作法】</span>
-                推行 SAP S/4HANA Clean Core（核心標準化、擴充外部化）；打通 ERP、MES、PLM、APS；建置 ELK 底層行動化 BI 戰情室，即時呈現 OEE、良率與停機。
-              </div>
-              <div class="p-3 bg-slate-950/80 rounded-lg border border-slate-800 space-y-1 text-emerald-400 font-medium">
-                <div>✓ 產線良率提升 15%</div>
-                <div>✓ 化解數億元滯銷存貨</div>
-                <div>✓ 集團 IT 維運成本降低 25%</div>
-                <div>✓ 縮短併購後系統整併週期</div>
-              </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">方案一</span>
+              <span class="text-xs text-slate-400">製造營運串流</span>
             </div>
+            <h3 class="text-lg font-bold text-white mb-2">串接 PLM、SAP (ERP)、MES 系統</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              遵循 Clean Core 原則，以標準 API 介接，杜絕修改核心程式碼帶來的技術債。
+            </p>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-400 font-bold">•</span>
+                <span><strong>研發到生產 (PLM → MES)：</strong>工程變更 (ECN) 圖面與參數自動傳遞至機台，降低人工作業失誤。</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-400 font-bold">•</span>
+                <span><strong>訂單到工單 (SAP → MES)：</strong>生管排程自動轉化為現場機台報工，即時回饋在製品與完成數。</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-400 font-bold">•</span>
+                <span><strong>品質批號追溯 (MES → SAP)：</strong>UDI 醫療器材唯一識別碼自動關聯檢驗數據，符合國際法遵。</span>
+              </li>
+            </ul>
           </div>
-          
-          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-amber-200/80 bg-amber-500/10 p-2 rounded">
-            <strong>對鐿鈦的意義：</strong>同樣是多廠區精密製造，可直接用於庫存可視化、良率追蹤，以及南屯總部與后里廠的數據串接。
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-amber-300">
+            成效：消除資料重複輸入，南屯與后里廠在製品透明化，縮短庫存天數。
           </div>
         </div>
 
-        <!-- Case 2: 隆中網絡 (上市櫃資安治理) -->
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+        <!-- Scheme 2: Notes 分批處理 (新增關鍵頁) -->
+        <div class="bg-slate-900 border border-amber-500/40 bg-amber-500/5 rounded-2xl p-6 flex flex-col justify-between">
           <div>
-            <div class="text-xs text-cyan-400 font-bold mb-1">上市櫃公司的資安治理與零停機</div>
-            <h3 class="text-lg font-bold text-white mb-1">隆中網絡 GameSparcs (6542)</h3>
-            <p class="text-xs text-slate-400 mb-4">資訊技術處處長 (IT Director)｜台北、台中、杭州、成都、馬爾他｜2022.09～2025.04</p>
-            
-            <div class="space-y-3 text-xs text-slate-300">
-              <div>
-                <span class="font-bold text-cyan-300">【處境】</span>
-                每月推出新產品，舊有關聯式資料庫無法承受瞬間高併發，維運團隊負擔極大且資安合規需求提升。
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-1 bg-amber-500 text-slate-950 text-xs font-bold rounded">方案二・核心經驗</span>
+              <span class="text-xs text-amber-400 font-bold">Lotus Notes 分批處理</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Notes 分批處理：盤點、分類、再移轉或淘汰</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              在健信科技帶過 Notes 的體悟：Notes 不只是工具，往往承載了各部門十幾年的「習慣」與非結構化邏輯，嚴禁一刀切！
+            </p>
+            <div class="grid grid-cols-3 gap-2 text-center text-xs mb-3">
+              <div class="p-2.5 bg-slate-950 rounded-lg border border-slate-800">
+                <div class="font-bold text-emerald-400">第一類：移轉</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">高頻、跨部門核心簽核，整併入 SAP/Web 系統</div>
               </div>
-              <div>
-                <span class="font-bold text-cyan-300">【作法】</span>
-                核心服務遷移至 GKE，部署人力減少 30%；資料庫重構至 MongoDB Atlas；建立 FinOps 模型；全集團通過 ISO 27001 驗證，建構 WAF 與 DDoS 防禦。
+              <div class="p-2.5 bg-slate-950 rounded-lg border border-slate-800">
+                <div class="font-bold text-cyan-400">第二類：輕量替代</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">內部特定表單，以低代碼或現有入口網頁替代</div>
               </div>
-              <div class="p-3 bg-slate-950/80 rounded-lg border border-slate-800 space-y-1 text-emerald-400 font-medium">
-                <div>✓ 核心服務 100% 零停機</div>
-                <div>✓ 年度雲端支出降低 30%</div>
-                <div>✓ 通過 ISO 27001 驗證</div>
-                <div>✓ 獲 Google Cloud、MongoDB 官方案例報導</div>
+              <div class="p-2.5 bg-slate-950 rounded-lg border border-slate-800">
+                <div class="font-bold text-slate-400">第三類：唯讀歸檔</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">停用多年但需留存之舊單據，唯讀歸檔並停用授權</div>
               </div>
             </div>
           </div>
-          
-          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-cyan-200/80 bg-cyan-500/10 p-2 rounded">
-            <strong>對鐿鈦的意義：</strong>在上市櫃公司建立資安管理系統並通過 ISO 27001，正是面對國際醫材與半導體客戶稽核所需的核心實力。
+          <div class="mt-3 pt-3 border-t border-slate-800 text-[11px] text-amber-200/90">
+            態度：充分與各部門同仁溝通痛點，提供培訓與過渡期，讓同仁覺得「新系統更好用」而非被強迫。
           </div>
         </div>
 
-        <!-- Case 3: 盛欣網絡 (AI治理與零信任) -->
+        <!-- Scheme 3: AI 導入各部門 (具體場景) -->
         <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
           <div>
-            <div class="text-xs text-purple-400 font-bold mb-1">AI 治理與零信任架構</div>
-            <h3 class="text-lg font-bold text-white mb-1">盛欣／盛碁網絡科技</h3>
-            <p class="text-xs text-slate-400 mb-4">技術副總／CIO (VP of Technology)｜台北、高雄、上海｜2025.05～至今</p>
-            
-            <div class="space-y-3 text-xs text-slate-300">
-              <div>
-                <span class="font-bold text-purple-300">【處境】</span>
-                跨國雲端資產破碎、資安人才短缺，同時急需導入 AI 提升跨國營運效率。
-              </div>
-              <div>
-                <span class="font-bold text-purple-300">【作法】</span>
-                Kubernetes 與 Terraform 落實基礎設施即代碼；落實零信任 IAM、MFA 與微分段；引進 ISO 42001 建立負責任 AI 護欄，將 Agentic AI 嵌入維運。
-              </div>
-              <div class="p-3 bg-slate-950/80 rounded-lg border border-slate-800 space-y-1 text-emerald-400 font-medium">
-                <div>✓ 流程自動化效率 +55%</div>
-                <div>✓ 核心服務可用率 +20%</div>
-                <div>✓ 資安事故年減 30%</div>
-                <div>✓ 開發到商用週期縮短 20% 以上</div>
-              </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded">方案三</span>
+              <span class="text-xs text-slate-400">跨單位賦能</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">AI 務實導入各部門（附各部建議）</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+              不搞空中樓閣，以「改善工作痛點、節省工時」為導向，提供各單位立即可用的落地範例：
+            </p>
+            <div class="space-y-2 text-xs text-slate-300">
+              <div><strong>• 生產／製造：</strong>機台異常日誌智慧歸納、微波開關打樣參數歷史比對推薦。</div>
+              <div><strong>• 品保單位：</strong>國際稽核規格問答、檢驗報告異常字樣自動初篩。</div>
+              <div><strong>• 業務單位：</strong>多國客戶詢價信件規格比對、產品型錄與交期自動查詢輔助。</div>
+              <div><strong>• 管理／人事：</strong>公司內規與福利知識庫問答、新進員工 SOP 培訓助理。</div>
+              <div><strong>• 資訊單位：</strong>程式碼除錯輔助、基礎網路障礙診斷、內部服務單 (Helpdesk) 自動分類。</div>
             </div>
           </div>
-          
-          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-purple-200/80 bg-purple-500/10 p-2 rounded">
-            <strong>對鐿鈦的意義：</strong>先立護欄、再放量使用，讓 AI 在不外流設計圖與客戶資料的前提下大幅提升生產力。
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-purple-300">
+            護欄：依 ISO 42001 原則建立白名單與地端模型，機敏圖面與客戶代號絕對不出廠。
+          </div>
+        </div>
+
+        <!-- Scheme 4: 資安作為底線 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-bold rounded">方案四</span>
+              <span class="text-xs text-slate-400">防護網</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">資安作為系統整合與 AI 的底線</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              資安不增加第一線過度繁瑣的負擔，而是在背後默默發揮防護作用，保證營運連續性。
+            </p>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-400 font-bold">•</span>
+                <span><strong>工廠網路實體/邏輯隔離：</strong>CNC、三次元量測儀與辦公網路微分段，防止單一 PC 中毒波及產線。</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-400 font-bold">•</span>
+                <span><strong>不可竄改備份機制：</strong>ERP、MES 與重要伺服器實施 3-2-1 離線/防勒索備份，保證能復原。</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-400 font-bold">•</span>
+                <span><strong>合規與客戶稽核應對：</strong>將資安條款結構化，面對美洲醫材大廠查核時迅速提供完整日誌佐證。</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-cyan-300">
+            目標：保障跨廠區連線順暢，客戶資安稽核零重大缺失。
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Chapter 07: 管理基石與方法論 (含框架圖) -->
+    <!-- Chapter 07: 帶領資訊團隊 (新增經理職核心) -->
     <section id="sec-07" class="scroll-mt-24">
       <div class="border-l-4 border-amber-500 pl-4 mb-6">
         <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 07</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">管理基石與方法論：從底層技術到數位轉型營運模式框架</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">帶領資訊團隊：尊重十年累積、保留既有分工、增設整合窗口</h2>
+        <p class="text-slate-400 text-sm mt-1">資訊經理最看重的是「帶人」與「協調」。我深知鐿鈦團隊在既有崗位上的長期貢獻，絕不貿然打亂組織。</p>
       </div>
 
-      <!-- Framework Image Spotlight Card -->
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 mb-8">
-        <div class="flex flex-col md:flex-row gap-8 items-center">
-          <div class="w-full md:w-1/2 space-y-4">
-            <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">獨創治理架構</span>
-            <h3 class="text-xl font-bold text-white">數位轉型營運模式框架圖 (DTOM)</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              業務主導、企業治理、集團 IT 賦能。五道治理護欄（AI、資料、資安、架構、法遵）套用在每個數位專案。
-            </p>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              需求依「部門審查 → 需求門檻 → 數位指導委員會 → 核准投資組合 → 執行治理」排定優先順序。用在鐿鈦，可讓醫材、工業與微波開關三事業部的 IT 需求用同一套客觀門檻決策，杜絕多頭馬車與無效益投資。
-            </p>
-            <div class="text-xs text-amber-400 flex items-center gap-1 font-semibold">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
-              點擊右側架構圖可放大瀏覽細節
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+          <div class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            保留既有雙軌專業分工
           </div>
-          
-          <div class="w-full md:w-1/2">
-            <div class="group relative rounded-xl overflow-hidden border border-slate-700 bg-slate-950 cursor-pointer shadow-xl" onclick="openLightbox('img/framework_diagram.jpg', '數位轉型營運模式框架圖')">
-              <img src="img/framework_diagram.jpg" alt="數位轉型營運模式框架圖" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
-                <span class="px-3 py-1.5 bg-amber-500 text-slate-950 rounded-lg text-xs font-bold shadow">點擊放大檢視</span>
-              </div>
-            </div>
-          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong>硬體網管組：</strong>專注於廠區網路、伺服器機房、機台連網與日常資訊設備穩定維運。<br><br>
+            <strong>程式開發組：</strong>專注於既有 ERP、內部表單維護、報表撰寫與資料庫日常作業。維持同仁安定感。
+          </p>
         </div>
+
+        <div class="bg-slate-900 border border-amber-500/40 bg-amber-500/5 rounded-xl p-5">
+          <div class="text-sm font-bold text-amber-300 mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            增設跨系統整合窗口
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            由我親自帶領，指派對業務流程熟悉的同仁擔任<strong>「整合專責窗口」</strong>，專門負責 PLM、SAP、MES 之間的介面定義、資料映射與跨部門痛點協調，不干擾既有維運小組。
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-purple-500/40 bg-purple-500/5 rounded-xl p-5">
+          <div class="text-sm font-bold text-purple-300 mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+            培育各部門 AI 種子同仁
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            在資訊部門內部以及生管、品保、管理部培育 1～2 位熱心同仁擔任<strong>「AI 種子」</strong>，由我手把手傳授工作流自動化與提示詞技巧，讓數位創新由下而上自然萌芽。
+          </p>
+        </div>
+
       </div>
 
-      <!-- Three Strategic Approaches -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl">
-          <div class="text-amber-400 font-bold text-sm mb-2">① 全域觀測站 (Full-Stack Observability)</div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            無法觀測就無法管理。整合日誌、資料庫與網路流量於單一平台，7×24 監控；資安威脅與系統瓶頸的發現速度提升 50%。
-          </p>
-        </div>
-
-        <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl">
-          <div class="text-amber-400 font-bold text-sm mb-2">② 以職缺觀測預判技術節奏</div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            追蹤全球科技巨頭與同業招募布局，預判未來 2～3 年技術投資方向，避開噱頭炒作，把預算放在真正產生價值的地方。
-          </p>
-        </div>
-
-        <div class="bg-slate-900/60 border border-slate-800 p-5 rounded-xl">
-          <div class="text-amber-400 font-bold text-sm mb-2">③ 隱性知識 SOP 化與 AI 輔助</div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            把精密加工資深人員的調機、量測與維護經驗結構化為知識庫，讓 AI 輔助決策、縮短新人學習曲線，保障老師傅經驗無縫傳承。
-          </p>
-        </div>
+      <div class="p-4 bg-slate-900/60 border border-slate-800 rounded-xl text-xs text-slate-300">
+        <span class="font-bold text-amber-400">管理心態：</span>
+        一個好的資訊主管不是在冷氣房下指令，而是站在同仁身邊搬走障礙。面對資深人員的習慣，以耐心傾聽與尊重為先；面對年輕同仁的成長，給予舞台與學習資源。
       </div>
     </section>
 
-    <!-- Chapter 08: 為鐿鈦規劃的三個方案 -->
+    <!-- Chapter 08: 到任計畫與第一年 KPI (整合、Notes、AI、團隊) -->
     <section id="sec-08" class="scroll-mt-24">
       <div class="border-l-4 border-amber-500 pl-4 mb-6">
         <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 08</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">為鐿鈦規劃的三個方案：先資安、再數據、後 AI，並同步鋪好多據點底座</h2>
-      </div>
-
-      <div class="space-y-6">
-        
-        <!-- Scheme 1 -->
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <div class="flex items-center gap-2">
-              <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">方案一</span>
-              <h3 class="text-lg sm:text-xl font-bold text-white">經得起國際客戶稽核的資安治理體系</h3>
-            </div>
-            <span class="text-xs text-slate-400 font-medium">目的：接新案與通過客戶稽核的必備條件</span>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-300 mb-4">
-            醫材客戶在意的不只是零件精度，也包括設計圖、製程參數與追溯紀錄的保護。資安做得好，是接新案與通過國際大廠稽核的先決條件，而不只是成本。
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-300">
-            <div class="p-3 bg-slate-950 rounded-lg border border-slate-800/80">
-              <span class="font-bold text-amber-400">1. ISO 27001 資安管理系統：</span>盤點資產與風險，建立政策與標準作業程序，推動第三方驗證。
-            </div>
-            <div class="p-3 bg-slate-950 rounded-lg border border-slate-800/80">
-              <span class="font-bold text-amber-400">2. 工廠網路分段與零信任：</span>CNC、量測設備與辦公網路嚴格隔離；落實 IAM、MFA 與最小權限原則。
-            </div>
-            <div class="p-3 bg-slate-950 rounded-lg border border-slate-800/80">
-              <span class="font-bold text-amber-400">3. 客戶資料安全交換：</span>圖面、工程變更、檢驗規格與品質紀錄加密傳輸與完整稽核日誌。
-            </div>
-            <div class="p-3 bg-slate-950 rounded-lg border border-slate-800/80">
-              <span class="font-bold text-amber-400">4. 勒索軟體強韌性：</span>建置不可竄改備份 (Immutable Backup) 與定時災難復原演練，確保產線不停擺。
-            </div>
-            <div class="p-3 bg-slate-950 rounded-lg border border-slate-800/80 md:col-span-2">
-              <span class="font-bold text-amber-400">5. 董事會資安季報：</span>建立量化資安指標，以風險態勢、合規進度與投資回報向董事會/審計委員會報告。
-            </div>
-          </div>
-        </div>
-
-        <!-- Scheme 2 -->
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <div class="flex items-center gap-2">
-              <span class="px-2.5 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-bold rounded">方案二</span>
-              <h3 class="text-lg sm:text-xl font-bold text-white">打通訂單到現場的智慧製造數據底座</h3>
-            </div>
-            <span class="text-xs text-slate-400 font-medium">原則：核心標準化、擴充外部化 (Clean Core)</span>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-300 mb-4">
-            先串聯資料，再談進階 AI。盡量發揮 ERP 標準架構，減少大量客製化造成的升級技術債。
-          </p>
-          
-          <!-- Data Pipeline Flow -->
-          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-xs mb-4">
-            <div class="p-3 bg-slate-950 rounded-lg border border-slate-800">
-              <div class="font-bold text-amber-400">ERP</div>
-              <div class="text-[11px] text-slate-400 mt-1">訂單與物料</div>
-            </div>
-            <div class="p-3 bg-slate-950 rounded-lg border border-slate-800">
-              <div class="font-bold text-amber-400">APS</div>
-              <div class="text-[11px] text-slate-400 mt-1">動態排程與產能</div>
-            </div>
-            <div class="p-3 bg-slate-950 rounded-lg border border-slate-800">
-              <div class="font-bold text-amber-400">MES / 機台</div>
-              <div class="text-[11px] text-slate-400 mt-1">現場工單聯網</div>
-            </div>
-            <div class="p-3 bg-slate-950 rounded-lg border border-slate-800">
-              <div class="font-bold text-amber-400">品質檢驗</div>
-              <div class="text-[11px] text-slate-400 mt-1">UDI 批號追溯</div>
-            </div>
-            <div class="p-3 bg-slate-950 rounded-lg border border-amber-500/40 bg-amber-500/10 col-span-2 sm:col-span-1">
-              <div class="font-bold text-amber-300">BI 戰情室</div>
-              <div class="text-[11px] text-amber-200 mt-1">經營決策支援</div>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-slate-300">
-            <div class="p-3 bg-slate-950/60 rounded-lg">
-              <div class="font-bold text-slate-200 mb-1">庫存看得見</div>
-              以料號與訂單追蹤在製品與成品庫存，找出呆滯成因，逐步縮短 222 天存貨周轉。
-            </div>
-            <div class="p-3 bg-slate-950/60 rounded-lg">
-              <div class="font-bold text-slate-200 mb-1">良率與 OEE 即時化</div>
-              南屯總部與后里兩廠的良率、稼動率與停機原因，以同一套度量即時呈現。
-            </div>
-            <div class="p-3 bg-slate-950/60 rounded-lg">
-              <div class="font-bold text-slate-200 mb-1">新產品導入加速 (NPI)</div>
-              支援微波開關與半導體零組件的多品種小批量快速打樣與彈性排程。
-            </div>
-          </div>
-        </div>
-
-        <!-- Scheme 3 -->
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <div class="flex items-center gap-2">
-              <span class="px-2.5 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded">方案三</span>
-              <h3 class="text-lg sm:text-xl font-bold text-white">有護欄的 AI，與可複製的跨國 IT 底座</h3>
-            </div>
-            <span class="text-xs text-slate-400 font-medium">美國設廠與日本深化之數位基石</span>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="space-y-2">
-              <h4 class="text-xs font-bold text-purple-300 uppercase tracking-wide">AI 導入與合規治理</h4>
-              <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
-                <li><strong>立護欄：</strong>依 ISO 42001 訂定 AI 使用規範，圖面與客戶機敏資料不出廠。</li>
-                <li><strong>優先場景：</strong>AOI 品檢影像輔助判讀、詢價報價文件整理、製程知識庫問答。</li>
-                <li><strong>推動方式：</strong>主管先學、小題目先試，產生成效再向各部門擴散。</li>
-              </ul>
-            </div>
-            
-            <div class="space-y-2">
-              <h4 class="text-xs font-bold text-purple-300 uppercase tracking-wide">多據點跨國 IT 底座</h4>
-              <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
-                <li><strong>標準化範本：</strong>以基礎設施即代碼 (IaC) 建立可直接複製至美國廠的據點範本。</li>
-                <li><strong>統一存取：</strong>美國廠、日本子公司與台灣總部共用零信任存取與集中帳號治理。</li>
-                <li><strong>費用治理：</strong>雲端與軟體授權導入 FinOps，避免擴張時 IT 費用失控失衡。</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Chapter 09: 到任計畫與第一年指標 -->
-    <section id="sec-09" class="scroll-mt-24">
-      <div class="border-l-4 border-amber-500 pl-4 mb-6">
-        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 09</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">到任計畫與第一年指標：前 90 天先聽、再定、後動</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">到任計畫與第一年指標：整合、Notes、AI、團隊四大軸線</h2>
       </div>
 
       <!-- 30-60-90 Days Plan -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 relative">
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
           <div class="text-2xl font-extrabold text-amber-400 mb-1">30 天</div>
-          <div class="text-sm font-bold text-white mb-2">盤點與傾聽</div>
+          <div class="text-sm font-bold text-white mb-2">傾聽同仁與盤點痛點</div>
           <ul class="text-xs text-slate-300 space-y-1.5">
-            <li>• 訪談董事長、總經理與各事業負責人</li>
-            <li>• 盤點系統、資料流與資安現況</li>
-            <li>• 整理近期客戶稽核要求與缺失清單</li>
+            <li>• 一對一訪談資訊團隊所有同仁，了解既有維運負擔</li>
+            <li>• 走訪南屯與后里廠，訪談生管、品保、製造部主管</li>
+            <li>• 盤點現行 Lotus Notes 資料庫數量、用途與活躍度</li>
           </ul>
           <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-amber-400 font-semibold">
-            交付：現況診斷與瓶頸分析報告
+            交付：現行系統斷點與 Notes 盤點清單
           </div>
         </div>
 
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 relative">
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
           <div class="text-2xl font-extrabold text-amber-400 mb-1">60 天</div>
-          <div class="text-sm font-bold text-white mb-2">藍圖與優先順序</div>
+          <div class="text-sm font-bold text-white mb-2">擬定整合與轉移藍圖</div>
           <ul class="text-xs text-slate-300 space-y-1.5">
-            <li>• 提出三年 IT 與資安轉型藍圖</li>
-            <li>• 排定各項投資順序與預算框架</li>
-            <li>• 與經營團隊確認 KPI 基準值</li>
+            <li>• 提出 PLM / SAP / MES 介接優先順序方案</li>
+            <li>• 完成 Notes 表單三級分類（移轉/替代/歸檔）</li>
+            <li>• 規劃 AI 工具測試環境與第一批試點題目</li>
           </ul>
           <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-amber-400 font-semibold">
-            交付：三年藍圖、首次董事會資安報告
+            交付：系統整合實施計畫與主管共識確認
           </div>
         </div>
 
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 relative">
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
           <div class="text-2xl font-extrabold text-amber-400 mb-1">90 天</div>
-          <div class="text-sm font-bold text-white mb-2">快速見效 (Quick Wins)</div>
+          <div class="text-sm font-bold text-white mb-2">小步快跑、交付成效</div>
           <ul class="text-xs text-slate-300 space-y-1.5">
-            <li>• 啟動 ISO 27001 專案推動</li>
-            <li>• 上線第一版庫存與良率戰情看板</li>
-            <li>• 發布 AI 使用規範，選定 1 個試點落地</li>
+            <li>• 上線第一個產線工單介接串聯驗證 (PoC)</li>
+            <li>• 啟動第一批高頻 Notes 表單之替代移轉</li>
+            <li>• 舉辦第一場跨部門 AI 增能工作坊</li>
           </ul>
           <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-amber-400 font-semibold">
-            交付：看得見、能量化的第一批成果
+            交付：第一批看的見的便利與同仁滿意度
           </div>
         </div>
       </div>
 
-      <!-- First Year KPI Table -->
+      <!-- KPI Table -->
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
-        <div class="text-sm font-bold text-white mb-3">第一年：用經營團隊看得懂的指標檢驗成果</div>
+        <div class="text-sm font-bold text-white mb-3">第一年指標檢驗表（四面向）</div>
         <div class="overflow-x-auto">
           <table class="min-w-full divide-y divide-slate-800 text-xs sm:text-sm">
             <thead class="bg-slate-950/60">
               <tr>
-                <th class="px-4 py-3 text-left font-bold text-slate-300">面向</th>
-                <th class="px-4 py-3 text-left font-bold text-slate-300">指標名稱</th>
-                <th class="px-4 py-3 text-left font-bold text-amber-400">第一年建議目標</th>
+                <th class="px-4 py-3 text-left font-bold text-slate-300 w-1/4">核心面向</th>
+                <th class="px-4 py-3 text-left font-bold text-slate-300 w-1/3">檢驗項目</th>
+                <th class="px-4 py-3 text-left font-bold text-amber-400">第一年預期目標</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-800 text-slate-300">
               <tr>
-                <td class="px-4 py-3 font-semibold text-white">資安治理</td>
-                <td class="px-4 py-3">ISO 27001 驗證進度</td>
-                <td class="px-4 py-3 text-amber-400 font-semibold">完成導入，進入驗證稽核階段</td>
+                <td class="px-4 py-3 font-semibold text-white">系統整合</td>
+                <td class="px-4 py-3">PLM/SAP/MES 關鍵流程串接</td>
+                <td class="px-4 py-3 text-amber-400 font-semibold">打通研發工程圖面至工單報工之斷點</td>
               </tr>
               <tr>
-                <td class="px-4 py-3 font-semibold text-white">客戶稽核</td>
-                <td class="px-4 py-3">客戶資安稽核重大缺失數</td>
-                <td class="px-4 py-3 text-emerald-400 font-semibold">0 重大缺失</td>
+                <td class="px-4 py-3 font-semibold text-white">Notes 移轉</td>
+                <td class="px-4 py-3">高頻簽核表單移轉比例</td>
+                <td class="px-4 py-3 text-emerald-400 font-semibold">完成前 50% 核心業務表單平穩替換與歸檔</td>
               </tr>
               <tr>
-                <td class="px-4 py-3 font-semibold text-white">系統穩定</td>
-                <td class="px-4 py-3">關鍵系統 (ERP/MES) 可用率</td>
-                <td class="px-4 py-3">到任後依基準訂定明確改善目標</td>
+                <td class="px-4 py-3 font-semibold text-white">AI 導入</td>
+                <td class="px-4 py-3">各部門實質落地應用數</td>
+                <td class="px-4 py-3 text-purple-400 font-semibold">完成 3～4 個跨部門實用工具（品檢/業務/內規）</td>
               </tr>
               <tr>
-                <td class="px-4 py-3 font-semibold text-white">製造數據</td>
-                <td class="px-4 py-3">戰情看板涵蓋的產線比例</td>
-                <td class="px-4 py-3 text-amber-400 font-semibold">涵蓋主要產線（南屯與后里）</td>
-              </tr>
-              <tr>
-                <td class="px-4 py-3 font-semibold text-white">庫存管理</td>
-                <td class="px-4 py-3">存貨周轉天數</td>
-                <td class="px-4 py-3">建立即時在製品能見度，設定降低天數</td>
-              </tr>
-              <tr>
-                <td class="px-4 py-3 font-semibold text-white">AI 應用</td>
-                <td class="px-4 py-3">通過治理審查並上線的場景</td>
-                <td class="px-4 py-3 text-amber-400 font-semibold">2～3 個具體場景</td>
+                <td class="px-4 py-3 font-semibold text-white">團隊帶領</td>
+                <td class="px-4 py-3">部門同仁向心力與滿意度</td>
+                <td class="px-4 py-3 text-cyan-400 font-semibold">同仁專業能力提升、團隊流動率維持低檔</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="mt-3 text-[11px] text-slate-500">
-          * 尚未看到內部基準前，不冒然寫死百分比；到任 60 天內與經營團隊共同訂定合理且具挑戰性的目標。
-        </div>
       </div>
     </section>
 
-    <!-- Chapter 10: 媒體報導與演講佐證 -->
-    <section id="sec-10" class="scroll-mt-24">
+    <!-- Chapter 09: 媒體報導、演講與證照佐證 -->
+    <section id="sec-09" class="scroll-mt-24">
       <div class="border-l-4 border-amber-500 pl-4 mb-6">
-        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 10</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">媒體報導、演講與證照佐證</h2>
-        <p class="text-slate-400 text-sm mt-1">隆中網絡任內成果獲 CIO IT 經理人、iThome 與 MongoDB 報導；演講場合涵蓋原廠大會與產業交流。點擊圖片可放大檢視。</p>
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 09</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">專業認證、媒體報導與產學實力</h2>
+        <p class="text-slate-400 text-sm mt-1">成果獲產業媒體報導；具備供應鏈、資料庫、專案管理與 AI 治理專業資質。點擊可放大。</p>
       </div>
 
       <!-- Media Grid -->
       <div class="mb-8">
-        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">媒體專題報導與專訪 (4)</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">媒體專題報導與原廠大會 (4)</div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           
-          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_01_cio_person.jpg', 'CIO IT 經理人 風雲人物專訪：多雲管理')">
+          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_01_cio_person.jpg', 'CIO IT 經理人 風雲人物專訪')">
             <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-2">
-              <img src="img/media_01_cio_person.jpg" alt="CIO IT 經理人 風雲人物專訪" class="w-full h-full object-cover group-hover:scale-105 transition">
+              <img src="img/media_01_cio_person.jpg" alt="CIO IT 經理人 專訪" class="w-full h-full object-cover group-hover:scale-105 transition">
             </div>
             <div class="text-xs font-bold text-slate-200 truncate">CIO IT 經理人</div>
-            <div class="text-[11px] text-slate-400">風雲人物專訪：多雲管理</div>
+            <div class="text-[11px] text-slate-400">風雲人物專訪：系統與多雲管理</div>
           </div>
 
           <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_02_cio_cover.jpg', 'CIO IT 經理人雜誌 2024年5月號封面')">
             <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-2">
-              <img src="img/media_02_cio_cover.jpg" alt="CIO IT 經理人雜誌 封面" class="w-full h-full object-cover group-hover:scale-105 transition">
+              <img src="img/media_02_cio_cover.jpg" alt="CIO 封面" class="w-full h-full object-cover group-hover:scale-105 transition">
             </div>
             <div class="text-xs font-bold text-slate-200 truncate">CIO IT 經理人雜誌</div>
-            <div class="text-[11px] text-slate-400">2024 年 5 月號封面專題</div>
+            <div class="text-[11px] text-slate-400">2024 年 5 月號封面人物</div>
           </div>
 
-          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_03_ithome_mongodb.jpg', 'iThome 專題：MongoDB Atlas 遊戲資料管理平台')">
+          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_01_mongodb_local.jpg', 'MongoDB.local Taipei (2024) 大會主講')">
+            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-2">
+              <img src="img/speech_01_mongodb_local.jpg" alt="MongoDB 大會主講" class="w-full h-full object-cover group-hover:scale-105 transition">
+            </div>
+            <div class="text-xs font-bold text-slate-200 truncate">MongoDB.local Taipei</div>
+            <div class="text-[11px] text-slate-400">年度大會架構主講人</div>
+          </div>
+
+          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_03_ithome_mongodb.jpg', 'iThome 專題報導')">
             <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-2">
               <img src="img/media_03_ithome_mongodb.jpg" alt="iThome 專題" class="w-full h-full object-cover group-hover:scale-105 transition">
             </div>
-            <div class="text-xs font-bold text-slate-200 truncate">iThome 專題報導</div>
-            <div class="text-[11px] text-slate-400">MongoDB Atlas 全球資料平台</div>
-          </div>
-
-          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_04_mongodb_ithome.jpg', 'MongoDB × iThome 聯合專訪')">
-            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-2">
-              <img src="img/media_04_mongodb_ithome.jpg" alt="MongoDB x iThome 專訪" class="w-full h-full object-cover group-hover:scale-105 transition">
-            </div>
-            <div class="text-xs font-bold text-slate-200 truncate">MongoDB × iThome</div>
-            <div class="text-[11px] text-slate-400">官方聯合專訪</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Speeches Grid -->
-      <div class="mb-8">
-        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">原廠大會演講與產業交流 (4)</div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          
-          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_01_mongodb_local.jpg', 'MongoDB.local Taipei (2024) 大會主講')">
-            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-2">
-              <img src="img/speech_01_mongodb_local.jpg" alt="MongoDB.local 主講" class="w-full h-full object-cover group-hover:scale-105 transition">
-            </div>
-            <div class="text-xs font-bold text-slate-200 truncate">MongoDB.local Taipei</div>
-            <div class="text-[11px] text-slate-400">2024 年度大會主講人</div>
-          </div>
-
-          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_02_interview_live.jpg', 'MongoDB × iThome 專訪現場')">
-            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-2">
-              <img src="img/speech_02_interview_live.jpg" alt="專訪現場" class="w-full h-full object-cover group-hover:scale-105 transition">
-            </div>
-            <div class="text-xs font-bold text-slate-200 truncate">原廠專訪現場</div>
-            <div class="text-[11px] text-slate-400">實體論壇與經驗交流</div>
-          </div>
-
-          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_03_enterprise_cloud.jpg', '企業上雲 產業交流活動')">
-            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-2">
-              <img src="img/speech_03_enterprise_cloud.jpg" alt="企業上雲" class="w-full h-full object-cover group-hover:scale-105 transition">
-            </div>
-            <div class="text-xs font-bold text-slate-200 truncate">企業上雲交流</div>
-            <div class="text-[11px] text-slate-400">雲端架構與治理座談</div>
-          </div>
-
-          <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2.5 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_04_civil_service.jpg', 'e 等公務園＋ 洞見機遇：雲端管理與實務')">
-            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-2">
-              <img src="img/speech_04_civil_service.jpg" alt="e等公務園" class="w-full h-full object-cover group-hover:scale-105 transition">
-            </div>
-            <div class="text-xs font-bold text-slate-200 truncate">e 等公務園＋</div>
-            <div class="text-[11px] text-slate-400">洞見機遇：雲端管理與實務</div>
+            <div class="text-xs font-bold text-slate-200 truncate">iThome 專題</div>
+            <div class="text-[11px] text-slate-400">高可用資料管理平台架構</div>
           </div>
 
         </div>
@@ -1217,7 +891,7 @@
             <div>
               <div class="text-xs font-bold text-white">GS1 條碼管理師</div>
               <div class="text-[11px] text-amber-400 mt-0.5">供應鏈條碼與產品追溯</div>
-              <div class="text-[10px] text-slate-400">直接對應醫療器材 UDI 批號管理規範</div>
+              <div class="text-[10px] text-slate-400">直接對應醫療器材 UDI 批號追溯標準</div>
             </div>
           </div>
 
@@ -1228,7 +902,7 @@
             <div>
               <div class="text-xs font-bold text-white">Oracle 供應鏈模組認證</div>
               <div class="text-[11px] text-amber-400 mt-0.5">EBS 採購、庫存、訂單</div>
-              <div class="text-[10px] text-slate-400">大型資料庫與企業 ERP 架構深厚底子</div>
+              <div class="text-[10px] text-slate-400">二十多年深厚關聯式資料庫實底</div>
             </div>
           </div>
 
@@ -1238,130 +912,69 @@
             </div>
             <div>
               <div class="text-xs font-bold text-white">WBSA 商務企劃師</div>
-              <div class="text-[11px] text-amber-400 mt-0.5">商業策略轉譯與提案</div>
-              <div class="text-[10px] text-slate-400">把技術語言精準翻譯為高層商業決策</div>
+              <div class="text-[11px] text-amber-400 mt-0.5">商業策略轉譯與協調</div>
+              <div class="text-[10px] text-slate-400">把技術語言精準翻譯為各部門工作價值</div>
             </div>
           </div>
 
         </div>
-        <div class="text-[11px] text-slate-500 mt-3">
-          * ISO 27001 / ISO 42001 主導稽核員、PMP 專案管理師、CSM 敏捷認證等實體證書，均可於面談時備查檢驗。
-        </div>
       </div>
     </section>
 
-    <!-- Chapter 11 & 12: 學歷、產業影響力與結語 -->
-    <section id="sec-12" class="scroll-mt-24 border-t border-slate-800 pt-16">
+    <!-- Chapter 10: 結語與即時對接 -->
+    <section id="sec-10" class="scroll-mt-24 border-t border-slate-800 pt-16">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="max-w-4xl mx-auto bg-gradient-to-br from-slate-900 to-slate-950 border border-amber-500/30 rounded-2xl p-6 sm:p-10 space-y-6 text-center">
         
-        <!-- Left: Academic & Industry influence -->
-        <div class="lg:col-span-6 space-y-6">
-          <div class="border-l-4 border-amber-500 pl-4">
-            <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 11</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white">學歷、專業認證與產業影響力</h2>
+        <div class="flex justify-center">
+          <img src="img/avatar_conclusion.jpg" alt="廖倫豪 博士" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-amber-500 shadow-xl cursor-pointer hover:scale-105 transition duration-300" onclick="openLightbox('img/avatar_conclusion.jpg', '廖倫豪 博士')">
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">願做鐿鈦數位營運最穩固的橋樑</h2>
+          <p class="italic font-serif text-amber-200/90 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            「最好的資訊主管，不是展示高深技術，而是把技術轉化為同仁手裡順手的工具、為公司省下成本、為客戶交付品質。」
+          </p>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            我的家就在台中，長期在台中榮總擔任顧問，對醫材有著無比的熱忱與敬重。我非常期待能加入鐿鈦團隊，與各位長官、同仁一起把系統串好、把 Notes 穩穩移轉、讓 AI 真正幫助到每一個部門。
+          </p>
+        </div>
+
+        <!-- Direct Contact Card -->
+        <div class="max-w-md mx-auto bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs space-y-2 text-left">
+          <div class="font-bold text-amber-400 uppercase tracking-wider text-[11px] mb-2">直接聯絡管道</div>
+          <div class="flex items-center justify-between py-1 border-b border-slate-900">
+            <span class="text-slate-400">電話 (Phone)</span>
+            <a href="tel:+886975323161" class="text-slate-200 font-mono font-bold hover:text-amber-400">+886-975-323161</a>
           </div>
-
-          <div class="space-y-4 text-xs">
-            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-              <div class="font-bold text-white text-sm mb-1">學歷背景</div>
-              <div class="text-slate-300">
-                <strong class="text-amber-400">博士 (Ph.D.)</strong> 朝陽科技大學 資訊管理研究所｜企業資訊架構現代化、混合雲資安治理<br>
-                <strong class="text-amber-400">碩士 (M.S.)</strong> 國立中興大學 資訊科學與工程研究所｜密碼學、資料探勘、資料治理
-              </div>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-              <div class="font-bold text-white text-sm mb-1">重要專業資質</div>
-              <div class="text-slate-300 space-y-1">
-                <div>• ISO 27001 資訊安全管理系統主導稽核員 (Lead Auditor)</div>
-                <div>• ISO 42001 人工智慧治理管理系統認證</div>
-                <div>• PMP 國際專案管理師 (Project Management Professional)</div>
-                <div>• CSM 敏捷專案管理師 (Certified ScrumMaster)</div>
-                <div>• Oracle Certified Professional (OCP & OCA)</div>
-                <div>• ESG 永續管理師認證、WBSA 企劃師</div>
-              </div>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-              <div class="font-bold text-white text-sm mb-1">產業影響力與社會責任</div>
-              <div class="text-slate-300 space-y-1">
-                <div>• MongoDB.local Taipei 大會主講 (2024)</div>
-                <div>• CIO 價值學院演講人 (2024)、資安高峰論壇主講</div>
-                <div>• Google Cloud 官方全球客戶成功案例代表</div>
-                <div>• 康善基金會 常務董事 (深耕公益與社會回饋)</div>
-              </div>
-            </div>
+          <div class="flex items-center justify-between py-1 border-b border-slate-900">
+            <span class="text-slate-400">電子郵件 (Email)</span>
+            <a href="mailto:Liao.Howard@gmail.com" class="text-slate-200 font-mono hover:text-amber-400">Liao.Howard@gmail.com</a>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-slate-900">
+            <span class="text-slate-400">工作地點 (Location)</span>
+            <span class="text-amber-400 font-medium">可常駐台中（南屯總部・后里廠）</span>
+          </div>
+          <div class="flex items-center justify-between py-1">
+            <span class="text-slate-400">目前狀態 (Status)</span>
+            <span class="text-emerald-400 font-medium">全力投入面談準備・可隨時配合長官時間</span>
           </div>
         </div>
 
-        <!-- Right: Chapter 12 結語與即時對接 -->
-        <div class="lg:col-span-6 bg-gradient-to-br from-slate-900 to-slate-950 border border-amber-500/30 rounded-2xl p-6 sm:p-8 space-y-5">
-          <div class="border-l-4 border-amber-500 pl-4">
-            <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Chapter 12</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white">結語：技術語言翻譯成經營與風險語言</h2>
-          </div>
-
-          <div class="flex items-start gap-4 pt-2">
-            <img src="img/avatar_conclusion.jpg" alt="廖倫豪 博士" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-amber-400 flex-shrink-0 cursor-pointer shadow-lg" onclick="openLightbox('img/avatar_conclusion.jpg', '廖倫豪 博士')">
-            <div class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
-              <p class="italic font-serif text-amber-200/90 text-sm sm:text-base">
-                「最好的技術主管，是把技術語言翻譯成經營與風險語言的人。」
-              </p>
-              <p>
-                鐿鈦正站在醫材、半導體與 AI 高速測試三條成長線的交會點。我希望協助公司建立經得起國際客戶檢驗的數位底座，讓成長走得更穩、更遠。
-              </p>
-              <p class="text-slate-400 text-xs">
-                若經營團隊方便，我很樂意安排面談交流，並參訪南屯總部與后里廠。
-              </p>
-            </div>
-          </div>
-
-          <!-- Direct Contact Card -->
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs space-y-2">
-            <div class="font-bold text-white text-xs mb-2 text-amber-400 uppercase tracking-wider">直接聯繫資訊</div>
-            <div class="flex items-center justify-between py-1 border-b border-slate-900">
-              <span class="text-slate-400">電話 (Phone)</span>
-              <a href="tel:+886975323161" class="text-slate-200 font-mono font-bold hover:text-amber-400">+886-975-323161</a>
-            </div>
-            <div class="flex items-center justify-between py-1 border-b border-slate-900">
-              <span class="text-slate-400">電子郵件 (Email)</span>
-              <a href="mailto:Liao.Howard@gmail.com" class="text-slate-200 font-mono hover:text-amber-400">Liao.Howard@gmail.com</a>
-            </div>
-            <div class="flex items-center justify-between py-1 border-b border-slate-900">
-              <span class="text-slate-400">LinkedIn</span>
-              <a href="https://www.linkedin.com/in/howardliao78" target="_blank" class="text-slate-200 hover:text-amber-400">howardliao78</a>
-            </div>
-            <div class="flex items-center justify-between py-1">
-              <span class="text-slate-400">工作地點 (Location)</span>
-              <span class="text-amber-400 font-medium">可常駐台中（南屯總部・后里廠）</span>
-            </div>
-          </div>
-
-          <!-- Quick Actions -->
-          <div class="flex flex-wrap gap-2 pt-2">
-            <button onclick="copyContact()" class="flex-1 px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-              一鍵複製聯絡資訊
-            </button>
-            <a href="廖倫豪_鐿鈦4163_書面自薦書.pdf" target="_blank" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs border border-slate-700 transition flex items-center justify-center gap-1.5">
-              <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-              下載書面自薦書
-            </a>
-          </div>
-
+        <!-- Quick Actions -->
+        <div class="flex flex-wrap justify-center gap-3 pt-2 max-w-md mx-auto">
+          <button onclick="copyContact()" class="flex-1 px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+            一鍵複製聯絡資訊
+          </button>
+          <a href="廖倫豪_鐿鈦4163_書面自薦書.pdf" target="_blank" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs border border-slate-700 transition flex items-center justify-center gap-1.5">
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            下載書面自薦書
+          </a>
         </div>
 
       </div>
 
-    </section>
-
-    <!-- Data Sources Citation Section -->
-    <section class="text-[11px] text-slate-500 border-t border-slate-800/80 pt-8 space-y-2">
-      <div class="font-bold text-slate-400">資料來源與公開性說明：</div>
-      <p>
-        鐿鈦相關財務與產業數據皆取自公開資料（包括 HiStock、Win 投資、富果、MoneyDJ、鉅亨網、FindBillion 等公開財報與法說會備忘錄），未使用任何公司內部非公開資訊。個人經歷與交付成果數字取自本人正式履歷（Executive Portfolio 2025–2026），皆備有完整實績證明與推薦人聯絡方式。
-      </p>
     </section>
 
   </main>
@@ -1370,10 +983,10 @@
   <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-xs text-slate-500 no-print">
     <div class="max-w-7xl mx-auto px-4 space-y-2">
       <div>
-        © 2026 廖倫豪 博士 (Howard Liao, Ph.D.) ｜ 鐿鈦科技（4163.TWO）資訊長暨資安長應聘自薦案
+        © 2026 廖倫豪 博士 (Howard Liao, Ph.D.) ｜ 鐿鈦科技（4163.TWO）資訊經理（系統整合與 AI 導入）自薦專案
       </div>
       <div class="text-[11px] text-slate-600">
-        本頁專案程式碼與三份完整 PDF 原始檔託管於 GitHub：<a href="https://github.com/HowardLiao/4163" target="_blank" class="text-amber-500/80 hover:text-amber-400 underline">HowardLiao/4163</a>
+        本頁專案程式碼與 PDF 原始檔託管於 GitHub：<a href="https://github.com/HowardLiao/4163" target="_blank" class="text-amber-500/80 hover:text-amber-400 underline">HowardLiao/4163</a>
       </div>
     </div>
   </footer>
@@ -1403,13 +1016,11 @@
         '26/01', '26/02', '26/03', '26/04', '26/05', '26/06', '26/07', '26/08', '26/09'
       ];
       
-      // Monthly revenue data in NTD millions
       const dataValues = [
         195, 205, 210, 202, 218, 225, 230,
         210, 198, 220, 235, 240, 248, 290, 265, 252
       ];
 
-      // Bar colors: highlight 26/07 (high surge) in bright amber
       const backgroundColors = dataValues.map((v, i) => {
         if (i === 13) return '#F59E0B'; // 26/07 peak
         return i >= 7 ? '#D97706' : '#4B5563';
@@ -1474,8 +1085,8 @@
       const text = '廖倫豪 博士 (Howard Liao, Ph.D.)
 電話：+886-975-323161
 Email：Liao.Howard@gmail.com
-職缺：鐿鈦科技（4163）資訊長暨資安長 (CIO/CISO) 候選人
-地點：可常駐台中';
+應徵：鐿鈦科技（4163）資訊經理（系統整合與 AI 導入）
+地點：常駐台中（住家鄰近・長期擔任中榮顧問）';
       navigator.clipboard.writeText(text).then(() => {
         const toast = document.getElementById('copyToast');
         toast.classList.remove('translate-y-20', 'opacity-0');
