@@ -305,15 +305,19 @@
               <span class="font-bold text-white text-base">廖倫豪 博士 敬上</span>
             </div>
 
-            <!-- Chapter 01 Photos: 實體工作特寫 & 顧問思維 -->
+            <!-- Chapter 01 Photos: 實體工作特寫 & 顧問思維 (Full Display, No Cropping) -->
             <div class="pt-4 border-t border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="rounded-xl overflow-hidden border border-slate-800 cursor-pointer group" onclick="openLightbox('img/portrait_202604.jpg', '廖倫豪 博士・在地深耕專業形象')">
-                <img src="img/portrait_202604.jpg" alt="Portrait" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-2 bg-slate-950 text-[11px] text-slate-400 text-center">廖倫豪 博士｜立足台中・深耕精密製造</div>
+              <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 cursor-pointer group flex flex-col justify-between shadow-lg" onclick="openLightbox('img/portrait_202604.jpg', 'Howard Liao, Ph.D. - Deeply Rooted in Taichung & Precision Manufacturing')">
+                <div class="w-full h-80 sm:h-96 flex items-center justify-center bg-slate-950 p-2 overflow-hidden">
+                  <img src="img/portrait_202604.jpg" alt="Portrait" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-2.5 bg-slate-950 border-t border-slate-800/80 text-[11px] text-slate-300 text-center font-medium">Howard Liao, Ph.D. ｜ Based in Taichung • Dedicated to Precision Manufacturing</div>
               </div>
-              <div class="rounded-xl overflow-hidden border border-slate-800 cursor-pointer group" onclick="openLightbox('img/methodology_question_matter.jpg', '顧問思維：問題比答案重要')">
-                <img src="img/methodology_question_matter.jpg" alt="Methodology" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-2 bg-slate-950 text-[11px] text-slate-400 text-center">顧問思維：深入現場找出真因，問題比答案更重要</div>
+              <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 cursor-pointer group flex flex-col justify-between shadow-lg" onclick="openLightbox('img/methodology_question_matter.jpg', 'Consultant Mindset: Problems Are More Important Than Answers')">
+                <div class="w-full h-80 sm:h-96 flex items-center justify-center bg-slate-950 p-2 overflow-hidden">
+                  <img src="img/methodology_question_matter.jpg" alt="Methodology" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-2.5 bg-slate-950 border-t border-slate-800/80 text-[11px] text-slate-300 text-center font-medium">Consultant Mindset: On-site Deep Dive to Uncover Root Causes</div>
               </div>
             </div>
           </div>
@@ -726,7 +730,7 @@
               <p class="text-xs text-slate-400 mb-3">台灣、深圳、上海、昆山、泰國｜2018.03～2022.08</p>
               
               <div class="mb-3 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/team_lobster.jpg', '泓晏科技製造現場與團隊')">
-                <img src="img/team_lobster.jpg" alt="Plant Team" class="w-full h-32 object-cover hover:scale-105 transition">
+                <div class="w-full h-36 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/team_lobster.jpg" alt="Plant Team" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               </div>
 
               <div class="space-y-2 text-xs text-slate-300">
@@ -752,7 +756,7 @@
               <p class="text-xs text-slate-400 mb-3">台北、台中、杭州、成都、馬爾他｜2022.09～2025.04</p>
               
               <div class="mb-3 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/media_mongodb_03.jpg', '隆中網絡架構專訪現場')">
-                <img src="img/media_mongodb_03.jpg" alt="MongoDB Event" class="w-full h-32 object-cover hover:scale-105 transition">
+                <div class="w-full h-36 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/media_mongodb_03.jpg" alt="MongoDB Event" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               </div>
 
               <div class="space-y-2 text-xs text-slate-300">
@@ -778,7 +782,7 @@
               <p class="text-xs text-slate-400 mb-3">台北、高雄、上海｜2025.05～至今</p>
               
               <div class="mb-3 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/team_trust.jpg', 'AI 賦能團隊合作')">
-                <img src="img/team_trust.jpg" alt="Trust" class="w-full h-32 object-cover hover:scale-105 transition">
+                <div class="w-full h-36 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/team_trust.jpg" alt="Trust" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               </div>
 
               <div class="space-y-2 text-xs text-slate-300">
@@ -814,7 +818,7 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
             <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">DTOM 數位轉型營運模式</span>
             <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950 cursor-pointer shadow group" onclick="openLightbox('img/framework_ai_enablement.jpg', 'DTOM 數位轉型營運模式框架圖')">
-              <img src="img/framework_ai_enablement.jpg" alt="DTOM" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+              <div class="w-full h-64 sm:h-72 flex items-center justify-center bg-slate-950 p-2 overflow-hidden"><img src="img/framework_ai_enablement.jpg" alt="DTOM" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300"></div>
               <div class="p-2 bg-slate-950/80 text-[11px] text-center text-slate-400">五道治理護欄 × 五階段需求審查（點擊放大）</div>
             </div>
             <p class="text-xs text-slate-300">讓醫材、工業與微波開關三事業部用同一套客觀標準排定 IT 優先順序，杜絕技術債。</p>
@@ -823,7 +827,7 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
             <span class="px-2.5 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded">CEC 企業營運架構模型</span>
             <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950 cursor-pointer shadow group" onclick="openLightbox('img/framework_diagram.jpg', 'CEC 企業營運架構模型')">
-              <img src="img/framework_diagram.jpg" alt="CEC Framework" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+              <div class="w-full h-64 sm:h-72 flex items-center justify-center bg-slate-950 p-2 overflow-hidden"><img src="img/framework_diagram.jpg" alt="CEC Framework" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300"></div>
               <div class="p-2 bg-slate-950/80 text-[11px] text-center text-slate-400">跨國集團資訊藍圖與架構設計（點擊放大）</div>
             </div>
             <p class="text-xs text-slate-300">以 TOGAF 10 與 BDAT 為核心，兼顧製造現場作業效率與資本市場監管合規。</p>
@@ -1281,81 +1285,61 @@
           <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
             
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_01_cio_person.jpg', 'CIO IT 經理人 Leader Profile: Multi-Cloud')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_01_cio_person.jpg" alt="CIO" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_01_cio_person.jpg" alt="CIO" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">CIO IT 經理人</div>
               <div class="text-[10px] text-slate-400">Leader Profile: Multi-Cloud</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_02_cio_magazine.jpg', 'CIO IT 經理人雜誌 2024年5月號封面')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_02_cio_magazine.jpg" alt="CIO Cover" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_02_cio_magazine.jpg" alt="CIO Cover" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">CIO Magazine Cover</div>
               <div class="text-[10px] text-slate-400">May 2024 Cover Story</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_03_ithome_mongodb.jpg', 'iThome 專題：MongoDB Atlas 遊戲資料管理平台')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_03_ithome_mongodb.jpg" alt="iThome" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_03_ithome_mongodb.jpg" alt="iThome" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">iThome Feature</div>
               <div class="text-[10px] text-slate-400">Database Refactoring & HA</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_04_mongodb_ithome.jpg', 'MongoDB × iThome 聯合官方專訪')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_04_mongodb_ithome.jpg" alt="Joint Interview" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_04_mongodb_ithome.jpg" alt="Joint Interview" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">MongoDB Joint Interview</div>
               <div class="text-[10px] text-slate-400">Official Vendor Feature</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_01_mongodb_local.jpg', 'MongoDB.local Taipei (2024) 大會主講')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_01_mongodb_local.jpg" alt="Keynote" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_01_mongodb_local.jpg" alt="Keynote" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">MongoDB.local Taipei</div>
               <div class="text-[10px] text-slate-400">2024 Keynote Speaker</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_mongodb_02.jpg', 'MongoDB 原廠專訪交流實況')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_mongodb_02.jpg" alt="Interview Live" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_mongodb_02.jpg" alt="Interview Live" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">Vendor Interview Live</div>
               <div class="text-[10px] text-slate-400">Cloud Architecture Insights</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_ace_01.jpg', 'ACE 產業交流專訪實況')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_ace_01.jpg" alt="ACE 01" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_ace_01.jpg" alt="ACE 01" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">ACE Interview Live</div>
               <div class="text-[10px] text-slate-400">Executive Dialogue</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_enterprise_cloud_hd.jpg', '企業上雲 產業論壇交流活動')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_enterprise_cloud_hd.jpg" alt="Enterprise Cloud" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_enterprise_cloud_hd.jpg" alt="Enterprise Cloud" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">Enterprise Cloud Forum</div>
               <div class="text-[10px] text-slate-400">Cloud Governance Panel</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_civil_01.jpg', 'e 等公務園＋ 洞見機遇：雲端管理與實務')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_civil_01.jpg" alt="Civil" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_civil_01.jpg" alt="Civil" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">Civil Service Academy</div>
               <div class="text-[10px] text-slate-400">Cloud Strategy Speaker</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/portrait_202605.jpg', '國際科技研討交流')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/portrait_202605.jpg" alt="Conference" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/portrait_202605.jpg" alt="Conference" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">Global Tech Conference</div>
               <div class="text-[10px] text-slate-400">Cutting-Edge Exchange</div>
             </div>
@@ -1441,7 +1425,7 @@
               </div>
             </div>
             <div class="pt-2 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/portrait_esg_2025.jpg', 'ESG 永續管理與跨界影響力')">
-              <img src="img/portrait_esg_2025.jpg" alt="ESG" class="w-full h-32 object-cover hover:scale-105 transition">
+              <div class="w-full h-44 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/portrait_esg_2025.jpg" alt="ESG" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               <div class="p-1.5 bg-slate-950 text-[10px] text-center text-slate-400">兼具學術厚度與綠色永續治理實務</div>
             </div>
           </div>
@@ -1719,15 +1703,19 @@
               <span class="font-bold text-white text-base">廖倫豪 博士 敬上</span>
             </div>
 
-            <!-- Chapter 01 Photos: 實體工作特寫 & 顧問思維 -->
+            <!-- Chapter 01 Photos: 實體工作特寫 & 顧問思維 (Full Display, No Cropping) -->
             <div class="pt-4 border-t border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="rounded-xl overflow-hidden border border-slate-800 cursor-pointer group" onclick="openLightbox('img/portrait_202604.jpg', '廖倫豪 博士・在地深耕專業形象')">
-                <img src="img/portrait_202604.jpg" alt="Portrait" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-2 bg-slate-950 text-[11px] text-slate-400 text-center">廖倫豪 博士｜立足台中・深耕精密製造</div>
+              <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 cursor-pointer group flex flex-col justify-between shadow-lg" onclick="openLightbox('img/portrait_202604.jpg', '廖倫豪 博士・在地深耕專業形象')">
+                <div class="w-full h-80 sm:h-96 flex items-center justify-center bg-slate-950 p-2 overflow-hidden">
+                  <img src="img/portrait_202604.jpg" alt="Portrait" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-2.5 bg-slate-950 border-t border-slate-800/80 text-[11px] text-slate-300 text-center font-medium">廖倫豪 博士｜立足台中・深耕精密製造</div>
               </div>
-              <div class="rounded-xl overflow-hidden border border-slate-800 cursor-pointer group" onclick="openLightbox('img/methodology_question_matter.jpg', '顧問思維：問題比答案重要')">
-                <img src="img/methodology_question_matter.jpg" alt="Methodology" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-2 bg-slate-950 text-[11px] text-slate-400 text-center">顧問思維：深入現場找出真因，問題比答案更重要</div>
+              <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 cursor-pointer group flex flex-col justify-between shadow-lg" onclick="openLightbox('img/methodology_question_matter.jpg', '顧問思維：問題比答案重要')">
+                <div class="w-full h-80 sm:h-96 flex items-center justify-center bg-slate-950 p-2 overflow-hidden">
+                  <img src="img/methodology_question_matter.jpg" alt="Methodology" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-2.5 bg-slate-950 border-t border-slate-800/80 text-[11px] text-slate-300 text-center font-medium">顧問思維：深入現場找出真因，問題比答案更重要</div>
               </div>
             </div>
           </div>
@@ -2140,7 +2128,7 @@
               <p class="text-xs text-slate-400 mb-3">台灣、深圳、上海、昆山、泰國｜2018.03～2022.08</p>
               
               <div class="mb-3 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/team_lobster.jpg', '泓晏科技製造現場與團隊')">
-                <img src="img/team_lobster.jpg" alt="Plant Team" class="w-full h-32 object-cover hover:scale-105 transition">
+                <div class="w-full h-36 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/team_lobster.jpg" alt="Plant Team" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               </div>
 
               <div class="space-y-2 text-xs text-slate-300">
@@ -2166,7 +2154,7 @@
               <p class="text-xs text-slate-400 mb-3">台北、台中、杭州、成都、馬爾他｜2022.09～2025.04</p>
               
               <div class="mb-3 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/media_mongodb_03.jpg', '隆中網絡架構專訪現場')">
-                <img src="img/media_mongodb_03.jpg" alt="MongoDB Event" class="w-full h-32 object-cover hover:scale-105 transition">
+                <div class="w-full h-36 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/media_mongodb_03.jpg" alt="MongoDB Event" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               </div>
 
               <div class="space-y-2 text-xs text-slate-300">
@@ -2192,7 +2180,7 @@
               <p class="text-xs text-slate-400 mb-3">台北、高雄、上海｜2025.05～至今</p>
               
               <div class="mb-3 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/team_trust.jpg', 'AI 賦能團隊合作')">
-                <img src="img/team_trust.jpg" alt="Trust" class="w-full h-32 object-cover hover:scale-105 transition">
+                <div class="w-full h-36 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/team_trust.jpg" alt="Trust" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               </div>
 
               <div class="space-y-2 text-xs text-slate-300">
@@ -2228,7 +2216,7 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
             <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">DTOM 數位轉型營運模式</span>
             <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950 cursor-pointer shadow group" onclick="openLightbox('img/framework_ai_enablement.jpg', 'DTOM 數位轉型營運模式框架圖')">
-              <img src="img/framework_ai_enablement.jpg" alt="DTOM" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+              <div class="w-full h-64 sm:h-72 flex items-center justify-center bg-slate-950 p-2 overflow-hidden"><img src="img/framework_ai_enablement.jpg" alt="DTOM" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300"></div>
               <div class="p-2 bg-slate-950/80 text-[11px] text-center text-slate-400">五道治理護欄 × 五階段需求審查（點擊放大）</div>
             </div>
             <p class="text-xs text-slate-300">讓醫材、工業與微波開關三事業部用同一套客觀標準排定 IT 優先順序，杜絕技術債。</p>
@@ -2237,7 +2225,7 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
             <span class="px-2.5 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded">CEC 企業營運架構模型</span>
             <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950 cursor-pointer shadow group" onclick="openLightbox('img/framework_diagram.jpg', 'CEC 企業營運架構模型')">
-              <img src="img/framework_diagram.jpg" alt="CEC Framework" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+              <div class="w-full h-64 sm:h-72 flex items-center justify-center bg-slate-950 p-2 overflow-hidden"><img src="img/framework_diagram.jpg" alt="CEC Framework" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300"></div>
               <div class="p-2 bg-slate-950/80 text-[11px] text-center text-slate-400">跨國集團資訊藍圖與架構設計（點擊放大）</div>
             </div>
             <p class="text-xs text-slate-300">以 TOGAF 10 與 BDAT 為核心，兼顧製造現場作業效率與資本市場監管合規。</p>
@@ -2695,81 +2683,61 @@
           <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
             
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_01_cio_person.jpg', 'CIO IT 經理人 風雲人物專訪：多雲管理')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_01_cio_person.jpg" alt="CIO" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_01_cio_person.jpg" alt="CIO" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">CIO IT 經理人</div>
               <div class="text-[10px] text-slate-400">風雲人物專訪：多雲管理</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_02_cio_magazine.jpg', 'CIO IT 經理人雜誌 2024年5月號封面')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_02_cio_magazine.jpg" alt="CIO Cover" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_02_cio_magazine.jpg" alt="CIO Cover" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">CIO 雜誌封面</div>
               <div class="text-[10px] text-slate-400">2024 年 5 月號封面人物</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_03_ithome_mongodb.jpg', 'iThome 專題：MongoDB Atlas 遊戲資料管理平台')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_03_ithome_mongodb.jpg" alt="iThome" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_03_ithome_mongodb.jpg" alt="iThome" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">iThome 專題報導</div>
               <div class="text-[10px] text-slate-400">資料庫重構與高可用</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_04_mongodb_ithome.jpg', 'MongoDB × iThome 聯合官方專訪')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_04_mongodb_ithome.jpg" alt="Joint Interview" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_04_mongodb_ithome.jpg" alt="Joint Interview" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">MongoDB 聯合專訪</div>
               <div class="text-[10px] text-slate-400">原廠官方聯合報導</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_01_mongodb_local.jpg', 'MongoDB.local Taipei (2024) 大會主講')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_01_mongodb_local.jpg" alt="Keynote" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_01_mongodb_local.jpg" alt="Keynote" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">MongoDB.local Taipei</div>
               <div class="text-[10px] text-slate-400">2024 年度大會主講人</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_mongodb_02.jpg', 'MongoDB 原廠專訪交流實況')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_mongodb_02.jpg" alt="Interview Live" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_mongodb_02.jpg" alt="Interview Live" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">原廠專訪實況</div>
               <div class="text-[10px] text-slate-400">雲端架構實務解析</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_ace_01.jpg', 'ACE 產業交流專訪實況')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_ace_01.jpg" alt="ACE 01" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_ace_01.jpg" alt="ACE 01" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">ACE 專訪實況</div>
               <div class="text-[10px] text-slate-400">高階對話實錄</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_enterprise_cloud_hd.jpg', '企業上雲 產業論壇交流活動')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_enterprise_cloud_hd.jpg" alt="Enterprise Cloud" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_enterprise_cloud_hd.jpg" alt="Enterprise Cloud" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">企業上雲交流論壇</div>
               <div class="text-[10px] text-slate-400">雲端架構與治理座談</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_civil_01.jpg', 'e 等公務園＋ 洞見機遇：雲端管理與實務')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_civil_01.jpg" alt="Civil" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_civil_01.jpg" alt="Civil" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">e 等公務園＋ 講座</div>
               <div class="text-[10px] text-slate-400">雲端管理與實務主講</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/portrait_202605.jpg', '國際科技研討交流')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/portrait_202605.jpg" alt="Conference" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/portrait_202605.jpg" alt="Conference" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">國際研討會交流</div>
               <div class="text-[10px] text-slate-400">前沿技術接軌</div>
             </div>
@@ -2855,7 +2823,7 @@
               </div>
             </div>
             <div class="pt-2 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/portrait_esg_2025.jpg', 'ESG 永續管理與跨界影響力')">
-              <img src="img/portrait_esg_2025.jpg" alt="ESG" class="w-full h-32 object-cover hover:scale-105 transition">
+              <div class="w-full h-44 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/portrait_esg_2025.jpg" alt="ESG" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               <div class="p-1.5 bg-slate-950 text-[10px] text-center text-slate-400">兼具學術厚度與綠色永續治理實務</div>
             </div>
           </div>
@@ -3133,15 +3101,19 @@
               <span class="font-bold text-white text-base">廖倫豪 博士 敬上</span>
             </div>
 
-            <!-- Chapter 01 Photos: 實體工作特寫 & 顧問思維 -->
+            <!-- Chapter 01 Photos: 實體工作特寫 & 顧問思維 (Full Display, No Cropping) -->
             <div class="pt-4 border-t border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="rounded-xl overflow-hidden border border-slate-800 cursor-pointer group" onclick="openLightbox('img/portrait_202604.jpg', '廖倫豪 博士・在地深耕專業形象')">
-                <img src="img/portrait_202604.jpg" alt="Portrait" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-2 bg-slate-950 text-[11px] text-slate-400 text-center">廖倫豪 博士｜立足台中・深耕精密製造</div>
+              <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 cursor-pointer group flex flex-col justify-between shadow-lg" onclick="openLightbox('img/portrait_202604.jpg', '廖倫豪 博士・台中常駐プロフェッショナル')">
+                <div class="w-full h-80 sm:h-96 flex items-center justify-center bg-slate-950 p-2 overflow-hidden">
+                  <img src="img/portrait_202604.jpg" alt="Portrait" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-2.5 bg-slate-950 border-t border-slate-800/80 text-[11px] text-slate-300 text-center font-medium">廖倫豪 博士｜台中常駐・精密製造業への専念</div>
               </div>
-              <div class="rounded-xl overflow-hidden border border-slate-800 cursor-pointer group" onclick="openLightbox('img/methodology_question_matter.jpg', '顧問思維：問題比答案重要')">
-                <img src="img/methodology_question_matter.jpg" alt="Methodology" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
-                <div class="p-2 bg-slate-950 text-[11px] text-slate-400 text-center">顧問思維：深入現場找出真因，問題比答案更重要</div>
+              <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 cursor-pointer group flex flex-col justify-between shadow-lg" onclick="openLightbox('img/methodology_question_matter.jpg', 'コンサルタント思考：答えより課題の特定が重要')">
+                <div class="w-full h-80 sm:h-96 flex items-center justify-center bg-slate-950 p-2 overflow-hidden">
+                  <img src="img/methodology_question_matter.jpg" alt="Methodology" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-2.5 bg-slate-950 border-t border-slate-800/80 text-[11px] text-slate-300 text-center font-medium">コンサルタント思考：現場へ深く入り真因を特定する</div>
               </div>
             </div>
           </div>
@@ -3554,7 +3526,7 @@
               <p class="text-xs text-slate-400 mb-3">台灣、深圳、上海、昆山、泰國｜2018.03～2022.08</p>
               
               <div class="mb-3 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/team_lobster.jpg', '泓晏科技製造現場與團隊')">
-                <img src="img/team_lobster.jpg" alt="Plant Team" class="w-full h-32 object-cover hover:scale-105 transition">
+                <div class="w-full h-36 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/team_lobster.jpg" alt="Plant Team" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               </div>
 
               <div class="space-y-2 text-xs text-slate-300">
@@ -3580,7 +3552,7 @@
               <p class="text-xs text-slate-400 mb-3">台北、台中、杭州、成都、馬爾他｜2022.09～2025.04</p>
               
               <div class="mb-3 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/media_mongodb_03.jpg', '隆中網絡架構專訪現場')">
-                <img src="img/media_mongodb_03.jpg" alt="MongoDB Event" class="w-full h-32 object-cover hover:scale-105 transition">
+                <div class="w-full h-36 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/media_mongodb_03.jpg" alt="MongoDB Event" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               </div>
 
               <div class="space-y-2 text-xs text-slate-300">
@@ -3606,7 +3578,7 @@
               <p class="text-xs text-slate-400 mb-3">台北、高雄、上海｜2025.05～至今</p>
               
               <div class="mb-3 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/team_trust.jpg', 'AI 賦能團隊合作')">
-                <img src="img/team_trust.jpg" alt="Trust" class="w-full h-32 object-cover hover:scale-105 transition">
+                <div class="w-full h-36 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/team_trust.jpg" alt="Trust" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               </div>
 
               <div class="space-y-2 text-xs text-slate-300">
@@ -3642,7 +3614,7 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
             <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">DTOM 數位轉型營運模式</span>
             <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950 cursor-pointer shadow group" onclick="openLightbox('img/framework_ai_enablement.jpg', 'DTOM 數位轉型營運模式框架圖')">
-              <img src="img/framework_ai_enablement.jpg" alt="DTOM" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+              <div class="w-full h-64 sm:h-72 flex items-center justify-center bg-slate-950 p-2 overflow-hidden"><img src="img/framework_ai_enablement.jpg" alt="DTOM" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300"></div>
               <div class="p-2 bg-slate-950/80 text-[11px] text-center text-slate-400">五道治理護欄 × 五階段需求審查（點擊放大）</div>
             </div>
             <p class="text-xs text-slate-300">讓醫材、工業與微波開關三事業部用同一套客觀標準排定 IT 優先順序，杜絕技術債。</p>
@@ -3651,7 +3623,7 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
             <span class="px-2.5 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded">CEC 企業營運架構模型</span>
             <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950 cursor-pointer shadow group" onclick="openLightbox('img/framework_diagram.jpg', 'CEC 企業營運架構模型')">
-              <img src="img/framework_diagram.jpg" alt="CEC Framework" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+              <div class="w-full h-64 sm:h-72 flex items-center justify-center bg-slate-950 p-2 overflow-hidden"><img src="img/framework_diagram.jpg" alt="CEC Framework" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300"></div>
               <div class="p-2 bg-slate-950/80 text-[11px] text-center text-slate-400">跨國集團資訊藍圖與架構設計（點擊放大）</div>
             </div>
             <p class="text-xs text-slate-300">以 TOGAF 10 與 BDAT 為核心，兼顧製造現場作業效率與資本市場監管合規。</p>
@@ -4109,81 +4081,61 @@
           <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
             
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_01_cio_person.jpg', 'CIO IT 經理人 注目人物特集：マルチクラウド管理')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_01_cio_person.jpg" alt="CIO" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_01_cio_person.jpg" alt="CIO" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">CIO IT 經理人</div>
               <div class="text-[10px] text-slate-400">注目人物特集：マルチクラウド管理</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_02_cio_magazine.jpg', 'CIO IT 經理人雜誌 2024年5月號封面')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_02_cio_magazine.jpg" alt="CIO Cover" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_02_cio_magazine.jpg" alt="CIO Cover" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">CIO誌 カバー</div>
               <div class="text-[10px] text-slate-400">2024年5月号表紙特集</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_03_ithome_mongodb.jpg', 'iThome 專題：MongoDB Atlas 遊戲資料管理平台')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_03_ithome_mongodb.jpg" alt="iThome" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_03_ithome_mongodb.jpg" alt="iThome" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">iThome 特集記事</div>
               <div class="text-[10px] text-slate-400">DB再構築・高可用性</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_04_mongodb_ithome.jpg', 'MongoDB × iThome 聯合官方專訪')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_04_mongodb_ithome.jpg" alt="Joint Interview" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_04_mongodb_ithome.jpg" alt="Joint Interview" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">MongoDB 共同インタビュー</div>
               <div class="text-[10px] text-slate-400">公式共同取材記事</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_01_mongodb_local.jpg', 'MongoDB.local Taipei (2024) 大會主講')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_01_mongodb_local.jpg" alt="Keynote" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_01_mongodb_local.jpg" alt="Keynote" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">MongoDB.local Taipei</div>
               <div class="text-[10px] text-slate-400">2024年年次大会基調登壇</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/media_mongodb_02.jpg', 'MongoDB 原廠專訪交流實況')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/media_mongodb_02.jpg" alt="Interview Live" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/media_mongodb_02.jpg" alt="Interview Live" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">ベンダー取材風景</div>
               <div class="text-[10px] text-slate-400">クラウドアーキテクチャ解説</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_ace_01.jpg', 'ACE 產業交流專訪實況')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_ace_01.jpg" alt="ACE 01" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_ace_01.jpg" alt="ACE 01" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">ACE 取材現場</div>
               <div class="text-[10px] text-slate-400">エグゼクティブ対談</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_enterprise_cloud_hd.jpg', '企業上雲 產業論壇交流活動')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_enterprise_cloud_hd.jpg" alt="Enterprise Cloud" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_enterprise_cloud_hd.jpg" alt="Enterprise Cloud" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">クラウド導入フォーラム</div>
               <div class="text-[10px] text-slate-400">ガバナンスパネル討論</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/speech_civil_01.jpg', 'e 等公務園＋ 洞見機遇：雲端管理與實務')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/speech_civil_01.jpg" alt="Civil" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/speech_civil_01.jpg" alt="Civil" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">公務員eアカデミー講座</div>
               <div class="text-[10px] text-slate-400">クラウド運用戦略登壇</div>
             </div>
 
             <div class="group bg-slate-900 border border-slate-800 rounded-xl p-2 cursor-pointer hover:border-amber-500 transition" onclick="openLightbox('img/portrait_202605.jpg', '國際科技研討交流')">
-              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5">
-                <img src="img/portrait_202605.jpg" alt="Conference" class="w-full h-full object-cover group-hover:scale-105 transition">
-              </div>
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-950 mb-1.5 flex items-center justify-center p-1"><img src="img/portrait_202605.jpg" alt="Conference" class="max-h-full max-w-full object-contain group-hover:scale-105 transition"></div>
               <div class="text-[11px] font-bold text-slate-200 truncate">国際技術カンファレンス</div>
               <div class="text-[10px] text-slate-400">先端技術交流</div>
             </div>
@@ -4269,7 +4221,7 @@
               </div>
             </div>
             <div class="pt-2 rounded-lg overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('img/portrait_esg_2025.jpg', 'ESG 永續管理與跨界影響力')">
-              <img src="img/portrait_esg_2025.jpg" alt="ESG" class="w-full h-32 object-cover hover:scale-105 transition">
+              <div class="w-full h-44 flex items-center justify-center bg-slate-950 p-1 overflow-hidden"><img src="img/portrait_esg_2025.jpg" alt="ESG" class="max-h-full max-w-full object-contain hover:scale-105 transition"></div>
               <div class="p-1.5 bg-slate-950 text-[10px] text-center text-slate-400">兼具學術厚度與綠色永續治理實務</div>
             </div>
           </div>
