@@ -11,7 +11,48 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="img/avatar_conclusion.jpg">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com">
+    // Online Protected Viewer Controls (View Only, No Download)
+    function openOnlineViewer(pdfPath, title) {
+      const modal = document.getElementById('docViewerModal');
+      const frame = document.getElementById('docViewerFrame');
+      const titleEl = document.getElementById('docViewerTitle');
+      
+      // Append #toolbar=0&navpanes=0 to disable native PDF download buttons
+      frame.src = pdfPath + '#toolbar=0&navpanes=0&scrollbar=1';
+      titleEl.textContent = title || '鐿鈦科技 專案文件 (僅限線上審閱)';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOnlineViewer() {
+      const modal = document.getElementById('docViewerModal');
+      const frame = document.getElementById('docViewerFrame');
+      frame.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Disable Right-Click and Save/Print Shortcut Keys
+    document.addEventListener('contextmenu', function(e) {
+      // Allow right click only if not in modal
+      const modal = document.getElementById('docViewerModal');
+      if (!modal.classList.contains('hidden')) {
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p')) {
+        e.preventDefault();
+        alert('【機密安全防護】本專案文件僅供鐿鈦科技高階主管線上審閱，已停用下載與列印功能。');
+      }
+      if (e.key === 'Escape') {
+        closeOnlineViewer();
+      }
+    });
+
+  </script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -24,8 +65,90 @@
         }
       }
     }
+  
+    // Online Protected Viewer Controls (View Only, No Download)
+    function openOnlineViewer(pdfPath, title) {
+      const modal = document.getElementById('docViewerModal');
+      const frame = document.getElementById('docViewerFrame');
+      const titleEl = document.getElementById('docViewerTitle');
+      
+      // Append #toolbar=0&navpanes=0 to disable native PDF download buttons
+      frame.src = pdfPath + '#toolbar=0&navpanes=0&scrollbar=1';
+      titleEl.textContent = title || '鐿鈦科技 專案文件 (僅限線上審閱)';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOnlineViewer() {
+      const modal = document.getElementById('docViewerModal');
+      const frame = document.getElementById('docViewerFrame');
+      frame.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Disable Right-Click and Save/Print Shortcut Keys
+    document.addEventListener('contextmenu', function(e) {
+      // Allow right click only if not in modal
+      const modal = document.getElementById('docViewerModal');
+      if (!modal.classList.contains('hidden')) {
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p')) {
+        e.preventDefault();
+        alert('【機密安全防護】本專案文件僅供鐿鈦科技高階主管線上審閱，已停用下載與列印功能。');
+      }
+      if (e.key === 'Escape') {
+        closeOnlineViewer();
+      }
+    });
+
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+    // Online Protected Viewer Controls (View Only, No Download)
+    function openOnlineViewer(pdfPath, title) {
+      const modal = document.getElementById('docViewerModal');
+      const frame = document.getElementById('docViewerFrame');
+      const titleEl = document.getElementById('docViewerTitle');
+      
+      // Append #toolbar=0&navpanes=0 to disable native PDF download buttons
+      frame.src = pdfPath + '#toolbar=0&navpanes=0&scrollbar=1';
+      titleEl.textContent = title || '鐿鈦科技 專案文件 (僅限線上審閱)';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOnlineViewer() {
+      const modal = document.getElementById('docViewerModal');
+      const frame = document.getElementById('docViewerFrame');
+      frame.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Disable Right-Click and Save/Print Shortcut Keys
+    document.addEventListener('contextmenu', function(e) {
+      // Allow right click only if not in modal
+      const modal = document.getElementById('docViewerModal');
+      if (!modal.classList.contains('hidden')) {
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p')) {
+        e.preventDefault();
+        alert('【機密安全防護】本專案文件僅供鐿鈦科技高階主管線上審閱，已停用下載與列印功能。');
+      }
+      if (e.key === 'Escape') {
+        closeOnlineViewer();
+      }
+    });
+
+  </script>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
@@ -67,7 +190,7 @@
       <a href="#sec-08" onclick="toggleMobileMenu()" class="hover:text-amber-400">08 四大方案 / Four Schemes / 4大計画</a>
       <a href="#sec-09" onclick="toggleMobileMenu()" class="hover:text-amber-400">09 到任計畫與團隊 / Onboarding</a>
       <a href="#sec-10" onclick="toggleMobileMenu()" class="hover:text-amber-400">10 媒體與證照 / Media & Certs</a>
-      <a href="#sec-downloads" onclick="toggleMobileMenu()" class="text-amber-400 font-bold">📄 PDF 下載 / Downloads</a>
+      <a href="#sec-downloads" onclick="toggleMobileMenu()" class="text-amber-400 font-bold">🔒 線上審閱 / Online View</a>
     </div>
     <div class="pt-3 border-t border-slate-800 text-xs text-slate-500 text-center">
       廖倫豪 博士 (Howard Liao, Ph.D.) ｜ 常駐台中
@@ -95,7 +218,7 @@
         <a href="#sec-08" class="hover:text-amber-400 transition">08 四大方案</a>
         <a href="#sec-09" class="hover:text-amber-400 transition">09 團隊帶領</a>
         <a href="#sec-10" class="hover:text-amber-400 transition">10 媒體證照</a>
-        <a href="#sec-downloads" class="text-amber-400 font-bold transition">PDF下載</a>
+        <a href="#sec-downloads" class="text-amber-400 font-bold transition">線上審閱</a>
       </nav>
 
       <!-- Language Switcher & Mobile Hamburger -->
@@ -240,11 +363,11 @@
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
             <span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs font-bold rounded">Official Documents</span>
-            <h2 class="text-xl font-bold text-white mt-1">Download Dossier & 25-Page Presentation (PDF)</h2>
+            <h2 class="text-xl font-bold text-white mt-1">View Dossier Online (View Only) & 25-Page Presentation (PDF)</h2>
             <p class="text-xs text-slate-400 mt-0.5">Available for offline review by hiring managers and leadership</p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <a href="廖倫豪_鐿鈦4163_網頁版.pdf" target="_blank" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group">
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_網頁版.pdf', '鐿鈦科技 網頁版報告書 (僅供線上審閱)')" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group cursor-pointer text-left">
               <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg group-hover:scale-105 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               </div>
@@ -253,7 +376,7 @@
                 <div class="text-[10px] text-slate-400">Full 12 Chapters with Data</div>
               </div>
             </a>
-            <a href="廖倫豪_鐿鈦4163_書面自薦書.pdf" target="_blank" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group">
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_書面自薦書.pdf', '鐿鈦科技 書面自薦書 (僅供線上審閱)')" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group cursor-pointer text-left">
               <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg group-hover:scale-105 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746-0-3.332.477-4.5 1.253"/></svg>
               </div>
@@ -262,7 +385,7 @@
                 <div class="text-[10px] text-slate-400">20-Page A4 Detailed Plan</div>
               </div>
             </a>
-            <a href="廖倫豪_鐿鈦4163_簡報.pdf" target="_blank" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group">
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_簡報.pdf', '鐿鈦科技 25頁專案簡報 (僅供線上審閱)')" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group cursor-pointer text-left">
               <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg group-hover:scale-105 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
               </div>
@@ -1507,8 +1630,8 @@
             <button onclick="copyContact('en')" class="flex-1 px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow">
               Copy Contact Info
             </button>
-            <a href="廖倫豪_鐿鈦4163_書面自薦書.pdf" target="_blank" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs border border-slate-700 transition">
-              Download Dossier (PDF)
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_書面自薦書.pdf', '鐿鈦科技 書面自薦書 (僅供線上審閱)')" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs border border-slate-700 transition cursor-pointer text-left">
+              View Dossier Online (View Only) (PDF)
             </a>
           </div>
 
@@ -1655,7 +1778,7 @@
             <p class="text-xs text-slate-400 mt-0.5">供用人主管與長官隨時離線審閱</p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <a href="廖倫豪_鐿鈦4163_網頁版.pdf" target="_blank" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group">
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_網頁版.pdf', '鐿鈦科技 網頁版報告書 (僅供線上審閱)')" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group cursor-pointer text-left">
               <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg group-hover:scale-105 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               </div>
@@ -1664,7 +1787,7 @@
                 <div class="text-[10px] text-slate-400">完整 12 大章節架構</div>
               </div>
             </a>
-            <a href="廖倫豪_鐿鈦4163_書面自薦書.pdf" target="_blank" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group">
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_書面自薦書.pdf', '鐿鈦科技 書面自薦書 (僅供線上審閱)')" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group cursor-pointer text-left">
               <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg group-hover:scale-105 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746-0-3.332.477-4.5 1.253"/></svg>
               </div>
@@ -1673,7 +1796,7 @@
                 <div class="text-[10px] text-slate-400">20 頁完整說明與方案</div>
               </div>
             </a>
-            <a href="廖倫豪_鐿鈦4163_簡報.pdf" target="_blank" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group">
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_簡報.pdf', '鐿鈦科技 25頁專案簡報 (僅供線上審閱)')" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group cursor-pointer text-left">
               <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg group-hover:scale-105 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
               </div>
@@ -2927,8 +3050,8 @@
             <button onclick="copyContact('zh')" class="flex-1 px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow">
               一鍵複製聯絡資訊
             </button>
-            <a href="廖倫豪_鐿鈦4163_書面自薦書.pdf" target="_blank" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs border border-slate-700 transition">
-              下載書面自薦書
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_書面自薦書.pdf', '鐿鈦科技 書面自薦書 (僅供線上審閱)')" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs border border-slate-700 transition cursor-pointer text-left">
+              線上審閱自薦書 (禁止下載)
             </a>
           </div>
 
@@ -3075,7 +3198,7 @@
             <p class="text-xs text-slate-400 mt-0.5">採用責任者・役員の皆様のオフライン閲覧用公式提出書類</p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <a href="廖倫豪_鐿鈦4163_網頁版.pdf" target="_blank" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group">
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_網頁版.pdf', '鐿鈦科技 網頁版報告書 (僅供線上審閱)')" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group cursor-pointer text-left">
               <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg group-hover:scale-105 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               </div>
@@ -3084,7 +3207,7 @@
                 <div class="text-[10px] text-slate-400">全12章完全収録</div>
               </div>
             </a>
-            <a href="廖倫豪_鐿鈦4163_書面自薦書.pdf" target="_blank" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group">
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_書面自薦書.pdf', '鐿鈦科技 書面自薦書 (僅供線上審閱)')" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group cursor-pointer text-left">
               <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg group-hover:scale-105 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746-0-3.332.477-4.5 1.253"/></svg>
               </div>
@@ -3093,7 +3216,7 @@
                 <div class="text-[10px] text-slate-400">20頁詳細実施計画</div>
               </div>
             </a>
-            <a href="廖倫豪_鐿鈦4163_簡報.pdf" target="_blank" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group">
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_簡報.pdf', '鐿鈦科技 25頁專案簡報 (僅供線上審閱)')" class="flex items-center gap-3 p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl transition group cursor-pointer text-left">
               <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg group-hover:scale-105 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
               </div>
@@ -4326,8 +4449,8 @@
             <button onclick="copyContact('ja')" class="flex-1 px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow">
               連絡先をコピー
             </button>
-            <a href="廖倫豪_鐿鈦4163_書面自薦書.pdf" target="_blank" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs border border-slate-700 transition">
-              自薦書をダウンロード
+            <button onclick="openOnlineViewer('廖倫豪_鐿鈦4163_書面自薦書.pdf', '鐿鈦科技 書面自薦書 (僅供線上審閱)')" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg text-xs border border-slate-700 transition cursor-pointer text-left">
+              自薦書をオンライン閲覧 (ダウンロード不可)
             </a>
           </div>
 
@@ -4528,7 +4651,96 @@
       const initialLang = localStorage.getItem('4163_lang') || 'en';
       setLanguage(initialLang);
     });
+  
+    // Online Protected Viewer Controls (View Only, No Download)
+    function openOnlineViewer(pdfPath, title) {
+      const modal = document.getElementById('docViewerModal');
+      const frame = document.getElementById('docViewerFrame');
+      const titleEl = document.getElementById('docViewerTitle');
+      
+      // Append #toolbar=0&navpanes=0 to disable native PDF download buttons
+      frame.src = pdfPath + '#toolbar=0&navpanes=0&scrollbar=1';
+      titleEl.textContent = title || '鐿鈦科技 專案文件 (僅限線上審閱)';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOnlineViewer() {
+      const modal = document.getElementById('docViewerModal');
+      const frame = document.getElementById('docViewerFrame');
+      frame.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Disable Right-Click and Save/Print Shortcut Keys
+    document.addEventListener('contextmenu', function(e) {
+      // Allow right click only if not in modal
+      const modal = document.getElementById('docViewerModal');
+      if (!modal.classList.contains('hidden')) {
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p')) {
+        e.preventDefault();
+        alert('【機密安全防護】本專案文件僅供鐿鈦科技高階主管線上審閱，已停用下載與列印功能。');
+      }
+      if (e.key === 'Escape') {
+        closeOnlineViewer();
+      }
+    });
+
   </script>
+
+  <!-- Protected Online Document Viewer Modal with Repeating Watermark -->
+  <div id="docViewerModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex flex-col items-center justify-between p-2 sm:p-4 select-none" oncontextmenu="return false;">
+    
+    <!-- Viewer Top Bar -->
+    <div class="w-full max-w-6xl flex items-center justify-between pb-3 border-b border-slate-800 text-xs sm:text-sm">
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/40 rounded-lg text-xs font-bold flex items-center gap-1.5">
+          🔒 機密保護 · 僅供線上審閱 · 禁止下載外流
+        </span>
+        <span id="docViewerTitle" class="text-white font-bold truncate max-w-xs sm:max-w-md"></span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="closeOnlineViewer()" class="px-3.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1 border border-slate-700">
+          ✕ 關閉 / Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Viewer Body Container with Multi-layer Watermark Overlay -->
+    <div class="relative w-full max-w-6xl flex-1 my-2 bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-2xl flex items-center justify-center">
+      
+      <!-- Embedded PDF / Presentation (Toolbar & Download Disabled) -->
+      <iframe id="docViewerFrame" src="" class="w-full h-full border-0" style="min-height: 75vh;"></iframe>
+      
+      <!-- Inescapable Watermark Overlay (Transparent, Pointer-events None) -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden z-10 flex flex-col justify-around opacity-15">
+        <div class="text-[13px] sm:text-base font-bold text-amber-300 transform -rotate-25 whitespace-nowrap select-none text-center leading-loose">
+          機密文件 · 僅供鐿鈦科技（4163）用人主管面試審閱 · 廖倫豪博士版權所有 · 禁止下載外流 · CONFIDENTIAL FOR INTAI REVIEW ONLY<br><br>
+          機密文件 · 僅供鐿鈦科技（4163）用人主管面試審閱 · 廖倫豪博士版權所有 · 禁止下載外流 · CONFIDENTIAL FOR INTAI REVIEW ONLY<br><br>
+          機密文件 · 僅供鐿鈦科技（4163）用人主管面試審閱 · 廖倫豪博士版權所有 · 禁止下載外流 · CONFIDENTIAL FOR INTAI REVIEW ONLY<br><br>
+          機密文件 · 僅供鐿鈦科技（4163）用人主管面試審閱 · 廖倫豪博士版權所有 · 禁止下載外流 · CONFIDENTIAL FOR INTAI REVIEW ONLY<br><br>
+          機密文件 · 僅供鐿鈦科技（4163）用人主管面試審閱 · 廖倫豪博士版權所有 · 禁止下載外流 · CONFIDENTIAL FOR INTAI REVIEW ONLY
+        </div>
+      </div>
+    </div>
+
+    <!-- Viewer Bottom Notice -->
+    <div class="w-full max-w-6xl pt-2 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-1">
+      <div>
+        ⚠️ <span class="text-amber-400 font-semibold">安全聲明：</span>本文件全頁已嵌入數位浮水印與安全防護機制，僅供鐿鈦科技高階主管面試檢閱，嚴禁任何形式之複製、截圖或外流。
+      </div>
+      <div class="text-slate-500 font-mono">
+        Howard Liao, Ph.D. × Intai Technology (4163.TWO)
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
 
