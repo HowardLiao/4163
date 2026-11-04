@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Howard Liao, Ph.D. × Intai Technology (4163) | IT Manager Application: Systems Integration & AI Adoption</title>
+<meta name="description" content="Howard Liao, Ph.D.'s application to Intai Technology (4163) leadership for IT Manager: integrating MES, PLM, Notes and SAP, and bringing AI to every department.">
+<meta property="og:title" content="Howard Liao, Ph.D. × Intai Technology (4163)">
+<meta property="og:description" content="Integrating MES, PLM, Notes and SAP, and bringing AI to every department.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<style>
+:root{
+  --bg:#F6F4EF; --bg-alt:#ECEFF2; --card:#FFFDF9; --line:#E2DED5;
+  --ink:#13233A; --body:#3E4A59; --muted:#6B7684;
+  --navy:#13233A; --navy-2:#1F3654; --on-navy:#E6EBF0; --on-navy-muted:#BFCBD8;
+  --copper:#A3561F; --copper-bright:#C8743A; --copper-soft:#E39A62;
+  --teal:#1E7A78; --teal-soft:#DFF1EF;
+  --radius:16px; --maxw:1120px;
+  --serif:'Noto Serif TC', Georgia, serif;
+  --sans:'Inter','Noto Sans TC', -apple-system, 'PingFang TC', 'Microsoft JhengHei', Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1A2B; --bg-alt:#14223A; --card:#18283F; --line:#26395A;
+    --ink:#EEF1F5; --body:#C3CDD9; --muted:#8FA0B5;
+    --navy:#0A1322; --navy-2:#1A2C47;
+    --copper:#E39A62; --copper-bright:#E39A62;
+    --teal:#4FB8B4; --teal-soft:#1B3A3D;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1A2B; --bg-alt:#14223A; --card:#18283F; --line:#26395A;
+  --ink:#EEF1F5; --body:#C3CDD9; --muted:#8FA0B5;
+  --navy:#0A1322; --navy-2:#1A2C47;
+  --copper:#E39A62; --copper-bright:#E39A62;
+  --teal:#4FB8B4; --teal-soft:#1B3A3D;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+img{max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--copper)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a.l{display:block;padding:6px 10px;border-radius:8px;color:var(--body);text-decoration:none;font-size:15px;white-space:nowrap}
+.nav a.l:hover,.nav a.l.on{background:var(--bg-alt);color:var(--ink)}
+.theme{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;font:inherit;font-size:14px}
+@media (max-width:860px){.nav ul{display:none}.theme{margin-left:auto}}
+
+/* hero */
+.hero{background:var(--navy);color:#F6F4EF;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--copper-bright)}
+.hero .wrap{padding-top:96px;padding-bottom:88px}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.14em;color:var(--copper)}
+.hero .eyebrow{color:var(--copper-soft)}
+.hero h1{font-family:var(--serif);font-size:clamp(44px,8vw,84px);line-height:1.1;margin:18px 0 8px}
+.hero .en{font-size:20px;color:var(--on-navy-muted);margin:0}
+.hero p{color:var(--on-navy)}
+.hero .role{font-size:clamp(22px,3.4vw,30px);font-weight:500;margin:28px 0 8px;color:#F6F4EF}
+.hero .lede{font-size:19px;color:var(--on-navy-muted);max-width:720px;margin:0}
+.pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.pill{border:1px solid #33496A;border-radius:999px;padding:6px 16px;font-size:15px;color:var(--on-navy)}
+.pill.hot{background:var(--copper-soft);border-color:var(--copper-soft);color:#13233A;font-weight:700}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.hero-stats div{border-top:2px solid #33496A;padding-top:14px}
+.hero-stats b{display:block;font-family:var(--serif);font-size:34px;color:var(--copper-soft);line-height:1.2}
+.hero-stats span{font-size:14px;color:var(--on-navy-muted)}
+@media (max-width:700px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
+
+.hero-grid{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:center}
+.hero-photo{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:20px;border:1px solid #33496A;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-photo{max-width:260px;order:-1}}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.gallery.g3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.gallery,.gallery.g3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.gallery,.gallery.g3{grid-template-columns:1fr}}
+.fig{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.fig button{all:unset;cursor:zoom-in;display:block}
+.fig img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--bg-alt)}
+.fig.tall img{aspect-ratio:3/4}
+.fig.doc img{object-fit:contain;background:#FBFAF6;padding:8px}
+.fig figcaption{padding:12px 16px 16px;font-size:14px;color:var(--body);line-height:1.5}
+.fig figcaption b{display:block;color:var(--ink);font-size:15px}
+.wide-fig{margin:0 0 28px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.wide-fig img{width:100%;display:block;border-radius:8px;cursor:zoom-in}
+.wide-fig figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+dialog.lb{border:none;padding:0;background:transparent;max-width:min(1200px,94vw);max-height:92vh}
+dialog.lb::backdrop{background:rgba(8,14,24,.85)}
+dialog.lb img{max-width:100%;max-height:86vh;display:block;border-radius:10px}
+dialog.lb p{color:#F6F4EF;text-align:center;margin:10px 0 0;font-size:15px}
+dialog.lb .x{position:absolute;top:8px;right:8px;border:none;background:rgba(0,0,0,.55);color:#fff;border-radius:999px;width:36px;height:36px;font-size:20px;cursor:pointer}
+.closing-grid{display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:center}
+.closing-grid img{width:200px;height:256px;object-fit:cover;border-radius:16px;border:1px solid #33496A}
+@media (max-width:700px){.closing-grid{grid-template-columns:1fr}.closing-grid img{width:150px;height:192px}}
+
+/* sections */
+section.s{padding:88px 0;border-bottom:1px solid var(--line)}
+section.alt{background:var(--bg-alt)}
+section.dark{background:var(--navy);color:#F6F4EF}
+section.dark .eyebrow{color:var(--copper-soft)}
+section.dark h2{color:#F6F4EF}
+section.dark p{color:var(--on-navy)}
+.num{font-family:var(--serif);color:var(--copper-bright);font-size:15px;font-weight:700;letter-spacing:.1em}
+h2{font-family:var(--serif);font-size:clamp(28px,4.4vw,42px);line-height:1.3;margin:10px 0 16px}
+h3{font-size:21px;line-height:1.45;margin:0 0 10px}
+.lead{font-size:19px;color:var(--body);max-width:820px;margin:0 0 36px}
+section.dark .lead{color:var(--on-navy-muted)}
+p{margin:0 0 14px;color:var(--body)}
+.note{font-size:14px;color:var(--muted);margin-top:20px}
+section.dark .note{color:var(--on-navy-muted)}
+
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.card.navy{background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
+.card.navy h3{color:var(--copper-soft)}
+.card.navy p,.card.navy li{color:var(--on-navy)}
+.card ul{margin:0;padding-left:20px;color:var(--body)}
+.card li{margin:4px 0}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--teal);background:var(--teal-soft);border-radius:999px;padding:2px 12px;margin-bottom:12px}
+
+.stat b{display:block;font-family:var(--serif);font-size:44px;line-height:1.15;color:var(--ink)}
+.stat span{font-size:15px;color:var(--body)}
+.stat{border-top:3px solid var(--copper-bright);padding-top:16px}
+
+/* tables */
+.tbl{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);font-size:16px}
+.tbl th{background:var(--navy);color:#F6F4EF;text-align:left;padding:14px 18px;font-weight:700}
+.tbl td{padding:14px 18px;border-top:1px solid var(--line);vertical-align:top;color:var(--body)}
+.tbl td:first-child{color:var(--ink);font-weight:500}
+.tbl tr:nth-child(even) td{background:color-mix(in srgb,var(--bg-alt) 55%,var(--card))}
+section.dark .tbl{background:var(--navy-2);border-color:#2B4466}
+section.dark .tbl th{background:#0A1628;color:var(--copper-soft)}
+section.dark .tbl td{color:var(--on-navy);border-color:#2B4466}
+section.dark .tbl td:first-child{color:#F6F4EF}
+section.dark .tbl tr:nth-child(even) td{background:#1A2E48}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){.tbl{font-size:15px}.tbl th,.tbl td{padding:12px 14px}}
+
+/* issues */
+.issue{display:flex;gap:20px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px}
+.issue .n{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--copper-bright);line-height:1;min-width:32px}
+.issue h3{margin-bottom:4px}
+.issue p{margin:0}
+
+/* timeline */
+.tl{position:relative;display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--line)}
+.tl .item{position:relative;padding-top:32px}
+.tl .item::before{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--muted);border:3px solid var(--bg)}
+.tl .item.key::before{background:var(--copper-bright)}
+.tl .y{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--muted)}
+.tl .key .y{color:var(--copper)}
+.tl .c{font-weight:700;color:var(--ink);font-size:16px;line-height:1.4;margin:4px 0}
+.tl .r{font-size:14px;color:var(--body);line-height:1.5}
+@media (max-width:900px){
+  .tl{grid-template-columns:1fr;gap:0}
+  .tl::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .tl .item{padding:0 0 24px 36px}
+  .tl .item::before{top:6px}
+}
+
+/* big numbers */
+.big b{display:block;font-family:var(--serif);font-size:clamp(44px,6vw,64px);line-height:1.1;color:var(--teal)}
+.big.cu b{color:var(--copper)}
+.big h3{margin:8px 0 2px}
+.big span{font-size:15px;color:var(--body)}
+
+/* cases */
+.case{border:1px solid var(--line);border-radius:20px;background:var(--card);overflow:hidden;margin-bottom:28px}
+.case header{padding:28px 32px 0}
+.case .meta{font-size:15px;color:var(--muted)}
+.case .body{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:0;margin-top:20px;border-top:1px solid var(--line)}
+.case .body>div{padding:24px 32px}
+.case .body>div+div{border-left:1px solid var(--line)}
+.case .body .res{background:var(--navy);color:var(--on-navy)}
+.case .body .res h3{color:var(--copper-soft)}
+.case .body .res li{color:var(--on-navy)}
+.case .body h3{font-size:17px;letter-spacing:.06em}
+.case .body ul{margin:0;padding-left:20px}
+.case .body li{margin:4px 0;color:var(--body)}
+.case .why{background:var(--bg-alt);border-left:5px solid var(--copper-bright);padding:18px 32px;margin:0}
+.case .why b{color:var(--ink)}
+@media (max-width:860px){.case .body{grid-template-columns:1fr}.case .body>div+div{border-left:none;border-top:1px solid var(--line)}.case header,.case .body>div,.case .why{padding-left:20px;padding-right:20px}}
+
+/* flow */
+.flow{display:flex;align-items:stretch;gap:0;margin:28px 0}
+.flow .st{flex:1;background:var(--navy);color:#F6F4EF;border-radius:12px;padding:18px}
+.flow .st small{display:block;color:var(--copper-soft);font-weight:700;font-size:13px;letter-spacing:.08em}
+.flow .st b{font-size:17px}
+.flow .st.end{background:var(--teal)}
+.flow .st.end small{color:var(--teal-soft)}
+.flow .ar{display:flex;align-items:center;justify-content:center;width:36px;color:var(--copper-bright);flex:none}
+@media (max-width:760px){.flow{flex-direction:column}.flow .ar{width:auto;height:30px;transform:rotate(90deg)}}
+
+/* chart */
+.chartbox{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.chartbox h3{margin-bottom:4px}
+.chartbox .cs{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.chartbox svg{width:100%;min-width:640px;height:auto;display:block;margin-top:12px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--body)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+/* phases */
+.phase .d{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--copper-bright);line-height:1.1}
+.phase.navy .d{color:var(--copper-soft)}
+.phase .out{margin-top:14px;font-size:14px;font-weight:700;color:var(--teal)}
+.phase.navy .out{color:var(--copper-soft)}
+
+/* closing */
+.quote{font-family:var(--serif);font-size:clamp(26px,4vw,40px);line-height:1.45;color:#F6F4EF;margin:12px 0 28px;max-width:900px}
+.contact{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.contact div{background:var(--navy-2);border-radius:12px;padding:18px 20px}
+.contact small{display:block;color:var(--copper-soft);font-weight:700;font-size:13px}
+.contact a,.contact span{color:#F6F4EF;text-decoration:none;font-size:16px;word-break:break-all}
+.contact .hot{background:var(--copper-soft)}
+.contact .hot small,.contact .hot span{color:#13233A;font-weight:700}
+@media (max-width:860px){.contact{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.contact{grid-template-columns:1fr}}
+
+.sources li{margin:6px 0;color:var(--body)}
+footer{padding:36px 0;font-size:14px;color:var(--muted)}
+.letter p{font-size:18px}
+.sign{font-family:var(--serif);font-size:20px;color:var(--ink)!important}
+@media print{.nav,.theme{display:none}section.s{break-inside:avoid-page;padding:40px 0}}
+.theme{white-space:nowrap}</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Section navigation">
+  <div class="wrap">
+    <a class="brand" href="#top">Howard Liao <span>× 4163</span></a>
+    <ul>
+      <li><a class="l" href="#letter">To the leadership team</a></li>
+      <li><a class="l" href="#intai">Intai</a></li>
+      <li><a class="l" href="#issues">Issues</a></li>
+      <li><a class="l" href="#match">Fit</a></li>
+      <li><a class="l" href="#career">Career</a></li>
+      <li><a class="l" href="#cases">Cases</a></li>
+      <li><a class="l" href="#plans">Plans</a></li>
+      <li><a class="l" href="#roadmap">Onboarding</a></li>
+      <li><a class="l" href="#media">Media</a></li>
+      <li><a class="l" href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme" id="themeBtn" type="button" aria-label="Toggle light/dark">◐ Theme</button>
+    <div class="langs" style="display:flex;gap:10px;font-size:13px;margin-left:12px;white-space:nowrap"><a href="index.html" style="color:inherit;opacity:.7;text-decoration:none">中文</a><a href="en.html" style="color:inherit;font-weight:700;text-decoration:underline">EN</a><a href="ja.html" style="color:inherit;opacity:.7;text-decoration:none">日本語</a></div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+   <div class="hero-grid">
+   <div>
+    <p class="eyebrow">To the Hiring Manager and Leadership Team, Intai Technology (4163)</p>
+    <h1>Howard Liao</h1>
+    <p class="en">Ph.D. · 廖倫豪</p>
+    <p class="role">IT Manager Candidate | Systems Integration & AI Adoption</p>
+    <p class="lede">Integrating MES, PLM, Notes and SAP, and bringing AI to every department.</p>
+    <div class="pills">
+      <span class="pill hot">Lives nearby; available long-term in Taichung</span>
+      <span class="pill">25+ years in IT</span>
+      <span class="pill">ISO 27001 Lead Auditor</span>
+      <span class="pill">ISO 42001 AI governance</span>
+      <span class="pill">Led Lotus Notes early on</span>
+      <span class="pill">Ph.D. in Information Management</span>
+    </div>
+   </div>
+   <img class="hero-photo" src="img/portrait.jpg" alt="Portrait of Howard Liao, Ph.D." width="864" height="1184">
+   </div>
+    <div class="hero-stats">
+      <div><b>+15%</b><span>Manufacturing yield</span></div>
+      <div><b>−30%</b><span>Annual cloud spend</span></div>
+      <div><b>−30%</b><span>Security incidents per year</span></div>
+      <div><b>+55%</b><span>Process automation efficiency</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 letter -->
+<section class="s" id="letter">
+  <div class="wrap">
+    <p class="num">01　To the Hiring Manager</p>
+    <h2>I have done both things you are looking for</h2>
+    <div class="grid g2" style="align-items:start">
+      <div class="letter">
+        <p>Dear Hiring Manager,</p>
+        <p>Thank you to your HR team for explaining this role. The IT department has 10 staff, has run for over 10 years, and covers hardware and software systems; the company is looking for systems optimization and integration, and for AI adoption across departments.</p>
+        <p><b>Systems integration.</b>At Hongyan Technology (cross-border electronics manufacturing) I led the SAP S/4HANA rollout, connecting MES, PLM and APS. Production yield rose 15% and group IT operating cost fell 25%. More than 20 years ago I led Lotus Notes at Jianxin Technology (4502), so I understand how Notes applications are built and what makes migrating them hard.</p>
+        <p><b>AI adoption.</b>In my current role I set AI usage rules under ISO 42001, ran AI workflow courses for managers, and rolled AI out across departments, raising process automation efficiency by 55%.</p>
+        <p><b>Why Intai.</b>Intai is very close to my home, so I can commit for the long term. As a long-time advisor to Taichung Veterans General Hospital, I believe in medical devices and share Intai's positioning. My current role means constant travel across several countries; I want to focus my energy on one company and one team.</p>
+        <p class="sign">Howard Liao, Ph.D.</p>
+      </div>
+      <div class="tscroll">
+        <table class="tbl">
+          <tr><th style="width:30%">One-page summary</th><th>Key points</th></tr>
+          <tr><td>What the company needs</td><td>Optimize and integrate MES, PLM, Notes and SAP; evaluate and drive AI adoption across departments</td></tr>
+          <tr><td>Integration track record</td><td>SAP S/4HANA at Hongyan linked to MES, PLM and APS; yield +15%, IT operating cost −25%; led Lotus Notes early on at Jianxin Technology</td></tr>
+          <tr><td>AI track record</td><td>Drove AI adoption across departments under ISO 42001; process automation efficiency +55%</td></tr>
+          <tr><td>Leading the team</td><td>Respect ten years of team experience, keep the hardware/software split, add an integration lead and AI champions</td></tr>
+          <tr><td>Why Intai</td><td>Lives nearby and can stay long-term; long-time advisor to Taichung VGH, believes in medical devices and in Intai; no more constant international travel</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 intai -->
+<section class="s alt" id="intai">
+  <div class="wrap">
+    <p class="num">02　Intai as I understand it</p>
+    <h2>A key medical-device supplier built on precision machining</h2>
+    <p class="lead">Revenue for the first three quarters of 2026 was NT$2.082 billion, up 13.94% YoY; July revenue alone topped NT$290 million as new growth lines ramp up.</p>
+    <div class="grid g4" style="margin-bottom:36px">
+      <div class="stat"><b>76%</b><span>Medical-device share of revenue (Q1 2026)</span></div>
+      <div class="stat"><b>85%</b><span>Americas share of medical revenue (2025)</span></div>
+      <div class="stat"><b>NT$2.08B</b><span>Jan–Sep 2026 revenue, +13.9% YoY</span></div>
+      <div class="stat"><b>41.6%</b><span>Gross margin, Q2 2026</span></div>
+    </div>
+
+    <div class="chartbox" style="margin-bottom:36px">
+      <h3>Monthly revenue (NT$ million)</h3>
+      <div class="legend"><span><i style="background:var(--muted)"></i>2025</span><span><i style="background:var(--copper-bright)"></i>2026</span></div>
+      <div class="cs"><svg id="revChart" viewBox="0 0 960 340" role="img" aria-label="Bar chart of Intai monthly revenue, June 2025 to September 2026; peak about NT$290 million in July 2026"></svg></div>
+      <p class="note">July 2026 revenue was about NT$290 million, up nearly 50% YoY. Sources: HiStock and Winvest monthly revenue reports; the July figure is derived from August revenue and its month-on-month change.</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card"><span class="tag">Main revenue</span><h3>Medical devices</h3><p>Minimally invasive and robotic surgical instruments, cardiovascular, endoscopy, biopsy devices, continuous glucose monitoring; own-brand spinal navigation sold in the US and Mexico.</p></div>
+      <div class="card"><span class="tag">High value-add</span><h3>Industrial</h3><p>Precision fasteners and semiconductor equipment parts; in front-end cleaning processes, with plans to expand into mid- and back-end.</p></div>
+      <div class="card"><span class="tag">Biggest growth driver</span><h3>Microwave switches</h3><p>Used in high-speed test for AI servers and silicon photonics; customer qualification done, entering pre-production.</p></div>
+    </div>
+
+    <div class="tscroll" style="margin-top:36px">
+      <table class="tbl">
+        <tr><th style="width:28%">Financial metrics</th><th style="width:36%">Value</th><th>Period</th></tr>
+        <tr><td>Revenue</td><td>NT$2.082 billion, +13.94% YoY</td><td>Jan–Sep 2026</td></tr>
+        <tr><td>Earnings per share</td><td>NT$2.95, +50% YoY</td><td>H1 2026</td></tr>
+        <tr><td>Gross margin</td><td>41.6%</td><td>Q2 2026</td></tr>
+        <tr><td>Operating margin</td><td>About 12.8%</td><td>Q2 2026</td></tr>
+        <tr><td>Inventory days</td><td>About 222 days</td><td>Q1 2026</td></tr>
+        <tr><td>Employees</td><td>691</td><td>End of February 2025</td></tr>
+      </table>
+    </div>
+    <p class="note">Gross margin has held at 41–44%, reflecting high qualification barriers in medical devices; operating margin of 10–13% leaves room to improve cost efficiency. All from public data; not internal company information.</p>
+  </div>
+</section>
+
+<!-- 3 growth & issues -->
+<section class="s" id="issues">
+  <div class="wrap">
+    <p class="num">03　IT questions</p>
+    <h2>Five questions the IT team must answer next</h2>
+    <div class="tscroll" style="margin-bottom:40px">
+      <table class="tbl">
+        <tr><th style="width:42%">Growth drivers</th><th>New needs for IT systems</th></tr>
+        <tr><td>Microwave switches entering pre-production for AI / silicon photonics test</td><td>High-mix, low-volume scheduling, yield tracking and fast prototyping</td></tr>
+        <tr><td>Semiconductor parts moving into mid- and back-end processes</td><td>More complex part numbers, BOMs and process data that systems must sync in real time</td></tr>
+        <tr><td>Robotic surgical instruments and own-brand spinal navigation</td><td>Design data, product traceability and document control</td></tr>
+        <tr><td>Medical devices are 76% of revenue, mostly US customers</td><td>Lot traceability and quality records must be complete and searchable</td></tr>
+      </table>
+    </div>
+    <div class="grid" style="gap:14px">
+      <div class="issue"><span class="n">1</span><div><h3>Are the systems connected?</h3><p>Does data between MES, PLM and SAP still rely on manual exports and re-keying?</p></div></div>
+      <div class="issue"><span class="n">2</span><div><h3>What next for Notes?</h3><p>Notes usually holds years of approval workflows and documents. What should be kept, moved to SAP or a new platform, or retired?</p></div></div>
+      <div class="issue"><span class="n">3</span><div><h3>Is the data visible?</h3><p>Inventory turns about every 222 days. Can managers see stock, yield and downtime in real time?</p></div></div>
+      <div class="issue"><span class="n">4</span><div><h3>Where should AI start?</h3><p>　How to pick the right use cases without leaking drawings or customer data?</p></div></div>
+      <div class="issue"><span class="n">5</span><div><h3>How will the team keep up?</h3><p>How can 10 staff grow from daily operations into integration and AI without disrupting current support?</p></div></div>
+    </div>
+    <p class="note">Inferred from HR's briefing and public data; inventory days from FindBillion (Q1 2026). At interview I would first confirm priorities with management.</p>
+  </div>
+</section>
+
+<!-- 4 match -->
+<section class="s dark" id="match">
+  <div class="wrap">
+    <p class="num" style="color:var(--copper-soft)">04　Needs vs. track record</p>
+    <h2>For each of the five questions, I have done the work</h2>
+    <p class="lead">I have done real SAP, MES and PLM integration in manufacturing, and in recent years I have led AI adoption and governance. Intai needs both now, plus a manager willing to stay in Taichung for the long term and lead the current team well.</p>
+    <div class="tscroll">
+      <table class="tbl">
+        <tr><th style="width:20%">Issues</th><th style="width:48%">What I have done</th><th>Result</th></tr>
+        <tr><td>Systems integration</td><td>Hongyan: SAP S/4HANA linked to MES, PLM and APS via encrypted APIs</td><td>Yield +15%; IT operating cost −25%</td></tr>
+        <tr><td>What next for Notes?</td><td>Led Lotus Notes at Jianxin Technology (4502) 20+ years ago; merged systems and ERP master data at Fengchen Group</td><td>Knows how Notes apps are built and where migrations stall</td></tr>
+        <tr><td>Visible data</td><td>Hongyan: BI war room showing OEE, yield and downtime in real time</td><td>Cleared several hundred million NT$ of slow-moving stock</td></tr>
+        <tr><td>AI in every department</td><td>Shengxin: ISO 42001 rules and AI workflow courses for managers</td><td>Process automation efficiency +55%</td></tr>
+        <tr><td>Team keeps up</td><td>HyWeb APAC IT team; Shengxin cross-border team; knowledge management and SOPs</td><td>100% audit compliance; faster onboarding</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 5 career -->
+<section class="s" id="career">
+  <div class="wrap">
+    <p class="num">05　Career overview</p>
+    <h2>25+ years across global software, manufacturing and cloud platforms</h2>
+    <p class="lead">From database internals to group IT leader; the three roles marked in copper are closest to Intai's needs. Separately, as an advisor, I helped Jianxin Technology Industrial (4502) implement Lotus Notes early in my career.</p>
+    <div class="tl">
+      <div class="item"><div class="y">2003</div><div class="c">Sybase / Borland (US)　</div><div class="r">Technical Manager</div></div>
+      <div class="item"><div class="y">2007</div><div class="c">HyWeb (5212)</div><div class="r">Department Head</div></div>
+      <div class="item"><div class="y">2010</div><div class="c">Chiffon Group</div><div class="r">CIO</div></div>
+      <div class="item key"><div class="y">2018</div><div class="c">Hongyan Technology</div><div class="r">IT Director</div></div>
+      <div class="item key"><div class="y">2022</div><div class="c">GameSparcs (6542)</div><div class="r">IT Director</div></div>
+      <div class="item key"><div class="y">2025</div><div class="c">Shengxin / Shengqi Network</div><div class="r">VP of Technology / CIO</div></div>
+      <div class="item"><div class="y">2026</div><div class="c">PChome Big Data</div><div class="r">Senior Director (part-time)</div></div>
+    </div>
+
+    <h3 style="font-size:24px;margin:64px 0 24px">Six numbers that show I deliver results</h3>
+    <div class="grid g3" style="gap:36px 28px">
+      <div class="big"><b>+15%</b><h3>Production yield</h3><span>Hongyan, cross-plant data transparency</span></div>
+      <div class="big"><b>−25%</b><h3>Group annual IT operating cost</h3><span>Hongyan, post-merger consolidation</span></div>
+      <div class="big"><b>−30%</b><h3>Annual cloud spend</h3><span>GameSparcs, GKE and FinOps</span></div>
+      <div class="big cu"><b>Zero</b><h3>Core-service outages</h3><span>GameSparcs, global MongoDB Atlas platform</span></div>
+      <div class="big cu"><b>−30%</b><h3>Security incidents (per year)</h3><span>Shengxin, Zero Trust architecture</span></div>
+      <div class="big cu"><b>+55%</b><h3>Process automation efficiency</h3><span>Shengxin, agentic AI workflows</span></div>
+    </div>
+    <p class="note">I can explain the baseline, method and period behind every figure at interview, and provide evidence and references.</p>
+  </div>
+</section>
+
+<!-- 6 cases -->
+<section class="s alt" id="cases">
+  <div class="wrap">
+    <p class="num">06　Representative cases</p>
+    <h2>Three cases, matching manufacturing data, security governance and AI adoption</h2>
+
+    <article class="case">
+      <header>
+        <span class="tag">Most relevant to Intai</span>
+        <h3 style="font-size:24px">Hongyan: data integration in cross-border electronics manufacturing</h3>
+        <p class="meta">IT Director | Taichung, Hsinchu, Taoyuan, Shenzhen, Shanghai | 2018.10–2022.09</p>
+      </header>
+      <div class="body">
+        <div><h3>Situation</h3><p>After a merger, plants ran separately with no view of capacity, creating data silos and several hundred million NT$ of slow-moving stock.</p></div>
+        <div><h3>Action</h3><ul><li>Drove SAP S/4HANA Clean Core: standardize the core, keep extensions outside</li><li>Connected ERP, MES, PLM and APS through encrypted APIs</li><li>Built a mobile BI war room on ELK for live OEE, yield and downtime</li></ul></div>
+        <div class="res"><h3>Result</h3><ul><li>Production yield +15%</li><li>Cleared hundreds of millions NT$ of stock</li><li>Group IT operating cost −25%</li><li>Shortened post-merger systems consolidation</li></ul></div>
+      </div>
+      <p class="why"><b>Why it matters for Intai: </b>Same multi-plant precision manufacturing; directly applicable to inventory visibility, yield tracking and linking data between the Nantun HQ and the Houli plant.</p>
+    </article>
+
+    <article class="case">
+      <header>
+        <span class="tag">Large migrations with zero downtime</span>
+        <h3 style="font-size:24px">GameSparcs (6542): ISO 27001 and zero-outage architecture</h3>
+        <p class="meta">IT Director | Taipei, Taichung, Hangzhou, Chengdu, Malta | 2022.09–2025.04</p>
+      </header>
+      <div class="body">
+        <div><h3>Situation</h3><p>New games launched monthly; the legacy relational database could not handle campaign traffic spikes, and the ops team was overloaded.</p></div>
+        <div><h3>Action</h3><ul><li>Moved core services to GKE; scaling cut from 2–3 days to automatic, deployment effort −30%</li><li>Introduced Cloud Load Balancing, doubling content load speed</li><li>Rebuilt the database on MongoDB Atlas; built a FinOps cost model</li><li>Achieved ISO 27001; built WAF and DDoS defenses</li></ul></div>
+        <div class="res"><h3>Result</h3><ul><li>Zero core-service outages</li><li>Annual cloud spend −30%</li><li>Featured as a Google Cloud and MongoDB case study</li></ul></div>
+      </div>
+      <p class="why"><b>Why it matters for Intai: </b>Large migrations with zero downtime; the same discipline keeps lines and daily work running during SAP, MES and Notes changes.</p>
+    </article>
+
+    <article class="case">
+      <header>
+        <span class="tag">AI governance and Zero Trust</span>
+        <h3 style="font-size:24px">Shengxin / Shengqi Network Technology: ISO 42001 and agentic AI</h3>
+        <p class="meta">VP of Technology / CIO | Taipei, Kaohsiung, Shanghai | 2025.05 – present</p>
+      </header>
+      <div class="body">
+        <div><h3>Situation</h3><p>Fragmented cloud assets across countries, a shortage of security talent, and urgent pressure to use AI to improve global operations.</p></div>
+        <div><h3>Action</h3><ul><li>Infrastructure as code with Kubernetes and Terraform</li><li>Zero Trust integrating IAM, MFA and micro-segmentation</li><li>Introduced ISO 42001 with responsible-AI guardrails</li><li>AI workflow training for managers; agentic AI embedded in daily operations</li></ul></div>
+        <div class="res"><h3>Result</h3><ul><li>Process automation efficiency +55%</li><li>Service availability +20%</li><li>Security incidents −30% a year</li><li>Time from build to launch cut 20%+</li></ul></div>
+      </div>
+      <p class="why"><b>Why it matters for Intai: </b>This is the approach Intai can use for "AI in every department": set rules first, train managers first, pilot small, and scale what works.</p>
+    </article>
+  </div>
+</section>
+
+<!-- 7 foundation & method -->
+<section class="s" id="foundation">
+  <div class="wrap">
+    <p class="num">07　Foundations and methods</p>
+    <h2>From database internals to cross-border M&A integration</h2>
+    <div class="grid g2" style="margin-bottom:56px">
+      <div class="card"><h3>Sybase / Borland (US) | 2003–2007</h3><p>Carrier-grade database tuning and high-availability design, plus ALM platform rollout.</p><p class="out" style="color:var(--teal);font-weight:700;margin:0">→ Critical-system stability and software development control</p></div>
+      <div class="card"><h3>HyWeb Technology | 2007–2010</h3><p>APAC data-center consolidation, high-availability backup and unified AD; PMP-run projects with 100% audit compliance.</p><p style="color:var(--teal);font-weight:700;margin:0">→ Unified governance for US and Japan sites</p></div>
+      <div class="card"><h3>Chiffon Group｜2010–2018</h3><p>As CIO, led IT strategy, systems governance and the IT team across plants in Taiwan, China and the US.</p><p style="color:var(--teal);font-weight:700;margin:0">→ IT governance for multi-plant manufacturing</p></div>
+      <div class="card"><h3>Fengchen Group | Full-time</h3><p>Data cleansing and ERP master-data merges during cross-border M&A; unified several POS and CRM systems without disruption.</p><p style="color:var(--teal);font-weight:700;margin:0">→ Systems integration with a strategic shareholder</p></div>
+    </div>
+    <h3 style="font-size:24px;margin-bottom:12px">My governance framework: the DX operating model</h3>
+    <p>Business-led, enterprise-governed, IT-enabled. Five guardrails (AI, data, security, architecture, compliance) apply to every digital project, and demand is ranked through "domain review → demand gate → digital steering committee → approved portfolio → execution governance". At Intai, this lets IT requests from the medical, industrial and microwave units go through one decision gate.</p>
+    <figure class="wide-fig"><img src="img/dt-model.jpg" alt="Digital Transformation Operating Model diagram: enterprise guardrails and five-stage demand decision flow" width="1536" height="1024" data-lb><figcaption>Digital Transformation Operating Model | my design; figures are illustrative (click to enlarge)</figcaption></figure>
+    <h3 style="font-size:24px;margin:40px 0 20px">Three methods that keep tech decisions tied to business value</h3>
+    <div class="grid g3">
+      <div class="card"><h3>Full-stack observability</h3><p>You can't manage what you can't see. Logs, databases and traffic on one platform, monitored 24/7; threats and bottlenecks found 50% faster.</p></div>
+      <div class="card"><h3>Reading hiring signals</h3><p>Tracking big-tech hiring to anticipate the next 2–3 years of tech investment, skipping hype and funding what creates value.</p></div>
+      <div class="card"><h3>Turning tacit know-how into SOPs</h3><p>Capture senior staff experience in a knowledge base so AI can support decisions and onboarding is faster. Especially valuable for passing on precision-machining craft.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 plans -->
+<section class="s alt" id="plans">
+  <div class="wrap">
+    <p class="num">08　Four plans for Intai</p>
+    <h2>Connect the systems, deal with Notes, bring in AI, with security as the baseline</h2>
+
+    <span class="tag">Plan 1</span>
+    <h3 style="font-size:24px">Connect PLM, SAP and MES into one data flow</h3>
+    <p>The principle is to standardize the core and keep extensions outside, using SAP standard functions wherever possible to cut customization debt. Connect the data first, then talk about AI.</p>
+    <div class="flow" role="list" aria-label="Data flow: PLM, SAP, MES, quality, BI war room">
+      <div class="st" role="listitem"><small>PLM</small><b>Design & BOM</b></div><div class="ar" aria-hidden="true"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M0 8h20M14 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div>
+      <div class="st" role="listitem"><small>SAP</small><b>Orders, materials, cost</b></div><div class="ar" aria-hidden="true"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M0 8h20M14 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div>
+      <div class="st" role="listitem"><small>MES</small><b>Work orders & reporting</b></div><div class="ar" aria-hidden="true"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M0 8h20M14 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div>
+      <div class="st" role="listitem"><small>Quality</small><b>Lot traceability</b></div><div class="ar" aria-hidden="true"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M0 8h20M14 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div>
+      <div class="st end" role="listitem"><small>BI war room</small><b>Management decisions</b></div>
+    </div>
+    <div class="grid g3" style="margin-bottom:56px">
+      <div class="card"><h3>One less manual export</h3><p>Find every process that relies on Excel and re-keying between systems, and replace each with an interface.</p></div>
+      <div class="card"><h3>Consistent part numbers and BOMs</h3><p>PLM design changes flow automatically to SAP and MES, cutting the risk of using the wrong revision.</p></div>
+      <div class="card"><h3>Real-time stock and yield</h3><p>Stock, yield and downtime at the Nantun and Houli plants on one set of metrics.</p></div>
+    </div>
+
+    <span class="tag">Plan 2</span>
+    <h3 style="font-size:24px">Don't replace Notes in one go; find each app a home in waves</h3>
+    <div class="grid g3" style="margin-top:16px">
+      <div class="card phase"><div class="d">1</div><h3>Inventory</h3><p>List every Notes database and workflow: purpose, users, frequency, owner and data volume.</p></div>
+      <div class="card phase"><div class="d">2</div><h3>Classify</h3><p>Put each app in one of three groups: <b>keep</b> (for now), <b>move</b> (to SAP or a new platform), <b>retire</b> (archive, then shut down).</p></div>
+      <div class="card phase"><div class="d">3</div><h3>Migrate in waves</h3><p>Start with high-use, high-risk apps; return functions that duplicate SAP or MES to the core systems.</p></div>
+    </div>
+    <p class="note" style="margin-bottom:56px">Run old and new platforms in parallel, retiring an app only after its data and approval records are fully moved. Having led Lotus Notes at Jianxin Technology over 20 years ago, I know how Notes apps are built and where migrations usually get stuck. The new platform will be chosen after the inventory, based on needs and budget.</p>
+
+    <span class="tag">Plan 3</span>
+    <h3 style="font-size:24px">AI in every department: rules first, then the right use cases</h3>
+    <div class="grid g2" style="margin-top:16px;align-items:start">
+      <div class="card navy"><h3>Approach</h3><ul><li><b>Rules</b>: ISO 42001-based usage rules; drawings and customer data stay inside</li><li><b>Managers first</b>: AI workflow course for managers</li><li><b>Pilot small</b>: start inside IT, then scale once it works</li></ul></div>
+      <div class="tscroll"><table class="tbl">
+        <tr><th style="width:26%">Department</th><th>AI use cases to evaluate</th></tr>
+        <tr><td>Production</td><td>Q&A over a process knowledge base that keeps senior craftsmen's know-how</td></tr>
+        <tr><td>Quality assurance</td><td>AI-assisted visual inspection; complaint data analysis</td></tr>
+        <tr><td>Sales</td><td>Quote and order document prep; customer spec comparison</td></tr>
+        <tr><td>Back office</td><td>Meeting notes, report roll-ups, policy Q&A</td></tr>
+        <tr><td>IT</td><td>Coding and operations assistance</td></tr>
+      </table></div>
+    </div>
+    <p class="note" style="margin-bottom:56px">Each department's use cases will be confirmed after interviews in my first 60 days.</p>
+
+    <span class="tag">Plan 4</span>
+    <h3 style="font-size:24px">Security is the baseline for integration and AI</h3>
+    <p>The more systems are connected and the more widely AI is used, the higher the risk of data leaks and ransomware. I will get access rights, backups and network segmentation right first, as the foundation for integration and AI. I am an ISO 27001 Lead Auditor and have led a team through ISO 27001 certification.</p>
+  </div>
+</section>
+
+<!-- 9 roadmap -->
+<section class="s" id="roadmap">
+  <div class="wrap">
+    <p class="num">09　Onboarding plan, measures and team</p>
+    <h2>First 90 days: listen, decide, then act</h2>
+    <div class="grid g3" style="margin-bottom:56px">
+      <div class="card phase"><div class="d">30 days</div><h3>Review and listen</h3><ul><li>Interview leaders and each department</li><li>One-on-ones with all 10 staff</li><li>Map MES, PLM, Notes and SAP interfaces and data flows</li></ul><p class="out">Deliverable: current-state assessment</p></div>
+      <div class="card phase"><div class="d">60 days</div><h3>Roadmap and priorities</h3><ul><li>Present an integration roadmap</li><li>Finish the Notes app classification</li><li>Choose AI pilot departments and set budget</li></ul><p class="out">Deliverable: integration roadmap and Notes action list</p></div>
+      <div class="card navy phase"><div class="d">90 days</div><h3 style="color:#F6F4EF">First results</h3><ul><li>Deliver a first integration win, such as removing one manual export</li><li>First Notes apps start moving or retiring</li><li>Publish AI rules and launch pilots</li></ul><p class="out">Deliverable: improvements staff can feel</p></div>
+    </div>
+
+    <h3 style="font-size:24px;margin-bottom:18px">Year one: judge me on measures management can read</h3>
+    <div class="tscroll">
+      <table class="tbl">
+        <tr><th style="width:18%">Area</th><th style="width:44%">Measure</th><th>Suggested year-one target</th></tr>
+        <tr><td>Systems integration</td><td>Processes relying on manual exports or re-keying</td><td>Clear reduction from baseline</td></tr>
+        <tr><td>Notes</td><td>App inventory and classification</td><td>100%, with the first wave moved or retired</td></tr>
+        <tr><td>Stability</td><td>SAP and MES availability</td><td>Target set from baseline</td></tr>
+        <tr><td>Manufacturing data</td><td>Lines covered by dashboards</td><td>All main lines</td></tr>
+        <tr><td>AI use</td><td>Departments using AI on an ongoing basis</td><td>2–3 departments</td></tr>
+        <tr><td>Team</td><td>Staff trained in integration and AI</td><td>Everyone</td></tr>
+      </table>
+    </div>
+    <p class="note">No fixed percentages until I see internal baselines; we will set them together within 60 days of my joining.</p>
+
+    <h3 style="font-size:24px;margin:56px 0 18px">Leading the IT team: respect ten years of experience and move forward with all 10 staff</h3>
+    <div class="grid g2">
+      <div class="card"><h3>Get to know everyone first</h3><p>One-on-ones with every team member in month one: their systems, strengths and goals.</p></div>
+      <div class="card"><h3>Keep the structure, add roles</h3><p>Keep the hardware and software groups; add an integration lead and AI champions.</p></div>
+      <div class="card"><h3>Keep the knowledge</h3><p>Write system knowledge into SOPs and a knowledge base to reduce reliance on any one person.</p></div>
+      <div class="card"><h3>Learn AI together</h3><p>Use AI tools inside IT first; once staff have real experience, they help other departments.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- media -->
+<section class="s" id="media">
+  <div class="wrap">
+    <p class="num">10　Media and talks</p>
+    <h2>Public records from industry media, vendors and government</h2>
+    <p class="lead">Results from my time at GameSparcs were covered by CIO IT Manager, iThome and MongoDB; talks include vendor conferences, industry events and civil-service courses. Click an image to enlarge.</p>
+    <div class="gallery">
+      <figure class="fig tall"><button type="button"><img src="img/cio-cover.jpg" alt="CIO IT Manager profile interview: adopting multi-cloud, overcoming management challenges" loading="lazy" data-lb></button><figcaption><b>CIO IT Manager</b>Profile interview: multi-cloud management</figcaption></figure>
+      <figure class="fig tall"><button type="button"><img src="img/itmanager-cover.jpg" alt="CIO IT Manager magazine, May 2024 cover" loading="lazy" data-lb></button><figcaption><b>CIO IT Manager magazine</b>May 2024 issue</figcaption></figure>
+      <figure class="fig tall doc"><button type="button"><img src="img/ithome-article.jpg" alt="iThome feature: GameSparcs builds its game data platform on MongoDB Atlas" loading="lazy" data-lb></button><figcaption><b>iThome feature</b>MongoDB Atlas game data platform</figcaption></figure>
+      <figure class="fig tall"><button type="button"><img src="img/mongodb-interview.jpg" alt="Joint interview by MongoDB and iThome" loading="lazy" data-lb></button><figcaption><b>MongoDB × iThome</b>Joint interview</figcaption></figure>
+    </div>
+    <div class="gallery" style="margin-top:20px">
+      <figure class="fig"><button type="button"><img src="img/mongodb-keynote.jpg" alt="Keynote at MongoDB.local Taipei 2024" loading="lazy" data-lb></button><figcaption><b>MongoDB.local Taipei（2024）</b>　Keynote</figcaption></figure>
+      <figure class="fig"><button type="button"><img src="img/ace-interview.jpg" alt="At the MongoDB and iThome interview" loading="lazy" data-lb></button><figcaption><b>MongoDB × iThome</b>　Interview</figcaption></figure>
+      <figure class="fig"><button type="button"><img src="img/cloud-event.jpg" alt="Group photo at the Enterprise Cloud industry event" loading="lazy" data-lb></button><figcaption><b>Enterprise Cloud</b>　Industry event</figcaption></figure>
+      <figure class="fig doc"><button type="button"><img src="img/egov-course.jpg" alt="Course page on the Executive Yuan's e-learning platform: Seeing opportunity: cloud management in practice" loading="lazy" data-lb></button><figcaption><b>e-Learning for civil servants</b>　Cloud management in practice</figcaption></figure>
+    </div>
+    <h3 style="font-size:24px;margin:56px 0 18px">Certificates</h3>
+    <div class="gallery g3">
+      <figure class="fig doc"><button type="button"><img src="img/cert-gs1.jpg" alt="GS1 Certified Barcode Specialist certificate" loading="lazy" data-lb></button><figcaption><b>GS1 Certified Barcode Specialist</b>Supply-chain barcodes and traceability, directly relevant to medical lot control</figcaption></figure>
+      <figure class="fig doc"><button type="button"><img src="img/cert-oracle.jpg" alt="Oracle University supply chain modules certificate" loading="lazy" data-lb></button><figcaption><b>Oracle Supply Chain Modules</b>Oracle EBS purchasing, inventory and order modules</figcaption></figure>
+      <figure class="fig doc"><button type="button"><img src="img/cert-wbsa.jpg" alt="WBSA Marketing Planner certificate" loading="lazy" data-lb></button><figcaption><b>WBSA Marketing Planner</b>Turning technical plans into proposals leadership understands</figcaption></figure>
+    </div>
+    <p class="note">Copies of ISO 27001/42001, PMP and CSM certificates are available at interview.</p>
+  </div>
+</section>
+
+<!-- 10 credentials -->
+<section class="s alt" id="credentials">
+  <div class="wrap">
+    <p class="num">11　Education, certifications and industry presence</p>
+    <h2>Academic grounding, international certifications and hands-on results</h2>
+    <div class="grid g3">
+      <div class="card"><h3>Education</h3><p><b style="color:var(--ink)">Ph.D.</b>（Ph.D. in Information Management）<br>Enterprise IT architecture modernization, hybrid-cloud security governance</p><p><b style="color:var(--ink)">M.S.</b>（M.S. in Info Science）<br>National Chung Hsing University | cryptography, data mining, data governance</p></div>
+      <div class="card"><h3>Certifications</h3><ul><li>ISO 27001 Information Security Lead Auditor</li><li>ISO 42001 AI Management System</li><li>PMP (Project Management Professional)</li><li>Scrum Master（CSM）</li><li>Oracle OCP &amp; OCA</li><li>ESG Sustainability Manager, WBSA</li></ul></div>
+      <div class="card"><h3>Industry presence</h3><ul><li>MongoDB.local Taipei keynote (2024)</li><li>CIO Value Academy keynote (2024)</li><li>Cybersecurity Summit (2024)</li><li>Google Cloud customer case study</li><li>Advisor, Taichung Veterans General Hospital</li><li>Executive Director, Kang Shan Foundation</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 closing -->
+<section class="s dark" id="contact">
+  <div class="wrap">
+    <p class="num" style="color:var(--copper-soft)">12　Closing</p>
+    <div class="closing-grid">
+      <img src="img/headshot.jpg" alt="Headshot of Howard Liao, Ph.D." loading="lazy">
+      <p class="quote" style="margin:0">The best technology leaders translate tech into the language of business and risk.</p>
+    </div>
+    <p class="lead">I want to use 25+ years of integration experience to help Intai integrate MES, PLM, Notes and SAP and bring AI to every department. Years as an advisor to Taichung VGH have strengthened my belief in medical devices and in Intai, and living nearby lets me commit for the long term. If convenient, I would be glad to arrange an interview.</p>
+    <div class="contact">
+      <div><small>Phone</small><a href="tel:+886975323161">+886-975-323161</a></div>
+      <div><small>Email</small><a href="mailto:Liao.Howard@gmail.com">Liao.Howard@gmail.com</a></div>
+      <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/howardliao78/" target="_blank" rel="noopener">howardliao78</a></div>
+      <div class="hot"><small>Location</small><span>Lives nearby; available long-term</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="sources">
+  <div class="wrap">
+    <p class="num">Sources</p>
+    <p>All Intai figures come from public sources; no internal company information was used. Personal experience and result figures come from my résumé (Executive Portfolio 2025–2026).</p>
+    <ul class="sources">
+      <li><a href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=6689c421-6b60-4204-badc-ada674dacb70" target="_blank" rel="noopener">MoneyDJ: Intai expands into surgical robotics, clear progress expected in H2 (2026/05/15)</a></li>
+      <li><a href="https://winvest.tw/News/Detail/96943" target="_blank" rel="noopener">Winvest: Intai September 2026 revenue flash (2026/10/14)</a></li>
+      <li><a href="https://winvest.tw/News/Detail/93543" target="_blank" rel="noopener">Winvest: Intai August 2026 revenue flash (2026/09/09)</a></li>
+      <li><a href="https://winvest.tw/News/Detail/88854" target="_blank" rel="noopener">Winvest: Intai June 2026 revenue flash (2026/07/08)</a></li>
+      <li><a href="https://histock.tw/stock/financial.aspx?no=4163" target="_blank" rel="noopener">HiStock: Intai monthly revenue</a></li>
+      <li><a href="https://www.cnyes.com/twstock/profile/4163.htm" target="_blank" rel="noopener">cnyes: Intai company profile</a></li>
+      <li><a href="https://www.findbillion.com/twstock/4163/financial_statement" target="_blank" rel="noopener">FindBillion: Intai financial metrics</a></li>
+      <li><a href="https://blog.fugle.tw/post/earnings-call-4163-2025-03-25" target="_blank" rel="noopener">Fugle: Intai earnings call notes (2025/03/25)</a></li>
+      <li><a href="https://uc913.com/stock-4163/" target="_blank" rel="noopener">913 valuation: Intai Technology</a></li>
+      <li><a href="https://www.peoplenews.tw/articles/economic-news/19628" target="_blank" rel="noopener">People News: Catcher moves into medical devices</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<dialog class="lb" id="lb" aria-label="Image viewer"><button class="x" type="button" aria-label="Close">×</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+
+<footer>
+  <div class="wrap">© 2026 Howard Liao, Ph.D. | Personal job-application material; Intai content compiled from public information as of October 2026.</div>
+</footer>
+
+<script>
+(function(){
+  // theme toggle
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    drawChart();
+  });
+
+  // revenue chart (NT$ million)
+  var data=[
+    ['2025/06',207.6,0],['07',193.6,0],['08',210.3,0],['09',202.0,0],['10',170.2,0],['11',202.0,0],['12',205.8,0],
+    ['2026/01',253.5,1],['02',150.6,1],['03',218.7,1],['04',237.5,1],['05',220.6,1],['06',224,1],['07',290,1],['08',249,1],['09',238,1]
+  ];
+  function css(v){return getComputedStyle(root).getPropertyValue(v).trim();}
+  function drawChart(){
+    var svg=document.getElementById('revChart'); if(!svg) return;
+    var W=960,H=340,L=48,R=12,T=24,B=48,max=300;
+    var bw=(W-L-R)/data.length, out='';
+    var grid=css('--line'), muted=css('--muted'), cu=css('--copper-bright'), ink=css('--ink'), body=css('--body');
+    [0,100,200,300].forEach(function(v){
+      var y=T+(H-T-B)*(1-v/max);
+      out+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y+'" y2="'+y+'" stroke="'+grid+'" stroke-width="1"/>';
+      out+='<text x="'+(L-8)+'" y="'+(y+5)+'" text-anchor="end" font-size="14" fill="'+body+'">'+v+'</text>';
+    });
+    data.forEach(function(d,i){
+      var h=(H-T-B)*(d[1]/max), x=L+i*bw+bw*0.18, w=bw*0.64, y=H-B-h;
+      out+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="'+(d[2]?cu:muted)+'" opacity="'+(d[2]?1:0.55)+'"><title>'+d[0]+'：'+d[1]+' NT$M</title></rect>';
+      if(i===13) out+='<text x="'+(x+w/2)+'" y="'+(y-8)+'" text-anchor="middle" font-size="14" font-weight="700" fill="'+ink+'">≈290</text>';
+      out+='<text x="'+(x+w/2)+'" y="'+(H-B+22)+'" text-anchor="middle" font-size="13" fill="'+body+'">'+d[0]+'</text>';
+    });
+    svg.innerHTML=out;
+  }
+  drawChart();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawChart);
+
+  // lightbox
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+  document.querySelectorAll('img[data-lb]').forEach(function(im){
+    var t=im.closest('button')||im;
+    t.addEventListener('click',function(){ lbImg.src=im.src; lbImg.alt=im.alt; lbCap.textContent=im.alt; if(lb.showModal) lb.showModal(); });
+  });
+  lb.querySelector('.x').addEventListener('click',function(){lb.close();});
+  lb.addEventListener('click',function(e){ if(e.target===lb) lb.close(); });
+
+  // active nav
+  var links=[].slice.call(document.querySelectorAll('.nav a.l'));
+  var map={}; links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting && map[e.target.id]){ links.forEach(function(a){a.classList.remove('on')}); map[e.target.id].classList.add('on'); } });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  Object.keys(map).forEach(function(id){var el=document.getElementById(id); if(el) obs.observe(el);});
+})();
+</script>
+</body>
+</html>

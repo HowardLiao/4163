@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>廖倫豪 博士 × 鐿鈦科技（4163）｜情報システム部長 応募：システム統合と AI 導入</title>
+<meta name="description" content="廖倫豪 博士から鐿鈦科技（4163）経営陣への情報システム部長応募：MES・PLM・Notes・SAP の統合と全部門への AI 導入。">
+<meta property="og:title" content="廖倫豪 博士 × 鐿鈦科技（4163）">
+<meta property="og:description" content="MES・PLM・Notes・SAP を統合し、全部門に AI を導入。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
+<style>
+:root{
+  --bg:#F6F4EF; --bg-alt:#ECEFF2; --card:#FFFDF9; --line:#E2DED5;
+  --ink:#13233A; --body:#3E4A59; --muted:#6B7684;
+  --navy:#13233A; --navy-2:#1F3654; --on-navy:#E6EBF0; --on-navy-muted:#BFCBD8;
+  --copper:#A3561F; --copper-bright:#C8743A; --copper-soft:#E39A62;
+  --teal:#1E7A78; --teal-soft:#DFF1EF;
+  --radius:16px; --maxw:1120px;
+  --serif:'Noto Serif JP','Noto Serif CJK JP', Georgia, serif;
+  --sans:'Noto Sans JP','Noto Sans CJK JP', -apple-system, 'PingFang TC', 'Microsoft JhengHei', Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1A2B; --bg-alt:#14223A; --card:#18283F; --line:#26395A;
+    --ink:#EEF1F5; --body:#C3CDD9; --muted:#8FA0B5;
+    --navy:#0A1322; --navy-2:#1A2C47;
+    --copper:#E39A62; --copper-bright:#E39A62;
+    --teal:#4FB8B4; --teal-soft:#1B3A3D;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1A2B; --bg-alt:#14223A; --card:#18283F; --line:#26395A;
+  --ink:#EEF1F5; --body:#C3CDD9; --muted:#8FA0B5;
+  --navy:#0A1322; --navy-2:#1A2C47;
+  --copper:#E39A62; --copper-bright:#E39A62;
+  --teal:#4FB8B4; --teal-soft:#1B3A3D;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+img{max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--copper)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a.l{display:block;padding:6px 10px;border-radius:8px;color:var(--body);text-decoration:none;font-size:15px;white-space:nowrap}
+.nav a.l:hover,.nav a.l.on{background:var(--bg-alt);color:var(--ink)}
+.theme{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;font:inherit;font-size:14px}
+@media (max-width:860px){.nav ul{display:none}.theme{margin-left:auto}}
+
+/* hero */
+.hero{background:var(--navy);color:#F6F4EF;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--copper-bright)}
+.hero .wrap{padding-top:96px;padding-bottom:88px}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.14em;color:var(--copper)}
+.hero .eyebrow{color:var(--copper-soft)}
+.hero h1{font-family:var(--serif);font-size:clamp(44px,8vw,84px);line-height:1.1;margin:18px 0 8px}
+.hero .en{font-size:20px;color:var(--on-navy-muted);margin:0}
+.hero p{color:var(--on-navy)}
+.hero .role{font-size:clamp(22px,3.4vw,30px);font-weight:500;margin:28px 0 8px;color:#F6F4EF}
+.hero .lede{font-size:19px;color:var(--on-navy-muted);max-width:720px;margin:0}
+.pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.pill{border:1px solid #33496A;border-radius:999px;padding:6px 16px;font-size:15px;color:var(--on-navy)}
+.pill.hot{background:var(--copper-soft);border-color:var(--copper-soft);color:#13233A;font-weight:700}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.hero-stats div{border-top:2px solid #33496A;padding-top:14px}
+.hero-stats b{display:block;font-family:var(--serif);font-size:34px;color:var(--copper-soft);line-height:1.2}
+.hero-stats span{font-size:14px;color:var(--on-navy-muted)}
+@media (max-width:700px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
+
+.hero-grid{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:center}
+.hero-photo{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:20px;border:1px solid #33496A;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-photo{max-width:260px;order:-1}}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.gallery.g3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.gallery,.gallery.g3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.gallery,.gallery.g3{grid-template-columns:1fr}}
+.fig{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.fig button{all:unset;cursor:zoom-in;display:block}
+.fig img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--bg-alt)}
+.fig.tall img{aspect-ratio:3/4}
+.fig.doc img{object-fit:contain;background:#FBFAF6;padding:8px}
+.fig figcaption{padding:12px 16px 16px;font-size:14px;color:var(--body);line-height:1.5}
+.fig figcaption b{display:block;color:var(--ink);font-size:15px}
+.wide-fig{margin:0 0 28px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.wide-fig img{width:100%;display:block;border-radius:8px;cursor:zoom-in}
+.wide-fig figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+dialog.lb{border:none;padding:0;background:transparent;max-width:min(1200px,94vw);max-height:92vh}
+dialog.lb::backdrop{background:rgba(8,14,24,.85)}
+dialog.lb img{max-width:100%;max-height:86vh;display:block;border-radius:10px}
+dialog.lb p{color:#F6F4EF;text-align:center;margin:10px 0 0;font-size:15px}
+dialog.lb .x{position:absolute;top:8px;right:8px;border:none;background:rgba(0,0,0,.55);color:#fff;border-radius:999px;width:36px;height:36px;font-size:20px;cursor:pointer}
+.closing-grid{display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:center}
+.closing-grid img{width:200px;height:256px;object-fit:cover;border-radius:16px;border:1px solid #33496A}
+@media (max-width:700px){.closing-grid{grid-template-columns:1fr}.closing-grid img{width:150px;height:192px}}
+
+/* sections */
+section.s{padding:88px 0;border-bottom:1px solid var(--line)}
+section.alt{background:var(--bg-alt)}
+section.dark{background:var(--navy);color:#F6F4EF}
+section.dark .eyebrow{color:var(--copper-soft)}
+section.dark h2{color:#F6F4EF}
+section.dark p{color:var(--on-navy)}
+.num{font-family:var(--serif);color:var(--copper-bright);font-size:15px;font-weight:700;letter-spacing:.1em}
+h2{font-family:var(--serif);font-size:clamp(28px,4.4vw,42px);line-height:1.3;margin:10px 0 16px}
+h3{font-size:21px;line-height:1.45;margin:0 0 10px}
+.lead{font-size:19px;color:var(--body);max-width:820px;margin:0 0 36px}
+section.dark .lead{color:var(--on-navy-muted)}
+p{margin:0 0 14px;color:var(--body)}
+.note{font-size:14px;color:var(--muted);margin-top:20px}
+section.dark .note{color:var(--on-navy-muted)}
+
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.card.navy{background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
+.card.navy h3{color:var(--copper-soft)}
+.card.navy p,.card.navy li{color:var(--on-navy)}
+.card ul{margin:0;padding-left:20px;color:var(--body)}
+.card li{margin:4px 0}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--teal);background:var(--teal-soft);border-radius:999px;padding:2px 12px;margin-bottom:12px}
+
+.stat b{display:block;font-family:var(--serif);font-size:44px;line-height:1.15;color:var(--ink)}
+.stat span{font-size:15px;color:var(--body)}
+.stat{border-top:3px solid var(--copper-bright);padding-top:16px}
+
+/* tables */
+.tbl{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);font-size:16px}
+.tbl th{background:var(--navy);color:#F6F4EF;text-align:left;padding:14px 18px;font-weight:700}
+.tbl td{padding:14px 18px;border-top:1px solid var(--line);vertical-align:top;color:var(--body)}
+.tbl td:first-child{color:var(--ink);font-weight:500}
+.tbl tr:nth-child(even) td{background:color-mix(in srgb,var(--bg-alt) 55%,var(--card))}
+section.dark .tbl{background:var(--navy-2);border-color:#2B4466}
+section.dark .tbl th{background:#0A1628;color:var(--copper-soft)}
+section.dark .tbl td{color:var(--on-navy);border-color:#2B4466}
+section.dark .tbl td:first-child{color:#F6F4EF}
+section.dark .tbl tr:nth-child(even) td{background:#1A2E48}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){.tbl{font-size:15px}.tbl th,.tbl td{padding:12px 14px}}
+
+/* issues */
+.issue{display:flex;gap:20px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px}
+.issue .n{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--copper-bright);line-height:1;min-width:32px}
+.issue h3{margin-bottom:4px}
+.issue p{margin:0}
+
+/* timeline */
+.tl{position:relative;display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--line)}
+.tl .item{position:relative;padding-top:32px}
+.tl .item::before{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--muted);border:3px solid var(--bg)}
+.tl .item.key::before{background:var(--copper-bright)}
+.tl .y{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--muted)}
+.tl .key .y{color:var(--copper)}
+.tl .c{font-weight:700;color:var(--ink);font-size:16px;line-height:1.4;margin:4px 0}
+.tl .r{font-size:14px;color:var(--body);line-height:1.5}
+@media (max-width:900px){
+  .tl{grid-template-columns:1fr;gap:0}
+  .tl::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .tl .item{padding:0 0 24px 36px}
+  .tl .item::before{top:6px}
+}
+
+/* big numbers */
+.big b{display:block;font-family:var(--serif);font-size:clamp(44px,6vw,64px);line-height:1.1;color:var(--teal)}
+.big.cu b{color:var(--copper)}
+.big h3{margin:8px 0 2px}
+.big span{font-size:15px;color:var(--body)}
+
+/* cases */
+.case{border:1px solid var(--line);border-radius:20px;background:var(--card);overflow:hidden;margin-bottom:28px}
+.case header{padding:28px 32px 0}
+.case .meta{font-size:15px;color:var(--muted)}
+.case .body{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:0;margin-top:20px;border-top:1px solid var(--line)}
+.case .body>div{padding:24px 32px}
+.case .body>div+div{border-left:1px solid var(--line)}
+.case .body .res{background:var(--navy);color:var(--on-navy)}
+.case .body .res h3{color:var(--copper-soft)}
+.case .body .res li{color:var(--on-navy)}
+.case .body h3{font-size:17px;letter-spacing:.06em}
+.case .body ul{margin:0;padding-left:20px}
+.case .body li{margin:4px 0;color:var(--body)}
+.case .why{background:var(--bg-alt);border-left:5px solid var(--copper-bright);padding:18px 32px;margin:0}
+.case .why b{color:var(--ink)}
+@media (max-width:860px){.case .body{grid-template-columns:1fr}.case .body>div+div{border-left:none;border-top:1px solid var(--line)}.case header,.case .body>div,.case .why{padding-left:20px;padding-right:20px}}
+
+/* flow */
+.flow{display:flex;align-items:stretch;gap:0;margin:28px 0}
+.flow .st{flex:1;background:var(--navy);color:#F6F4EF;border-radius:12px;padding:18px}
+.flow .st small{display:block;color:var(--copper-soft);font-weight:700;font-size:13px;letter-spacing:.08em}
+.flow .st b{font-size:17px}
+.flow .st.end{background:var(--teal)}
+.flow .st.end small{color:var(--teal-soft)}
+.flow .ar{display:flex;align-items:center;justify-content:center;width:36px;color:var(--copper-bright);flex:none}
+@media (max-width:760px){.flow{flex-direction:column}.flow .ar{width:auto;height:30px;transform:rotate(90deg)}}
+
+/* chart */
+.chartbox{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.chartbox h3{margin-bottom:4px}
+.chartbox .cs{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.chartbox svg{width:100%;min-width:640px;height:auto;display:block;margin-top:12px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--body)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+/* phases */
+.phase .d{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--copper-bright);line-height:1.1}
+.phase.navy .d{color:var(--copper-soft)}
+.phase .out{margin-top:14px;font-size:14px;font-weight:700;color:var(--teal)}
+.phase.navy .out{color:var(--copper-soft)}
+
+/* closing */
+.quote{font-family:var(--serif);font-size:clamp(26px,4vw,40px);line-height:1.45;color:#F6F4EF;margin:12px 0 28px;max-width:900px}
+.contact{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.contact div{background:var(--navy-2);border-radius:12px;padding:18px 20px}
+.contact small{display:block;color:var(--copper-soft);font-weight:700;font-size:13px}
+.contact a,.contact span{color:#F6F4EF;text-decoration:none;font-size:16px;word-break:break-all}
+.contact .hot{background:var(--copper-soft)}
+.contact .hot small,.contact .hot span{color:#13233A;font-weight:700}
+@media (max-width:860px){.contact{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.contact{grid-template-columns:1fr}}
+
+.sources li{margin:6px 0;color:var(--body)}
+footer{padding:36px 0;font-size:14px;color:var(--muted)}
+.letter p{font-size:18px}
+.sign{font-family:var(--serif);font-size:20px;color:var(--ink)!important}
+@media print{.nav,.theme{display:none}section.s{break-inside:avoid-page;padding:40px 0}}
+.theme{white-space:nowrap}</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="セクション案内">
+  <div class="wrap">
+    <a class="brand" href="#top">廖倫豪 博士 <span>× 4163</span></a>
+    <ul>
+      <li><a class="l" href="#letter">経営陣の皆様へ</a></li>
+      <li><a class="l" href="#intai">鐿鈦</a></li>
+      <li><a class="l" href="#issues">課題</a></li>
+      <li><a class="l" href="#match">対照</a></li>
+      <li><a class="l" href="#career">経歴</a></li>
+      <li><a class="l" href="#cases">事例</a></li>
+      <li><a class="l" href="#plans">提案</a></li>
+      <li><a class="l" href="#roadmap">着任</a></li>
+      <li><a class="l" href="#media">報道</a></li>
+      <li><a class="l" href="#contact">連絡先</a></li>
+    </ul>
+    <button class="theme" id="themeBtn" type="button" aria-label="ライト／ダークの切替">◐ テーマ</button>
+    <div class="langs" style="display:flex;gap:10px;font-size:13px;margin-left:12px;white-space:nowrap"><a href="index.html" style="color:inherit;opacity:.7;text-decoration:none">中文</a><a href="en.html" style="color:inherit;opacity:.7;text-decoration:none">EN</a><a href="ja.html" style="color:inherit;font-weight:700;text-decoration:underline">日本語</a></div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+   <div class="hero-grid">
+   <div>
+    <p class="eyebrow">鐿鈦科技（4163）採用ご担当者様・経営陣の皆様へ</p>
+    <h1>廖倫豪 博士</h1>
+    <p class="en">Howard Liao, Ph.D.</p>
+    <p class="role">情報システム部長候補｜システム統合と AI 導入</p>
+    <p class="lede">MES・PLM・Notes・SAP を統合し、全部門に AI を導入。</p>
+    <div class="pills">
+      <span class="pill hot">自宅が近く、台中に長期常駐可能</span>
+      <span class="pill">IT 経験 25 年以上</span>
+      <span class="pill">ISO 27001 主任審査員</span>
+      <span class="pill">ISO 42001 AI ガバナンス</span>
+      <span class="pill">早期に Lotus Notes を担当</span>
+      <span class="pill">情報管理 博士</span>
+    </div>
+   </div>
+   <img class="hero-photo" src="img/portrait.jpg" alt="廖倫豪 博士 ポートレート" width="864" height="1184">
+   </div>
+    <div class="hero-stats">
+      <div><b>+15%</b><span>製造歩留まり</span></div>
+      <div><b>−30%</b><span>年間クラウド費用</span></div>
+      <div><b>−30%</b><span>セキュリティ事故（年間）</span></div>
+      <div><b>+55%</b><span>業務自動化効率</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 letter -->
+<section class="s" id="letter">
+  <div class="wrap">
+    <p class="num">01　採用ご担当者様へ</p>
+    <h2>御社が求める 2 つのこと、どちらも自ら手掛けてきました</h2>
+    <div class="grid g2" style="align-items:start">
+      <div class="letter">
+        <p>ご担当者様</p>
+        <p>人事ご担当者様より本職務についてご説明いただき、ありがとうございました。情報システム部門は 10 名体制で 10 年以上運営され、ハードウェアとソフトウェアを担当しています。会社が期待するのはシステムの最適化・統合と、各部門への AI 導入です。</p>
+        <p><b>システム統合。</b>泓晏科技（多国籍の電子製造業）で SAP S/4HANA 導入を主導し、MES・PLM・APS と連携。生産歩留まりは 15% 向上し、グループの IT 運用コストは 25% 削減しました。20 年以上前には健信科技（4502）で Lotus Notes を担当し、Notes アプリの構造と移行の難しさを理解しています。</p>
+        <p><b>AI 導入。</b>現職で ISO 42001 に基づく AI 利用規程を整備し、管理職向け AI ワークフロー講座を開講、各部門への AI 導入を推進して業務自動化効率を 55% 向上させました。</p>
+        <p><b>なぜ鐿鈦なのか。</b>鐿鈦は自宅から非常に近く、長期的に安定して力を注げます。台中栄民総医院の顧問を長年務め、医療機器産業の将来性を確信し、鐿鈦の位置づけに共感しています。現職は出張が多く複数国を担当しており、一つの会社、一つのチームに力を集中したいと考えています。</p>
+        <p class="sign">廖倫豪 博士</p>
+      </div>
+      <div class="tscroll">
+        <table class="tbl">
+          <tr><th style="width:30%">1 ページ要約</th><th>要点</th></tr>
+          <tr><td>会社の期待</td><td>MES・PLM・Notes・SAP の最適化と統合；各部門への AI 導入の評価と推進</td></tr>
+          <tr><td>システム統合の実績</td><td>泓晏科技で SAP S/4HANA を導入し MES・PLM・APS と連携、歩留まり +15%、IT 運用コスト −25%；早期に健信科技で Lotus Notes を担当</td></tr>
+          <tr><td>AI 導入の実績</td><td>ISO 42001 に基づき各部門へ AI を導入、業務自動化効率 +55%</td></tr>
+          <tr><td>チームの統率</td><td>部門 10 年の蓄積を尊重し、ハード・ソフトの分担を維持、統合窓口と AI 推進メンバーを追加</td></tr>
+          <tr><td>なぜ鐿鈦なのか</td><td>自宅が近く長期常駐可能；台中栄総の長年の顧問として医療機器と鐿鈦に共感；海外出張中心の働き方から転換</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 intai -->
+<section class="s alt" id="intai">
+  <div class="wrap">
+    <p class="num">02　私が理解する鐿鈦</p>
+    <h2>精密加工を核とする医療機器サプライチェーンの要</h2>
+    <p class="lead">2026 年 1–3 四半期の売上高は 20.82 億元（前年比 +13.94%）。7 月単月の売上は 2.9 億元を超え、新たな成長分野が立ち上がりつつあります。</p>
+    <div class="grid g4" style="margin-bottom:36px">
+      <div class="stat"><b>76%</b><span>医療機器の売上比率（2026 Q1）</span></div>
+      <div class="stat"><b>85%</b><span>医療機器売上に占める米州比率（2025）</span></div>
+      <div class="stat"><b>20.8 億元</b><span>2026 年 1–9 月売上高、前年比 +13.9%</span></div>
+      <div class="stat"><b>41.6%</b><span>2026 Q2 粗利率</span></div>
+    </div>
+
+    <div class="chartbox" style="margin-bottom:36px">
+      <h3>月次売上高の推移（百万台湾ドル）</h3>
+      <div class="legend"><span><i style="background:var(--muted)"></i>2025 年</span><span><i style="background:var(--copper-bright)"></i>2026 年</span></div>
+      <div class="cs"><svg id="revChart" viewBox="0 0 960 340" role="img" aria-label="鐿鈦の月次売上高（2025 年 6 月〜2026 年 9 月）の棒グラフ。2026 年 7 月が最高で約 2.9 億元"></svg></div>
+      <p class="note">2026 年 7 月の売上高は約 2.9 億元、前年比ほぼ 50% 増。出典：HiStock、Win 投資の月次売上公告。7 月の数値は 8 月売上と前月比から推計。</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card"><span class="tag">売上の柱</span><h3>医療機器</h3><p>低侵襲・ロボット手術器具、心血管、内視鏡、生検器具、持続血糖測定。自社ブランドの脊椎ナビゲーションを米国・メキシコで販売。</p></div>
+      <div class="card"><span class="tag">高付加価値</span><h3>産業用途</h3><p>精密ファスナーと半導体装置部品。前工程の洗浄工程に参入済みで、中・後工程への拡大を計画。</p></div>
+      <div class="card"><span class="tag">最大の成長分野</span><h3>マイクロ波スイッチ</h3><p>AI サーバー・シリコンフォトニクスの高速試験向け。顧客認証を完了し、量産準備段階へ。</p></div>
+    </div>
+
+    <div class="tscroll" style="margin-top:36px">
+      <table class="tbl">
+        <tr><th style="width:28%">財務指標</th><th style="width:36%">数値</th><th>期間</th></tr>
+        <tr><td>売上高</td><td>20.82 億元、前年比 +13.94%</td><td>2026 年 1–9 月</td></tr>
+        <tr><td>1 株当たり利益</td><td>2.95 元、前年比 +50%</td><td>2026 年上期</td></tr>
+        <tr><td>粗利率</td><td>41.6%</td><td>2026 年第 2 四半期</td></tr>
+        <tr><td>営業利益率</td><td>約 12.8%</td><td>2026 年第 2 四半期</td></tr>
+        <tr><td>在庫回転日数</td><td>約 222 日</td><td>2026 年第 1 四半期</td></tr>
+        <tr><td>従業員数</td><td>691 名</td><td>2025 年 2 月末</td></tr>
+      </table>
+    </div>
+    <p class="note">粗利率は長期的に 41–44% を維持し、医療機器の高い認証障壁を反映。営業利益率は 10–13% で費用効率に改善の余地あり。いずれも公開資料に基づき、社内の状況を示すものではありません。</p>
+  </div>
+</section>
+
+<!-- 3 growth & issues -->
+<section class="s" id="issues">
+  <div class="wrap">
+    <p class="num">03　IT 課題</p>
+    <h2>情報システム部門が次に答えるべき 5 つの問い</h2>
+    <div class="tscroll" style="margin-bottom:40px">
+      <table class="tbl">
+        <tr><th style="width:42%">成長ドライバー</th><th>情報システムへの新たなニーズ</th></tr>
+        <tr><td>マイクロ波スイッチが AI／シリコンフォトニクス試験向けに量産準備</td><td>多品種少量の生産計画、歩留まり追跡、迅速な試作</td></tr>
+        <tr><td>半導体装置部品が中・後工程へ拡大</td><td>品番・BOM・工程データが複雑化し、システム間のリアルタイム同期が必要</td></tr>
+        <tr><td>手術ロボット器具と自社ブランドの脊椎ナビゲーション</td><td>設計データ、製品トレーサビリティ、文書管理</td></tr>
+        <tr><td>医療機器が売上の 76%、顧客は米国中心</td><td>ロット追跡と品質記録の完全性・検索性</td></tr>
+      </table>
+    </div>
+    <div class="grid" style="gap:14px">
+      <div class="issue"><span class="n">1</span><div><h3>システムはつながっているか</h3><p>MES・PLM・SAP 間のデータは、まだ手作業の変換や二重入力に頼っていないか？</p></div></div>
+      <div class="issue"><span class="n">2</span><div><h3>Notes の次の一手</h3><p>Notes には通常、長年の承認フローと文書が蓄積されている。何を残し、何を SAP や新基盤へ移し、何を廃止するか？</p></div></div>
+      <div class="issue"><span class="n">3</span><div><h3>データは見えているか</h3><p>在庫回転日数は約 222 日。在庫・歩留まり・停止時間を管理職にリアルタイムで示せるか？</p></div></div>
+      <div class="issue"><span class="n">4</span><div><h3>AI はどの部門から始めるか</h3><p>　適切なテーマを選びつつ、図面や顧客データの流出をどう防ぐか？</p></div></div>
+      <div class="issue"><span class="n">5</span><div><h3>チームはどう追いつくか</h3><p>10 名のメンバーが現在のサポートを乱さず、日常運用から統合・AI へどう広げるか？</p></div></div>
+    </div>
+    <p class="note">人事部の説明と公開資料からの推論。在庫日数は FindBillion（2026 Q1）。面談ではまず優先順位を経営層と確認したいと考えています。</p>
+  </div>
+</section>
+
+<!-- 4 match -->
+<section class="s dark" id="match">
+  <div class="wrap">
+    <p class="num" style="color:var(--copper-soft)">04　ニーズと実績の対照</p>
+    <h2>5 つの問いすべてに、実践済みの答えがあります</h2>
+    <p class="lead">私は製造業で SAP・MES・PLM の実際の統合を経験し、近年は AI 導入とガバナンスを担ってきました。鐿鈦は今この 2 つの能力を同時に必要としており、台中に長く腰を据え、現在のチームを率いる責任者も必要としています。</p>
+    <div class="tscroll">
+      <table class="tbl">
+        <tr><th style="width:20%">課題</th><th style="width:48%">私の実績</th><th>成果</th></tr>
+        <tr><td>システム統合</td><td>泓晏科技：SAP S/4HANA を導入し、暗号化 API で MES・PLM・APS と連携</td><td>歩留まり +15%；IT 運用コスト −25%</td></tr>
+        <tr><td>Notes の次の一手</td><td>20 年以上前に健信科技（4502）で Lotus Notes を担当；豐辰グループで複数システムと ERP マスタを統合</td><td>Notes アプリの構造と移行の難所を熟知</td></tr>
+        <tr><td>データの可視化</td><td>泓晏科技：BI 戦情室で OEE・歩留まり・停止時間をリアルタイム表示</td><td>数億元規模の滞留在庫を解消</td></tr>
+        <tr><td>全部門への AI 導入</td><td>盛欣網絡：ISO 42001 に基づく規程と管理職向け AI ワークフロー講座</td><td>業務自動化効率 +55%</td></tr>
+        <tr><td>チームの底上げ</td><td>凌網科技のアジア太平洋 IT チーム；盛欣網絡の多国籍チーム；ナレッジ管理と SOP 整備</td><td>監査適合率 100%；新人の立ち上がり短縮</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 5 career -->
+<section class="s" id="career">
+  <div class="wrap">
+    <p class="num">05　キャリア概要</p>
+    <h2>25 年以上：外資系ソフトウェア、製造業、クラウド基盤</h2>
+    <p class="lead">データベースの基盤からグループの IT 責任者へ。銅色は鐿鈦のニーズに最も近い 3 つの経歴です。また早期には顧問として、健信科技工業（4502）の Lotus Notes 導入を支援しました。</p>
+    <div class="tl">
+      <div class="item"><div class="y">2003</div><div class="c">米 Sybase／Borland　</div><div class="r">テクニカルマネージャー</div></div>
+      <div class="item"><div class="y">2007</div><div class="c">凌網科技（5212）</div><div class="r">部門長</div></div>
+      <div class="item"><div class="y">2010</div><div class="c">Chiffon Group</div><div class="r">情報担当責任者（CIO）</div></div>
+      <div class="item key"><div class="y">2018</div><div class="c">泓晏科技</div><div class="r">IT Director</div></div>
+      <div class="item key"><div class="y">2022</div><div class="c">隆中網絡（6542）</div><div class="r">情報技術部長</div></div>
+      <div class="item key"><div class="y">2025</div><div class="c">盛欣／盛碁網絡</div><div class="r">技術担当副社長／CIO</div></div>
+      <div class="item"><div class="y">2026</div><div class="c">PChome ビッグデータ処</div><div class="r">シニアディレクター（兼務）</div></div>
+    </div>
+
+    <h3 style="font-size:24px;margin:64px 0 24px">成果を示す 6 つの数字</h3>
+    <div class="grid g3" style="gap:36px 28px">
+      <div class="big"><b>+15%</b><h3>生産歩留まり</h3><span>泓晏科技、工場横断のデータ可視化</span></div>
+      <div class="big"><b>−25%</b><h3>グループ年間 IT 運用コスト</h3><span>泓晏科技、買収後のシステム統合</span></div>
+      <div class="big"><b>−30%</b><h3>年間クラウド費用</h3><span>隆中網絡、GKE と FinOps</span></div>
+      <div class="big cu"><b>停止ゼロ</b><h3>基幹サービス Zero Outage</h3><span>隆中網絡、MongoDB Atlas グローバル基盤</span></div>
+      <div class="big cu"><b>−30%</b><h3>セキュリティ事故（年間）</h3><span>盛欣網絡、ゼロトラスト</span></div>
+      <div class="big cu"><b>+55%</b><h3>業務自動化効率</h3><span>盛欣網絡、エージェント型 AI</span></div>
+    </div>
+    <p class="note">各数値の基準・手法・期間は面談時にご説明でき、裏付け資料と推薦者もご提供します。</p>
+  </div>
+</section>
+
+<!-- 6 cases -->
+<section class="s alt" id="cases">
+  <div class="wrap">
+    <p class="num">06　代表事例</p>
+    <h2>製造データ、セキュリティ・ガバナンス、AI 導入に対応する 3 つの事例</h2>
+
+    <article class="case">
+      <header>
+        <span class="tag">鐿鈦との関連が最も高い</span>
+        <h3 style="font-size:24px">泓晏科技：多国籍電子製造のデータ統合</h3>
+        <p class="meta">IT Director｜台中・新竹・桃園・深圳・上海｜2018.10–2022.09</p>
+      </header>
+      <div class="body">
+        <div><h3>状況</h3><p>買収後、各工場が個別に運営され生産能力が見えず、データのサイロ化から数億元規模の滞留在庫が発生。</p></div>
+        <div><h3>取り組み</h3><ul><li>SAP S/4HANA Clean Core を推進：コアは標準化、拡張は外部化</li><li>ERP・MES・PLM・APS を暗号化 API で連携</li><li>ELK ベースのモバイル BI 戦情室で OEE・歩留まり・停止をリアルタイム表示</li></ul></div>
+        <div class="res"><h3>成果</h3><ul><li>生産歩留まり 15% 向上</li><li>数億元の滞留在庫を解消</li><li>グループ IT 運用コスト 25% 削減</li><li>買収後のシステム統合期間を短縮</li></ul></div>
+      </div>
+      <p class="why"><b>鐿鈦にとっての意味：</b>同じ多拠点の精密製造業。在庫の可視化、歩留まり追跡、南屯本社と后里工場のデータ連携にそのまま活かせます。</p>
+    </article>
+
+    <article class="case">
+      <header>
+        <span class="tag">大規模移行を無停止で</span>
+        <h3 style="font-size:24px">隆中網絡 GameSparcs（6542）：ISO 27001 と無停止アーキテクチャ</h3>
+        <p class="meta">情報技術部長（IT Director）｜台北・台中・杭州・成都・マルタ｜2022.09–2025.04</p>
+      </header>
+      <div class="body">
+        <div><h3>状況</h3><p>毎月新作を投入する中、旧来の RDB はキャンペーン時の急激な同時接続に耐えられず、運用チームの負担が極めて大きくなっていました。</p></div>
+        <div><h3>取り組み</h3><ul><li>基幹サービスを GKE へ移行。リソース拡張を 2–3 日から自動化し、デプロイ工数を 30% 削減</li><li>Cloud Load Balancing を導入し、コンテンツ読み込みを 2 倍に高速化</li><li>DB を MongoDB Atlas で再構築；FinOps コストモデルを構築</li><li>ISO 27001 を取得し、WAF と DDoS 対策を構築</li></ul></div>
+        <div class="res"><h3>成果</h3><ul><li>基幹サービス停止ゼロ</li><li>年間クラウド費用 30% 削減</li><li>Google Cloud・MongoDB の公式事例に選出</li></ul></div>
+      </div>
+      <p class="why"><b>鐿鈦にとっての意味：</b>大規模移行を無停止で実現。SAP・MES 統合や Notes 移行でも、生産ラインと日常業務を止めません。</p>
+    </article>
+
+    <article class="case">
+      <header>
+        <span class="tag">AI ガバナンスとゼロトラスト</span>
+        <h3 style="font-size:24px">盛欣／盛碁網絡科技：ISO 42001 とエージェント型 AI</h3>
+        <p class="meta">技術担当副社長／CIO（VP of Technology）｜台北・高雄・上海｜2025.05 – 現在</p>
+      </header>
+      <div class="body">
+        <div><h3>状況</h3><p>多国に分散したクラウド資産、セキュリティ人材の不足、そしてグローバル運営の効率化に向けた AI 導入の急務。</p></div>
+        <div><h3>取り組み</h3><ul><li>Kubernetes と Terraform で IaC を実現</li><li>IAM・MFA・マイクロセグメンテーションを統合したゼロトラスト</li><li>ISO 42001 を導入し、責任ある AI のガードレールを整備</li><li>管理職向け AI ワークフロー研修；エージェント型 AI を日常運用に組み込み</li></ul></div>
+        <div class="res"><h3>成果</h3><ul><li>業務自動化効率 +55%</li><li>サービス可用性 +20%</li><li>セキュリティ事故 年 30% 減</li><li>開発から商用化までの期間を 20% 以上短縮</li></ul></div>
+      </div>
+      <p class="why"><b>鐿鈦にとっての意味：</b>これこそ鐿鈦の「全部門への AI 導入」に適した手順です：規程を先に、管理職から学び、小さく試して成果が出たら展開します。</p>
+    </article>
+  </div>
+</section>
+
+<!-- 7 foundation & method -->
+<section class="s" id="foundation">
+  <div class="wrap">
+    <p class="num">07　マネジメントの基礎と手法</p>
+    <h2>データベースの基盤から国際 M&A 統合まで</h2>
+    <div class="grid g2" style="margin-bottom:56px">
+      <div class="card"><h3>米 Sybase／Borland｜2003–2007</h3><p>通信事業者級の DB チューニングと高可用性設計、ALM 基盤の推進。</p><p class="out" style="color:var(--teal);font-weight:700;margin:0">→ 基幹システムの安定性とソフトウェア開発管理</p></div>
+      <div class="card"><h3>凌網科技｜2007–2010</h3><p>アジア太平洋の DC 統合、高可用バックアップ、AD 統一。PMP で案件管理し監査適合率 100%。</p><p style="color:var(--teal);font-weight:700;margin:0">→ 米国・日本拠点の統一ガバナンス</p></div>
+      <div class="card"><h3>Chiffon Group｜2010–2018</h3><p>情報担当責任者として、台湾・中国・米国の多拠点の IT 戦略、システムガバナンス、IT チームを統括。</p><p style="color:var(--teal);font-weight:700;margin:0">→ 多拠点製造の IT ガバナンス</p></div>
+      <div class="card"><h3>豐辰グループ｜正社員</h3><p>国際 M&A 時のデータクレンジングと ERP マスタ統合。複数の POS・CRM を統合し事業継続を確保。</p><p style="color:var(--teal);font-weight:700;margin:0">→ 戦略株主との連携下でのシステム統合</p></div>
+    </div>
+    <h3 style="font-size:24px;margin-bottom:12px">私のガバナンス・フレームワーク：DX オペレーティングモデル</h3>
+    <p>事業主導・全社ガバナンス・IT による支援。5 つのガードレール（AI・データ・セキュリティ・アーキテクチャ・コンプライアンス）を全デジタル案件に適用し、需要は「部門審査 → 需要ゲート → デジタル運営委員会 → 承認ポートフォリオ → 実行ガバナンス」で優先順位付けします。鐿鈦では、医療・産業・マイクロ波の 3 事業の IT 要求を同じ基準で判断できます。</p>
+    <figure class="wide-fig"><img src="img/dt-model.jpg" alt="Digital Transformation Operating Model の図：全社ガバナンスのガードレールと 5 段階の需要意思決定プロセス" width="1536" height="1024" data-lb><figcaption>Digital Transformation Operating Model｜本人設計、図中の数値は例示（クリックで拡大）</figcaption></figure>
+    <h3 style="font-size:24px;margin:40px 0 20px">技術判断を事業価値と結びつける 3 つの手法</h3>
+    <div class="grid g3">
+      <div class="card"><h3>全域オブザーバビリティ</h3><p>見えないものは管理できない。ログ・DB・トラフィックを一元化し 24 時間監視。脅威やボトルネックの検知を 50% 高速化。</p></div>
+      <div class="card"><h3>求人動向から技術の潮流を読む</h3><p>大手テック企業の採用動向から今後 2–3 年の投資方向を予測し、流行に流されず価値を生む分野に予算を配分。</p></div>
+      <div class="card"><h3>暗黙知の SOP 化</h3><p>ベテランの経験をナレッジベースに構造化し、AI の判断支援と新人の早期戦力化に活用。精密加工の技能継承に特に有効です。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 plans -->
+<section class="s alt" id="plans">
+  <div class="wrap">
+    <p class="num">08　鐿鈦への 4 つの提案</p>
+    <h2>システム連携、Notes への対応、AI 導入、そしてセキュリティを最低条件に</h2>
+
+    <span class="tag">施策 1</span>
+    <h3 style="font-size:24px">PLM・SAP・MES を一本のデータフローに</h3>
+    <p>原則はコアの標準化と拡張の外部化で、可能な限り SAP の標準機能を使い、カスタマイズの技術的負債を減らします。まずデータをつなぎ、それから AI を語ります。</p>
+    <div class="flow" role="list" aria-label="データフロー：PLM・SAP・MES・品質・BI 戦情室">
+      <div class="st" role="listitem"><small>PLM</small><b>設計と BOM</b></div><div class="ar" aria-hidden="true"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M0 8h20M14 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div>
+      <div class="st" role="listitem"><small>SAP</small><b>受注・資材・原価</b></div><div class="ar" aria-hidden="true"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M0 8h20M14 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div>
+      <div class="st" role="listitem"><small>MES</small><b>現場指示と実績</b></div><div class="ar" aria-hidden="true"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M0 8h20M14 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div>
+      <div class="st" role="listitem"><small>品質</small><b>ロット追跡</b></div><div class="ar" aria-hidden="true"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M0 8h20M14 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div>
+      <div class="st end" role="listitem"><small>BI 戦情室</small><b>経営判断</b></div>
+    </div>
+    <div class="grid g3" style="margin-bottom:56px">
+      <div class="card"><h3>手作業の変換を 1 つ減らす</h3><p>システム間で Excel や二重入力に頼る工程を洗い出し、順次システム連携に置き換える。</p></div>
+      <div class="card"><h3>品番と BOM の一致</h3><p>PLM の設計変更を SAP・MES に自動反映し、版違いのリスクを低減。</p></div>
+      <div class="card"><h3>在庫と歩留まりのリアルタイム化</h3><p>南屯・后里の両工場の在庫・歩留まり・停止を同じ指標で表示。</p></div>
+    </div>
+
+    <span class="tag">施策 2</span>
+    <h3 style="font-size:24px">Notes は一括で置き換えず、段階的に移行先を決める</h3>
+    <div class="grid g3" style="margin-top:16px">
+      <div class="card phase"><div class="d">1</div><h3>棚卸し</h3><p>全 Notes DB とワークフローを一覧化：用途・利用部門・頻度・責任者・データ量。</p></div>
+      <div class="card phase"><div class="d">2</div><h3>分類</h3><p>各アプリを次の 3 種類に分類：<b>維持</b>（当面継続）、<b>移行</b>（SAP または新基盤へ）、<b>廃止</b>（アーカイブ後に停止）。</p></div>
+      <div class="card phase"><div class="d">3</div><h3>段階的に移行</h3><p>利用頻度・リスクの高いものから着手。SAP・MES と重複する機能は基幹システムへ戻す。</p></div>
+    </div>
+    <p class="note" style="margin-bottom:56px">新旧の基盤を一定期間並行稼働し、データと承認記録の完全移行後に停止します。20 年以上前に健信科技で Lotus Notes を担当した経験から、Notes アプリの構造と移行時のつまずきどころを理解しています。新基盤は棚卸し後に要件と予算で選定します。</p>
+
+    <span class="tag">施策 3</span>
+    <h3 style="font-size:24px">全部門への AI 導入：規程を先に、テーマを正しく選ぶ</h3>
+    <div class="grid g2" style="margin-top:16px;align-items:start">
+      <div class="card navy"><h3>推進方法</h3><ul><li><b>規程</b>：ISO 42001 に基づく利用規程。図面と顧客データを外部に出さない</li><li><b>管理職から</b>：管理職向け AI ワークフロー講座</li><li><b>小さく試す</b>：まず IT 部門内で使い、成果が出たら展開</li></ul></div>
+      <div class="tscroll"><table class="tbl">
+        <tr><th style="width:26%">部門</th><th>検討できる AI 活用</th></tr>
+        <tr><td>生産</td><td>工程ナレッジの Q&A でベテランの技能を保存</td></tr>
+        <tr><td>品質保証</td><td>検査画像の判定支援、クレームデータ分析</td></tr>
+        <tr><td>営業</td><td>見積・受注書類の整理、顧客仕様の照合</td></tr>
+        <tr><td>管理部門</td><td>議事録、レポート集計、規程文書の Q&A</td></tr>
+        <tr><td>情報システム部門</td><td>開発・運用支援</td></tr>
+      </table></div>
+    </div>
+    <p class="note" style="margin-bottom:56px">各部門のテーマは、着任後 60 日以内のヒアリングを経て確定します。</p>
+
+    <span class="tag">施策 4</span>
+    <h3 style="font-size:24px">セキュリティは統合と AI の最低条件</h3>
+    <p>システムの連携が進み AI の利用が広がるほど、データ流出とランサムウェアのリスクは高まります。まず権限管理・バックアップ・ネットワーク分離を整え、統合と AI の基盤とします。私は ISO 27001 主任審査員の資格を持ち、チームを率いて ISO 27001 認証を取得した経験もあります。</p>
+  </div>
+</section>
+
+<!-- 9 roadmap -->
+<section class="s" id="roadmap">
+  <div class="wrap">
+    <p class="num">09　着任計画・指標・チーム</p>
+    <h2>最初の 90 日：聞く、決める、動く</h2>
+    <div class="grid g3" style="margin-bottom:56px">
+      <div class="card phase"><div class="d">30 日</div><h3>調査とヒアリング</h3><ul><li>経営層・各部門へのヒアリング</li><li>10 名全員と 1on1</li><li>MES・PLM・Notes・SAP の連携とデータフローを調査</li></ul><p class="out">成果物：現状診断レポート</p></div>
+      <div class="card phase"><div class="d">60 日</div><h3>ロードマップと優先順位</h3><ul><li>システム統合ロードマップを提示</li><li>Notes アプリの分類リストを完成</li><li>AI パイロット部門を選定し予算化</li></ul><p class="out">成果物：統合ロードマップと Notes 対応リスト</p></div>
+      <div class="card navy phase"><div class="d">90 日</div><h3 style="color:#F6F4EF">最初の成果</h3><ul><li>最初の統合改善を実現（例：手作業の変換を 1 つ削減）</li><li>最初の Notes アプリの移行・廃止を開始</li><li>AI 利用規程を公表し、パイロット開始</li></ul><p class="out">成果物：メンバーが実感できる改善</p></div>
+    </div>
+
+    <h3 style="font-size:24px;margin-bottom:18px">1 年目：経営層にわかる指標で評価してください</h3>
+    <div class="tscroll">
+      <table class="tbl">
+        <tr><th style="width:18%">領域</th><th style="width:44%">指標</th><th>1 年目の目標案</th></tr>
+        <tr><td>システム統合</td><td>手作業の変換・二重入力に頼る工程数</td><td>基準値から大幅に削減</td></tr>
+        <tr><td>Notes</td><td>アプリ棚卸し・分類の完了率</td><td>100%、第 1 弾の移行・廃止を完了</td></tr>
+        <tr><td>システム安定性</td><td>SAP・MES の可用性</td><td>基準値をもとに改善目標を設定</td></tr>
+        <tr><td>製造データ</td><td>ダッシュボードの対象ライン</td><td>主要ラインを網羅</td></tr>
+        <tr><td>AI 活用</td><td>AI を導入し継続利用する部門</td><td>2–3 部門</td></tr>
+        <tr><td>チーム</td><td>統合・AI 研修の修了</td><td>全員修了</td></tr>
+      </table>
+    </div>
+    <p class="note">内部の基準値を確認するまで数値は固定せず、着任後 60 日以内に経営層と共に設定します。</p>
+
+    <h3 style="font-size:24px;margin:56px 0 18px">IT チームを率いる：10 年の蓄積を尊重し、10 名のメンバーと共に前進</h3>
+    <div class="grid g2">
+      <div class="card"><h3>まず一人ひとりを知る</h3><p>着任 1 か月目に全員と 1on1。担当システム・強み・目指す方向を把握。</p></div>
+      <div class="card"><h3>分担は維持し、役割を追加</h3><p>ハード・ソフトの 2 グループは維持し、統合窓口と AI 推進メンバーを設置。</p></div>
+      <div class="card"><h3>経験を残す</h3><p>システム知識を SOP とナレッジベースにまとめ、特定のメンバーへの依存を減らす。</p></div>
+      <div class="card"><h3>一緒に AI を学ぶ</h3><p>AI ツールはまず IT 部門内で使い、実際の経験を積んでから他部門を支援。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- media -->
+<section class="s" id="media">
+  <div class="wrap">
+    <p class="num">10　メディア掲載と講演</p>
+    <h2>業界メディア・ベンダー・行政機関による公開記録</h2>
+    <p class="lead">隆中網絡在任中の成果は CIO IT 經理人、iThome、MongoDB に取り上げられました。講演はベンダーのカンファレンス、業界イベント、公務員向け講座に及びます。画像をクリックすると拡大します。</p>
+    <div class="gallery">
+      <figure class="fig tall"><button type="button"><img src="img/cio-cover.jpg" alt="CIO IT 經理人 注目人物インタビュー：マルチクラウド導入と管理課題の克服" loading="lazy" data-lb></button><figcaption><b>CIO IT 經理人</b>注目人物インタビュー：マルチクラウド管理</figcaption></figure>
+      <figure class="fig tall"><button type="button"><img src="img/itmanager-cover.jpg" alt="CIO IT 經理人 誌 2024 年 5 月号 表紙" loading="lazy" data-lb></button><figcaption><b>CIO IT 經理人 誌</b>2024 年 5 月号</figcaption></figure>
+      <figure class="fig tall doc"><button type="button"><img src="img/ithome-article.jpg" alt="iThome 特集：隆中網絡が MongoDB Atlas でゲームデータ管理基盤を構築" loading="lazy" data-lb></button><figcaption><b>iThome 特集</b>MongoDB Atlas ゲームデータ管理基盤</figcaption></figure>
+      <figure class="fig tall"><button type="button"><img src="img/mongodb-interview.jpg" alt="MongoDB と iThome の共同インタビュー" loading="lazy" data-lb></button><figcaption><b>MongoDB × iThome</b>共同インタビュー</figcaption></figure>
+    </div>
+    <div class="gallery" style="margin-top:20px">
+      <figure class="fig"><button type="button"><img src="img/mongodb-keynote.jpg" alt="MongoDB.local Taipei 2024 基調講演" loading="lazy" data-lb></button><figcaption><b>MongoDB.local Taipei（2024）</b>　基調講演</figcaption></figure>
+      <figure class="fig"><button type="button"><img src="img/ace-interview.jpg" alt="MongoDB・iThome インタビューの様子" loading="lazy" data-lb></button><figcaption><b>MongoDB × iThome</b>　インタビュー</figcaption></figure>
+      <figure class="fig"><button type="button"><img src="img/cloud-event.jpg" alt="「企業のクラウド化」業界イベントでの集合写真" loading="lazy" data-lb></button><figcaption><b>企業のクラウド化</b>　業界交流イベント</figcaption></figure>
+      <figure class="fig doc"><button type="button"><img src="img/egov-course.jpg" alt="行政院人事総処 e等公務園＋ 講座ページ「機会を見通す：クラウド管理の実務」" loading="lazy" data-lb></button><figcaption><b>e等公務園＋</b>　クラウド管理の実務</figcaption></figure>
+    </div>
+    <h3 style="font-size:24px;margin:56px 0 18px">資格証明</h3>
+    <div class="gallery g3">
+      <figure class="fig doc"><button type="button"><img src="img/cert-gs1.jpg" alt="GS1 バーコード管理士 証書" loading="lazy" data-lb></button><figcaption><b>GS1 バーコード管理士</b>サプライチェーンのバーコードと追跡。医療機器のロット管理に直結</figcaption></figure>
+      <figure class="fig doc"><button type="button"><img src="img/cert-oracle.jpg" alt="Oracle University サプライチェーン修了証" loading="lazy" data-lb></button><figcaption><b>Oracle サプライチェーン修了</b>Oracle EBS 購買・在庫・受注モジュール</figcaption></figure>
+      <figure class="fig doc"><button type="button"><img src="img/cert-wbsa.jpg" alt="WBSA マーケティング企画士 証書" loading="lazy" data-lb></button><figcaption><b>WBSA マーケティング企画士</b>技術案を経営陣に伝わる提案に</figcaption></figure>
+    </div>
+    <p class="note">ISO 27001／42001、PMP、CSM 等の証書の写しは面接時にご提出できます。</p>
+  </div>
+</section>
+
+<!-- 10 credentials -->
+<section class="s alt" id="credentials">
+  <div class="wrap">
+    <p class="num">11　学歴・資格・業界での発信</p>
+    <h2>学術・国際資格・実務を兼備</h2>
+    <div class="grid g3">
+      <div class="card"><h3>学歴</h3><p><b style="color:var(--ink)">博士</b>（Ph.D. in Information Management）<br>企業 IT アーキテクチャの近代化、ハイブリッドクラウドのセキュリティ・ガバナンス</p><p><b style="color:var(--ink)">修士</b>（M.S. in Info Science）<br>国立中興大学｜暗号学、データマイニング、データガバナンス</p></div>
+      <div class="card"><h3>専門資格</h3><ul><li>ISO 27001 情報セキュリティ主任審査員</li><li>ISO 42001 AI マネジメントシステム</li><li>PMP 国際プロジェクトマネジメント</li><li>Scrum Master（CSM）</li><li>Oracle OCP &amp; OCA</li><li>ESG サステナビリティ管理士、WBSA</li></ul></div>
+      <div class="card"><h3>業界での発信</h3><ul><li>MongoDB.local Taipei 講演（2024）</li><li>CIO 価値学院 講演（2024）</li><li>セキュリティ・サミット（2024）</li><li>Google Cloud 公式顧客事例</li><li>台中栄民総医院 顧問（長期）</li><li>康善基金会 常務理事</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 closing -->
+<section class="s dark" id="contact">
+  <div class="wrap">
+    <p class="num" style="color:var(--copper-soft)">12　結びに</p>
+    <div class="closing-grid">
+      <img src="img/headshot.jpg" alt="廖倫豪 博士 顔写真" loading="lazy">
+      <p class="quote" style="margin:0">最良の技術リーダーとは、技術を経営とリスクの言葉に翻訳できる人です。</p>
+    </div>
+    <p class="lead">25 年以上のシステム統合経験を活かし、鐿鈦の MES・PLM・Notes・SAP の統合と全部門への AI 導入に貢献したいと考えています。台中栄総での長年の顧問経験から医療機器産業と鐿鈦への思いを強くしており、自宅が近いことで長期的に安定して力を注げます。ご都合がよろしければ、ぜひ面談の機会をいただけますと幸いです。</p>
+    <div class="contact">
+      <div><small>電話</small><a href="tel:+886975323161">+886-975-323161</a></div>
+      <div><small>メール</small><a href="mailto:Liao.Howard@gmail.com">Liao.Howard@gmail.com</a></div>
+      <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/howardliao78/" target="_blank" rel="noopener">howardliao78</a></div>
+      <div class="hot"><small>勤務地</small><span>自宅が近く、長期常駐可能</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="sources">
+  <div class="wrap">
+    <p class="num">出典</p>
+    <p>鐿鈦に関する数値はすべて公開資料によるもので、社内情報は使用していません。個人の経歴と成果の数値は本人の職務経歴書（Executive Portfolio 2025–2026）によるものです。</p>
+    <ul class="sources">
+      <li><a href="https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=6689c421-6b60-4204-badc-ada674dacb70" target="_blank" rel="noopener">MoneyDJ：鐿鈦が手術ロボットに注力、下期に明確な進展見込み（2026/05/15）</a></li>
+      <li><a href="https://winvest.tw/News/Detail/96943" target="_blank" rel="noopener">Win 投資：鐿鈦 2026 年 9 月売上速報（2026/10/14）</a></li>
+      <li><a href="https://winvest.tw/News/Detail/93543" target="_blank" rel="noopener">Win 投資：鐿鈦 2026 年 8 月売上速報（2026/09/09）</a></li>
+      <li><a href="https://winvest.tw/News/Detail/88854" target="_blank" rel="noopener">Win 投資：鐿鈦 2026 年 6 月売上速報（2026/07/08）</a></li>
+      <li><a href="https://histock.tw/stock/financial.aspx?no=4163" target="_blank" rel="noopener">HiStock：鐿鈦 月次売上</a></li>
+      <li><a href="https://www.cnyes.com/twstock/profile/4163.htm" target="_blank" rel="noopener">鉅亨網：鐿鈦 企業情報</a></li>
+      <li><a href="https://www.findbillion.com/twstock/4163/financial_statement" target="_blank" rel="noopener">FindBillion：鐿鈦 財務指標</a></li>
+      <li><a href="https://blog.fugle.tw/post/earnings-call-4163-2025-03-25" target="_blank" rel="noopener">富果：鐿鈦 決算説明会メモ（2025/03/25）</a></li>
+      <li><a href="https://uc913.com/stock-4163/" target="_blank" rel="noopener">913 理財估測站：鐿鈦科技</a></li>
+      <li><a href="https://www.peoplenews.tw/articles/economic-news/19628" target="_blank" rel="noopener">民報：可成が医療機器へ参入</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<dialog class="lb" id="lb" aria-label="画像拡大表示"><button class="x" type="button" aria-label="閉じる">×</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+
+<footer>
+  <div class="wrap">© 2026 廖倫豪 Howard Liao, Ph.D.｜本ページは個人の応募資料です。鐿鈦科技に関する内容は公開情報に基づき、2026 年 10 月時点のものです。</div>
+</footer>
+
+<script>
+(function(){
+  // theme toggle
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    drawChart();
+  });
+
+  // revenue chart (NT$ million)
+  var data=[
+    ['2025/06',207.6,0],['07',193.6,0],['08',210.3,0],['09',202.0,0],['10',170.2,0],['11',202.0,0],['12',205.8,0],
+    ['2026/01',253.5,1],['02',150.6,1],['03',218.7,1],['04',237.5,1],['05',220.6,1],['06',224,1],['07',290,1],['08',249,1],['09',238,1]
+  ];
+  function css(v){return getComputedStyle(root).getPropertyValue(v).trim();}
+  function drawChart(){
+    var svg=document.getElementById('revChart'); if(!svg) return;
+    var W=960,H=340,L=48,R=12,T=24,B=48,max=300;
+    var bw=(W-L-R)/data.length, out='';
+    var grid=css('--line'), muted=css('--muted'), cu=css('--copper-bright'), ink=css('--ink'), body=css('--body');
+    [0,100,200,300].forEach(function(v){
+      var y=T+(H-T-B)*(1-v/max);
+      out+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y+'" y2="'+y+'" stroke="'+grid+'" stroke-width="1"/>';
+      out+='<text x="'+(L-8)+'" y="'+(y+5)+'" text-anchor="end" font-size="14" fill="'+body+'">'+v+'</text>';
+    });
+    data.forEach(function(d,i){
+      var h=(H-T-B)*(d[1]/max), x=L+i*bw+bw*0.18, w=bw*0.64, y=H-B-h;
+      out+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="'+(d[2]?cu:muted)+'" opacity="'+(d[2]?1:0.55)+'"><title>'+d[0]+'：'+d[1]+' 百万元</title></rect>';
+      if(i===13) out+='<text x="'+(x+w/2)+'" y="'+(y-8)+'" text-anchor="middle" font-size="14" font-weight="700" fill="'+ink+'">≈290</text>';
+      out+='<text x="'+(x+w/2)+'" y="'+(H-B+22)+'" text-anchor="middle" font-size="13" fill="'+body+'">'+d[0]+'</text>';
+    });
+    svg.innerHTML=out;
+  }
+  drawChart();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawChart);
+
+  // lightbox
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+  document.querySelectorAll('img[data-lb]').forEach(function(im){
+    var t=im.closest('button')||im;
+    t.addEventListener('click',function(){ lbImg.src=im.src; lbImg.alt=im.alt; lbCap.textContent=im.alt; if(lb.showModal) lb.showModal(); });
+  });
+  lb.querySelector('.x').addEventListener('click',function(){lb.close();});
+  lb.addEventListener('click',function(e){ if(e.target===lb) lb.close(); });
+
+  // active nav
+  var links=[].slice.call(document.querySelectorAll('.nav a.l'));
+  var map={}; links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting && map[e.target.id]){ links.forEach(function(a){a.classList.remove('on')}); map[e.target.id].classList.add('on'); } });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  Object.keys(map).forEach(function(id){var el=document.getElementById(id); if(el) obs.observe(el);});
+})();
+</script>
+</body>
+</html>
