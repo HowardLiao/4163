@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>鐿鈦蜂巢計畫</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a plan document — sticky section nav, single 1100px column, diagrams in scrollable frames */
+:root{
+  --bg:#F7F8FA; --surface:#FFFFFF; --ink:#13233A; --body:#3B4757; --muted:#6B7684; --line:#D9DEE5;
+  --accent:#B8642E; --accent-soft:#F6E7DC; --teal:#1E7A78; --teal-soft:#DDEFEE;
+  --ok:#2E7D4F; --warn:#B7791F; --crit:#B23B3B;
+  --z-it:#E7EEF7; --z-ot:#FBEFE4; --z-dmz:#EEF0F2; --z-cloud:#E4F1F0;
+  --serif:'Noto Serif TC','Songti TC',Georgia,serif; --sans:'Noto Sans TC','PingFang TC','Microsoft JhengHei',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1724; --surface:#162133; --ink:#EEF2F7; --body:#C3CCD8; --muted:#8C98A8; --line:#2A3850;
+  --accent:#E39A62; --accent-soft:#3A2A1E; --teal:#5EC2BD; --teal-soft:#183533;
+  --ok:#6CC08F; --warn:#E3B45A; --crit:#E57B7B;
+  --z-it:#1B2A40; --z-ot:#33261C; --z-dmz:#232C3A; --z-cloud:#183331; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1724; --surface:#162133; --ink:#EEF2F7; --body:#C3CCD8; --muted:#8C98A8; --line:#2A3850;
+  --accent:#E39A62; --accent-soft:#3A2A1E; --teal:#5EC2BD; --teal-soft:#183533;
+  --ok:#6CC08F; --warn:#E3B45A; --crit:#E57B7B;
+  --z-it:#1B2A40; --z-ot:#33261C; --z-dmz:#232C3A; --z-cloud:#183331; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--body);font-family:var(--sans);font-size:15px;line-height:1.7;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{max-width:1100px;margin:0 auto}
+h1,h2,h3{color:var(--ink);text-wrap:balance;margin:0}
+h1{font-family:var(--serif);font-size:clamp(28px,4.2vw,42px);line-height:1.25}
+h2{font-family:var(--serif);font-size:clamp(22px,2.8vw,28px);line-height:1.3}
+h3{font-size:17px;line-height:1.4}
+p{margin:0;max-width:68ch}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:0 max(16px,env(safe-area-inset-left,0px))}
+nav.top .in{max-width:1100px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:8px}
+nav.top a{flex:none;color:var(--body);text-decoration:none;font-size:13px;padding:6px 10px;border-radius:6px;white-space:nowrap}
+nav.top a:hover,nav.top a:focus-visible{background:var(--teal-soft);color:var(--ink);outline:none}
+header.hero{padding-block:48px 32px;display:grid;gap:18px}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
+.meta div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.meta b{display:block;color:var(--ink);font-size:15px}
+.meta span{font-size:12px;color:var(--muted)}
+section{padding-block:36px;border-top:1px solid var(--line);display:grid;gap:18px}
+.lead{font-size:16px;color:var(--body)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:6px;align-content:start;min-width:0}
+.card .k{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:600}
+.alert{background:var(--accent-soft);border-radius:10px;padding:16px 18px;display:grid;gap:6px}
+.alert b{color:var(--ink)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:720px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{color:var(--ink);font-weight:700;background:var(--bg);font-size:12.5px;white-space:nowrap}
+td:first-child{color:var(--ink);font-weight:500}
+tr:last-child td{border-bottom:none}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;white-space:nowrap}
+.p-run{background:var(--teal-soft);color:var(--teal)}
+.p-wait{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.p-dec{background:var(--accent-soft);color:var(--accent)}
+.raci td{text-align:center;font-family:var(--mono);font-weight:600}
+.raci td:first-child{text-align:left;font-family:var(--sans)}
+.A{color:var(--accent)} .R{color:var(--teal)} .C{color:var(--body)} .I{color:var(--muted)}
+/* stages */
+.stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:6px;align-content:start}
+.stage.now{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal) inset}
+.stage .w{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.gates{display:flex;gap:4px;flex-wrap:wrap}
+/* gantt */
+.gantt{min-width:860px;display:grid;grid-template-columns:260px repeat(26,1fr);font-size:12.5px}
+.gantt .h{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.gantt .lab{padding:6px 10px;border-bottom:1px solid var(--line);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gantt .lab.grp{font-weight:700;background:var(--bg)}
+.gantt .cell{border-bottom:1px solid var(--line);border-left:1px dashed var(--line);position:relative}
+.gantt .bar{position:absolute;top:7px;bottom:7px;left:2px;right:2px;border-radius:3px}
+.b-gov{background:var(--muted);opacity:.55} .b-inv{background:var(--teal)} .b-api{background:var(--accent)} .b-lake{background:#5B6FB0} .b-gate{background:var(--crit)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+/* diagrams */
+.diagram{padding:14px;min-width:0}
+svg text{font-family:var(--sans)}
+.s-ink{fill:var(--ink)} .s-body{fill:var(--body)} .s-muted{fill:var(--muted)} .s-acc{fill:var(--accent)} .s-teal{fill:var(--teal)}
+.z-it{fill:var(--z-it)} .z-ot{fill:var(--z-ot)} .z-dmz{fill:var(--z-dmz)} .z-cloud{fill:var(--z-cloud)} .z-surf{fill:var(--surface)}
+.st-line{stroke:var(--line)} .st-ink{stroke:var(--ink)} .st-acc{stroke:var(--accent)} .st-teal{stroke:var(--teal)} .st-muted{stroke:var(--muted)}
+.layers{display:grid;gap:8px}
+.layer{display:grid;grid-template-columns:190px 1fr;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;align-items:start}
+.layer .n{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:600}
+.layer h3{font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:3px 8px;color:var(--ink)}
+.medal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.medal .card h3{display:flex;gap:8px;align-items:center}
+.dot{width:12px;height:12px;border-radius:50%;flex:none}
+.seq{display:grid;gap:10px}
+.seq ol{margin:0;padding-left:22px;display:grid;gap:4px;font-size:14px}
+.note{font-size:13px;color:var(--muted)}
+footer{padding-block:28px 48px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:grid;gap:6px}
+a{color:var(--teal)}
+@media (max-width:640px){.layer{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="章節導覽"><div class="in">
+  <a href="#scope">範圍與原則</a><a href="#stages">推進時程</a><a href="#gantt">甘特圖</a><a href="#network">網路架構</a><a href="#api">API 平台</a><a href="#lake">資料湖倉</a><a href="#tools">工具選型</a><a href="#security">資安與法遵</a><a href="#tasks">任務與分工</a><a href="#accept">驗收與風險</a><a href="#decisions">待裁示決策</a><a href="#phase2">第二階段</a>
+</div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <p class="eyebrow">Intai Technology · Project Hive · v1.0 提案</p>
+  <h1>鐿鈦蜂巢計畫實施藍圖</h1>
+  <p class="lead">把台中南屯總部、后里廠，以及日本子公司與規劃中的美國廠，串成一個 API 平台與一座資料湖倉。SAP、MES、PLM、品質系統與 Notes 的資料先接通，作為 BI、KPI、批號追溯與 AI 應用的共同底座。</p>
+  <div class="meta">
+    <div><span>版本</span><b>v1.0 · 2026-11-04</b></div>
+    <div><span>目前階段</span><b>到任前提案，W1 = 到任日</b></div>
+    <div><span>第一批裁示</span><b>D01 範圍、D02 窗口、D03 首批標的</b></div>
+    <div><span>規劃者</span><b>廖倫豪 博士（資訊經理候選人）</b></div>
+  </div>
+</header>
+
+<section id="scope">
+  <p class="eyebrow">Governance</p>
+  <h2>範圍與治理原則</h2>
+  <div class="grid2">
+    <div class="card"><span class="k">01 · 專案性質</span><h3>跨廠資訊架構升級</h3><p>由資訊部門主導，依 RACI 推動硬體設備組、程式系統組、品保、製造與 SI 廠商落地。先串資料，再談 AI。</p></div>
+    <div class="card"><span class="k">02 · 角色分工</span><h3>資訊經理負責架構與統籌</h3><p>資訊經理負責需求統整、架構規劃、選型審查與進度回報；開發、部署與維運由指派同仁與 SI 承接。</p></div>
+    <div class="card"><span class="k">03 · 決策開放</span><h3>選型與預算依盤點定案</h3><p>SAP 原生、Azure 雲端或開源地端三條路線，依現況盤點、法規檢核與 TCO 比較後呈核。</p></div>
+    <div class="card"><span class="k">04 · 集中治理</span><h3>總部統一標準，各廠回饋校正</h3><p>需求三種來源：總部推動、各廠與事業部需求、經營層年度規劃。報表可依廠別呈現，背後的料號、批號與指標口徑必須一致。</p></div>
+  </div>
+  <div class="alert">
+    <b>到任後首要排查：SAP 版本與維護期限</b>
+    <p>若鐿鈦現行 SAP 為 ECC 6.0，SAP 主流維護至 2027 年底，之後須付費延長維護（至 2030 年）或轉 S/4HANA。蜂巢計畫的 API 與資料管線必須在盤點時確認 SAP 版本，避免整合做在即將升級的核心上。另外，FDA 的 QMSR（對齊 ISO 13485）已於 2026 年 2 月生效，醫材客戶稽核會更重視電子紀錄與稽核軌跡。</p>
+  </div>
+</section>
+
+<section id="stages">
+  <p class="eyebrow">Timeline & Gates</p>
+  <h2>六階段推進與決策閘門</h2>
+  <p class="note">週數自到任日起算，紅色標籤為進入下一階段前必須完成的裁示。階段 5 期程依選型結果另訂。</p>
+  <div class="stages">
+    <div class="stage now"><span class="w">W1–W4 · 進行中</span><h3>1 現況盤點</h3><p>清查兩廠系統、資料庫、介面、機台連網與窗口名單；Notes 應用清單。</p><div class="gates"><span class="pill p-dec">D02</span></div></div>
+    <div class="stage"><span class="w">W5–W6</span><h3>2 範圍確認</h3><p>核定首批 API、資料湖納入範圍與試點產線。</p><div class="gates"><span class="pill p-dec">D01</span><span class="pill p-dec">D03</span></div></div>
+    <div class="stage"><span class="w">W7–W10</span><h3>3 平台選型</h3><p>比較三條路線，產出 TCO 與建議方案，完成資料落地與法規檢核。</p><div class="gates"><span class="pill p-dec">D04</span><span class="pill p-dec">D06</span></div></div>
+    <div class="stage"><span class="w">W11–W18</span><h3>4 PoC 驗證</h3><p>依驗收標準驗證 SAP↔MES 工單、PLM→SAP BOM 與 BI 取數。</p><div class="gates"><span class="pill p-dec">D05</span></div></div>
+    <div class="stage"><span class="w">W19 起</span><h3>5 建置與驗收</h3><p>正式環境部署、兩廠分批上線、階段驗收。</p></div>
+    <div class="stage"><span class="w">建置後 4 週</span><h3>6 維運交接</h3><p>維運手冊、分工表生效、SLA 監控上線。</p></div>
+  </div>
+</section>
+
+<section id="gantt">
+  <p class="eyebrow">WBS Gantt · W1–W26</p>
+  <h2>前 26 週 WBS 甘特圖</h2>
+  <p class="note">排程為建議值，到任盤點後校正。手機請左右滑動。</p>
+  <div class="legend"><span><i class="b-gov"></i>專案治理</span><span><i class="b-inv"></i>盤點</span><span><i class="b-api"></i>API 平台</span><span><i class="b-lake"></i>資料湖倉</span><span><i class="b-gate"></i>決策閘門</span></div>
+  <div class="scroll"><div class="gantt" id="gantt-grid" role="table" aria-label="前 26 週甘特圖"></div></div>
+</section>
+
+<section id="network">
+  <p class="eyebrow">Network Architecture</p>
+  <h2>網路架構：IT／OT 分區與兩廠互連</h2>
+  <p class="lead">依 IEC 62443 與 Purdue 模型分區。機台與量測設備留在 OT 區，資料經工業 DMZ 的邊緣閘道往上送；兩廠以 SD-WAN 雙線互連，雲端只走私有連線。</p>
+  <div class="scroll"><div class="diagram">
+  <svg viewBox="0 0 1040 560" width="1040" height="560" role="img" aria-label="鐿鈦網路架構圖：雲端、南屯總部、后里廠、日本與美國據點">
+    <rect x="300" y="12" width="440" height="78" rx="10" class="z-cloud"/>
+    <text x="520" y="36" text-anchor="middle" class="s-ink" font-size="14" font-weight="700">雲端主區（D06 決定：台灣在地或日本東部）</text>
+    <text x="520" y="58" text-anchor="middle" class="s-body" font-size="12">API 閘道 · 資料湖倉 · BI · AI 服務（私有端點，不對公網開放）</text>
+    <text x="520" y="76" text-anchor="middle" class="s-muted" font-size="11">WAAP／WAF · 身分中心（AD／Entra ID＋MFA）· 稽核日誌</text>
+    <line x1="420" y1="90" x2="250" y2="140" class="st-teal" stroke-width="2"/>
+    <line x1="620" y1="90" x2="790" y2="140" class="st-teal" stroke-width="2"/>
+    <text x="300" y="118" class="s-teal" font-size="11">IPsec／專線私有連線</text>
+    <text x="640" y="118" class="s-teal" font-size="11">IPsec／專線私有連線</text>
+    <rect x="20" y="140" width="470" height="400" rx="12" class="z-surf st-line" stroke-width="1"/>
+    <text x="40" y="166" class="s-ink" font-size="15" font-weight="700">台中南屯總部＋廠</text>
+    <rect x="40" y="180" width="430" height="92" rx="8" class="z-it"/>
+    <text x="54" y="200" class="s-acc" font-size="11" font-weight="700">L4–5 企業 IT 區</text>
+    <text x="54" y="222" class="s-body" font-size="12">SAP（ERP）· PLM · Lotus Notes／Domino · AD · 檔案伺服器</text>
+    <text x="54" y="242" class="s-body" font-size="12">品質系統（QMS）· 文件管制 · 備份（3-2-1，含離線備份）</text>
+    <text x="54" y="262" class="s-muted" font-size="11">NGFW＋SD-WAN 邊界 · 辦公網段與伺服器網段分離</text>
+    <rect x="40" y="282" width="430" height="58" rx="8" class="z-dmz"/>
+    <text x="54" y="302" class="s-acc" font-size="11" font-weight="700">L3.5 工業 DMZ</text>
+    <text x="54" y="324" class="s-body" font-size="12">邊緣閘道（API 代理＋本地佇列）· 跳板主機 · 修補伺服器</text>
+    <rect x="40" y="350" width="430" height="80" rx="8" class="z-ot"/>
+    <text x="54" y="370" class="s-acc" font-size="11" font-weight="700">L3 製造營運區</text>
+    <text x="54" y="392" class="s-body" font-size="12">MES · 機台資料收集（OPC UA／MTConnect）· SPC</text>
+    <text x="54" y="412" class="s-body" font-size="12">量測資料（CMM）· 條碼／UDI 標籤列印</text>
+    <rect x="40" y="440" width="430" height="84" rx="8" class="z-ot"/>
+    <text x="54" y="460" class="s-acc" font-size="11" font-weight="700">L0–2 設備與控制區</text>
+    <text x="54" y="482" class="s-body" font-size="12">CNC 車銑複合機 · 走心機 · 雷射打標 · 清洗與包裝線</text>
+    <text x="54" y="502" class="s-body" font-size="12">HMI · 機台 PC（多為舊版 Windows，不直接上網）</text>
+    <rect x="550" y="140" width="470" height="300" rx="12" class="z-surf st-line" stroke-width="1"/>
+    <text x="570" y="166" class="s-ink" font-size="15" font-weight="700">台中后里廠</text>
+    <rect x="570" y="180" width="430" height="58" rx="8" class="z-it"/>
+    <text x="584" y="200" class="s-acc" font-size="11" font-weight="700">L4 廠區 IT</text>
+    <text x="584" y="222" class="s-body" font-size="12">辦公網段 · SAP／Notes 用戶端 · 本地 AD 讀取副本</text>
+    <rect x="570" y="248" width="430" height="58" rx="8" class="z-dmz"/>
+    <text x="584" y="268" class="s-acc" font-size="11" font-weight="700">L3.5 工業 DMZ</text>
+    <text x="584" y="290" class="s-body" font-size="12">邊緣閘道（斷線時本地暫存，復網後補傳）</text>
+    <rect x="570" y="316" width="430" height="108" rx="8" class="z-ot"/>
+    <text x="584" y="336" class="s-acc" font-size="11" font-weight="700">L0–3 製造區</text>
+    <text x="584" y="358" class="s-body" font-size="12">MES 工站 · 機台資料收集 · SPC</text>
+    <text x="584" y="378" class="s-body" font-size="12">微波開關與半導體零組件產線 · 測試站</text>
+    <text x="584" y="398" class="s-body" font-size="12">CNC／精密加工設備 · 量測室</text>
+    <line x1="490" y1="210" x2="570" y2="210" class="st-acc" stroke-width="3"/>
+    <line x1="490" y1="226" x2="570" y2="226" class="st-acc" stroke-width="3" stroke-dasharray="6 4"/>
+    <text x="530" y="200" text-anchor="middle" class="s-acc" font-size="10.5">SD-WAN</text>
+    <text x="530" y="244" text-anchor="middle" class="s-muted" font-size="10">主線＋備援</text>
+    <rect x="550" y="460" width="225" height="80" rx="10" class="z-surf st-line" stroke-width="1"/>
+    <text x="566" y="484" class="s-ink" font-size="13" font-weight="700">日本子公司</text>
+    <text x="566" y="506" class="s-body" font-size="12">業務與客服 · SAP 用戶端</text>
+    <text x="566" y="526" class="s-muted" font-size="11">VPN · 資料每日彙總</text>
+    <rect x="795" y="460" width="225" height="80" rx="10" class="z-surf st-line" stroke-width="1"/>
+    <text x="811" y="484" class="s-ink" font-size="13" font-weight="700">美國廠（規劃中）</text>
+    <text x="811" y="506" class="s-body" font-size="12">比照台中範本複製部署</text>
+    <text x="811" y="526" class="s-muted" font-size="11">在地留存依 D06 決定</text>
+    <line x1="490" y1="300" x2="550" y2="500" class="st-muted" stroke-width="1.5" stroke-dasharray="4 4"/>
+  </svg>
+  </div></div>
+  <div class="grid3">
+    <div class="card"><span class="k">分區原則</span><p>OT 設備不直接連外網。機台資料只能經工業 DMZ 的邊緣閘道往上送，雲端與 IT 區不得反向直連機台。</p></div>
+    <div class="card"><span class="k">兩廠互連</span><p>南屯與后里以 SD-WAN 主線加備援線互連；量測各廠頻寬後設定機台資料與 ERP 流量的優先權。</p></div>
+    <div class="card"><span class="k">斷線不停線</span><p>邊緣閘道在斷線時把工序與檢驗資料寫入本地佇列，產線照常作業；復網後依時序自動補傳，不重複入帳。</p></div>
+  </div>
+</section>
+
+<section id="api">
+  <p class="eyebrow">API Platform</p>
+  <h2>API 平台：五層架構</h2>
+  <div class="layers">
+    <div class="layer"><div><span class="n">層級 1</span><h3>呼叫端</h3></div><div class="chips"><span class="chip">SAP（訂單、物料、成本）</span><span class="chip">MES 工站與機台</span><span class="chip">PLM（設計與 BOM）</span><span class="chip">QMS（檢驗、NCR、CAPA）</span><span class="chip">醫材客戶 EDI／B2B</span><span class="chip">主管看板與行動端</span></div></div>
+    <div class="layer"><div><span class="n">層級 2</span><h3>邊界防護與網路</h3></div><div class="chips"><span class="chip">WAAP／WAF（OWASP Top 10）</span><span class="chip">廠區 IP 白名單</span><span class="chip">速率限制</span><span class="chip">TLS 1.3／mTLS</span><span class="chip">SD-WAN＋IPsec</span></div></div>
+    <div class="layer"><div><span class="n">層級 3</span><h3>API 閘道與治理</h3></div><div class="chips"><span class="chip">OAuth2／JWT 驗證</span><span class="chip">OpenAPI 契約與版本</span><span class="chip">JSON↔IDoc／XML 轉換</span><span class="chip">料號、批號欄位檢核</span><span class="chip">稽核軌跡（誰、何時、改了什麼）</span><span class="chip">OpenTelemetry 追蹤</span></div></div>
+    <div class="layer"><div><span class="n">層級 4</span><h3>廠區邊緣閘道</h3></div><div class="chips"><span class="chip">南屯邊緣閘道</span><span class="chip">后里邊緣閘道</span><span class="chip">本地佇列（斷線暫存）</span><span class="chip">OPC UA／MTConnect 機台資料</span><span class="chip">復網依序補傳</span></div></div>
+    <div class="layer"><div><span class="n">層級 5</span><h3>後端服務與資料湖倉</h3></div><div class="chips"><span class="chip">SAP 整合服務</span><span class="chip">工單與批號服務</span><span class="chip">變更擷取（CDC）</span><span class="chip">資料湖倉（單一事實來源）</span><span class="chip">BI 與 AI 服務</span></div></div>
+  </div>
+  <div class="grid3 seq">
+    <div class="card"><span class="k">情境一 · 正常連線</span><ol><li>MES 回報工序完工與良品數</li><li>邊緣閘道加密轉送</li><li>WAAP 白名單與限流檢查</li><li>API 閘道驗證身分與權限</li><li>寫入 SAP 工單確認與資料湖</li><li>回傳成功，產線看板更新</li></ol></div>
+    <div class="card"><span class="k">情境二 · 兩廠或外網斷線</span><ol><li>MES 照常回報</li><li>上傳逾時，邊緣閘道改寫本地佇列</li><li>回傳「已接收」，產線不停</li><li>品質資料同樣暫存，不遺失</li></ol></div>
+    <div class="card"><span class="k">情境三 · 復網補傳</span><ol><li>邊緣閘道偵測復網</li><li>依時序批次補傳</li><li>SAP 與資料湖依交易編號去重</li><li>清空佇列，發出補傳完成通知</li></ol></div>
+  </div>
+</section>
+
+<section id="lake">
+  <p class="eyebrow">Data Lakehouse</p>
+  <h2>資料湖倉：三層結構與傳輸節奏</h2>
+  <p class="lead">兩廠都在台中，頻寬相對寬裕，所以機台與工序資料可以近即時（分鐘級）上傳；SAP 財務與庫存做每日結算；日本與美國據點每日離峰彙總一次。</p>
+  <div class="medal">
+    <div class="card"><h3><span class="dot" style="background:#A86B3C"></span>Bronze 原始層</h3><p>完整保留 SAP、MES、PLM、QMS、機台的原始異動，只能新增、不可修改，作為稽核軌跡的來源。</p></div>
+    <div class="card"><h3><span class="dot" style="background:#9AA4B1"></span>Silver 清洗層</h3><p>去重、時間戳統一、料號與批號對齊，關聯產品、機台、客戶主檔；檢查 BOM 版本是否一致。</p></div>
+    <div class="card"><h3><span class="dot" style="background:#C9A227"></span>Gold 主題層</h3><p>每日結算表、批號／UDI 正反向追溯表、良率與 OEE、存貨周轉（目前約 222 天）、SPC 管制圖資料。</p></div>
+  </div>
+  <div class="scroll"><table>
+    <thead><tr><th>資料類型</th><th>來源</th><th>傳輸節奏</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr><td>機台狀態、加工參數</td><td>CNC／走心機（OPC UA）</td><td class="mono">每 1–5 分鐘</td><td>OEE、停機分析、預防保養</td></tr>
+      <tr><td>工序完工、良品與不良數</td><td>MES</td><td class="mono">即時（API）</td><td>SAP 工單確認、良率</td></tr>
+      <tr><td>檢驗與量測結果</td><td>QMS、CMM</td><td class="mono">每批完成時</td><td>SPC、批號放行、客戶稽核</td></tr>
+      <tr><td>設計與 BOM 變更</td><td>PLM</td><td class="mono">變更核准時</td><td>同步 SAP 與 MES，避免用錯版本</td></tr>
+      <tr><td>訂單、庫存、成本</td><td>SAP</td><td class="mono">每日 02:00 結算</td><td>存貨周轉、毛利、經營看板</td></tr>
+      <tr><td>簽核流程與文件</td><td>Lotus Notes</td><td class="mono">移轉期間每日</td><td>封存查詢，逐步移出 Notes</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="tools">
+  <p class="eyebrow">Platform Selection</p>
+  <h2>工具選型：三條路線對照</h2>
+  <p class="note">路線 A 貼近現有 SAP；路線 B 適合已有 Microsoft 授權與 AD 的環境；路線 C 授權費最低但需要維運人力。最終依 D04 呈核。</p>
+  <div class="scroll"><table>
+    <thead><tr><th>架構層級</th><th>A · SAP 原生</th><th>B · Azure 雲端</th><th>C · 開源地端</th></tr></thead>
+    <tbody>
+      <tr><td>邊界防護</td><td>SAP BTP 內建防護＋前端 WAF</td><td>Front Door＋WAF、Private Link</td><td>Coraza WAF／NGINX、CrowdSec</td></tr>
+      <tr><td>API 閘道</td><td>SAP Integration Suite（API Management）</td><td>Azure API Management</td><td>Kong Gateway OSS／Apache APISIX</td></tr>
+      <tr><td>整合與轉換</td><td>Cloud Integration（CPI）、IDoc／OData</td><td>Logic Apps、Service Bus</td><td>Node-RED／自建 .NET 服務</td></tr>
+      <tr><td>機台資料</td><td>SAP Digital Manufacturing（選配）</td><td>IoT Hub／IoT Operations</td><td>OPC UA 閘道＋MQTT（Mosquitto）</td></tr>
+      <tr><td>資料擷取</td><td>SAP Datasphere 複寫流程</td><td>Data Factory＋自託管整合執行階段</td><td>Debezium CDC／Airbyte</td></tr>
+      <tr><td>資料湖倉</td><td>SAP Datasphere</td><td>Fabric／ADLS Gen2（Delta Lake）</td><td>MinIO＋Apache Iceberg＋Trino</td></tr>
+      <tr><td>排程與對帳</td><td>Datasphere 任務鏈</td><td>Data Factory 管線</td><td>Apache Airflow</td></tr>
+      <tr><td>BI</td><td>SAP Analytics Cloud</td><td>Power BI</td><td>Apache Superset／Grafana</td></tr>
+      <tr><td>監控追蹤</td><td>SAP Cloud ALM</td><td>Azure Monitor</td><td>OpenTelemetry＋Prometheus＋Grafana</td></tr>
+      <tr><td>Notes 移轉</td><td colspan="3">HCL Domino REST API 作為過渡橋接；應用分為保留、移轉、淘汰三類，資料與簽核紀錄完整轉出後下線</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="security">
+  <p class="eyebrow">Security & Compliance</p>
+  <h2>資安與醫材法遵</h2>
+  <div class="grid2">
+    <div class="card"><span class="k">雙軌防護</span><h3>邊界 WAAP＋旁路 API 安全</h3><p>邊界 WAAP 在入口即時攔截已知攻擊；旁路 API 安全以流量鏡像分析行為，找出未列管 API 與越權讀取（例如換工單號偷看其他客戶圖面），再把封鎖規則回送 WAAP。</p></div>
+    <div class="card"><span class="k">OT 資安</span><h3>IEC 62443 分區與管道</h3><p>機台 PC 不上網、USB 管控、遠端維護只經跳板主機並錄影；修補先在測試機驗證，避免影響產線。</p></div>
+    <div class="card"><span class="k">資料完整性</span><h3>電子紀錄可稽核</h3><p>依 FDA 21 CFR Part 11 與 ISO 13485：電子紀錄要有稽核軌跡、電子簽章與保存期限，資料符合 ALCOA+（可歸屬、清楚、即時、原始、正確）。</p></div>
+    <div class="card"><span class="k">資料保護</span><h3>設計圖與客戶資料不外流</h3><p>依資料分級決定可上雲與可進 AI 的範圍；客戶圖面與報價採列級權限與遮罩；日本個資依 APPI、美國廠依當地規定。</p></div>
+  </div>
+</section>
+
+<section id="tasks">
+  <p class="eyebrow">Phase 1 · 9 Tasks</p>
+  <h2>第一階段 9 項任務</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th>工作項目</th><th>主要工作內容</th><th>交付產出</th><th>階段</th><th>狀態</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>現況與需求盤點</td><td>兩廠及日本據點的系統、資料庫、介面、機台連網與 Notes 應用</td><td>現況清單、需求清單、窗口名單</td><td class="mono">1</td><td><span class="pill p-run">進行中</span></td></tr>
+      <tr><td>2</td><td>API 平台規劃與建置</td><td>盤點既有介面，確認首批串接（SAP↔MES 工單、PLM→SAP BOM）</td><td>API 清單、平台方案</td><td class="mono">2→5</td><td><span class="pill p-wait">未啟動</span></td></tr>
+      <tr><td>3</td><td>資料湖倉規劃與建置</td><td>確認資料納入範圍、分層、保存期限與權限</td><td>資料來源清單、湖倉方案</td><td class="mono">2→5</td><td><span class="pill p-wait">未啟動</span></td></tr>
+      <tr><td>4</td><td>平台選型與成本評估</td><td>比較 SAP 原生、Azure、開源地端三條路線</td><td>選型比較表、TCO、建議方案</td><td class="mono">3</td><td><span class="pill p-wait">未啟動</span></td></tr>
+      <tr><td>5</td><td>機台與系統資料串接</td><td>試點產線機台連網、擷取方式與對來源系統的效能影響</td><td>串接規格、資料管線、測試結果</td><td class="mono">2→5</td><td><span class="pill p-wait">未啟動</span></td></tr>
+      <tr><td>6</td><td>每日結算與批號追溯</td><td>SAP 日結、對帳規則、批號／UDI 正反向追溯、失敗補跑</td><td>結算規則、追溯表規格</td><td class="mono">2→5</td><td><span class="pill p-wait">未啟動</span></td></tr>
+      <tr><td>7</td><td>網路與資安配套</td><td>IT／OT 分區、SD-WAN、雲端連線、權限與稽核需求</td><td>網路架構、資安需求清單</td><td class="mono">3</td><td><span class="pill p-wait">未啟動</span></td></tr>
+      <tr><td>8</td><td>PoC 與階段驗收</td><td>依驗收標準驗證首批串接、對帳與 BI 取數</td><td>PoC 報告、問題清單</td><td class="mono">4</td><td><span class="pill p-wait">未啟動</span></td></tr>
+      <tr><td>9</td><td>執行與維運分工</td><td>確認兩組同仁、品保、製造與 SI 的建置與維運責任</td><td>分工表、交接清單</td><td class="mono">6</td><td><span class="pill p-wait">未啟動</span></td></tr>
+    </tbody>
+  </table></div>
+  <h3>資訊部門分工（10 位同仁，運作逾 10 年）</h3>
+  <div class="grid3">
+    <div class="card"><span class="k">硬體設備組</span><p>網路、機房、伺服器、SD-WAN、OT 分區與備份；承接任務 7。</p></div>
+    <div class="card"><span class="k">程式系統組</span><p>SAP、MES、PLM、Notes 的維護與開發；承接 API 與資料串接。</p></div>
+    <div class="card"><span class="k">新增角色</span><p>系統整合窗口一位、AI 種子同仁一至兩位，由現有同仁兼任並培訓。</p></div>
+  </div>
+  <h3>RACI 責任矩陣（初稿，待發起人確認）</h3>
+  <div class="scroll"><table class="raci">
+    <thead><tr><th>任務</th><th>專案發起人</th><th>資訊經理</th><th>硬體設備組</th><th>程式系統組</th><th>品保／法規</th><th>製造／生管</th><th>SI／原廠</th></tr></thead>
+    <tbody>
+      <tr><td>1 現況與需求盤點</td><td class="A">A</td><td class="R">R</td><td class="C">C</td><td class="C">C</td><td class="C">C</td><td class="C">C</td><td class="I">—</td></tr>
+      <tr><td>2 API 平台</td><td class="I">I</td><td class="A">A</td><td class="C">C</td><td class="R">R</td><td class="I">I</td><td class="C">C</td><td class="R">R</td></tr>
+      <tr><td>3 資料湖倉</td><td class="I">I</td><td class="A">A</td><td class="C">C</td><td class="R">R</td><td class="C">C</td><td class="I">I</td><td class="R">R</td></tr>
+      <tr><td>4 平台選型與成本</td><td class="A">A</td><td class="R">R</td><td class="C">C</td><td class="C">C</td><td class="C">C</td><td class="I">I</td><td class="C">C</td></tr>
+      <tr><td>5 機台與系統串接</td><td class="I">I</td><td class="C">C</td><td class="R">R</td><td class="A">A</td><td class="I">I</td><td class="R">R</td><td class="R">R</td></tr>
+      <tr><td>6 每日結算與批號追溯</td><td class="I">I</td><td class="C">C</td><td class="I">I</td><td class="A">A</td><td class="R">R</td><td class="C">C</td><td class="R">R</td></tr>
+      <tr><td>7 網路與資安</td><td class="I">I</td><td class="C">C</td><td class="A">A</td><td class="C">C</td><td class="C">C</td><td class="C">C</td><td class="R">R</td></tr>
+      <tr><td>8 PoC 與驗收</td><td class="A">A</td><td class="R">R</td><td class="C">C</td><td class="R">R</td><td class="C">C</td><td class="C">C</td><td class="C">C</td></tr>
+      <tr><td>9 執行與維運分工</td><td class="A">A</td><td class="R">R</td><td class="C">C</td><td class="C">C</td><td class="I">I</td><td class="C">C</td><td class="I">I</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">R 執行 · A 最終負責 · C 諮詢 · I 知會。每項任務只有一位 A。</p>
+</section>
+
+<section id="accept">
+  <p class="eyebrow">Acceptance & Risk</p>
+  <h2>PoC 驗收標準與主要風險</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>驗收項目</th><th>通過門檻（建議值，D01 時確認）</th><th>對應任務</th></tr></thead>
+    <tbody>
+      <tr><td>SAP↔MES 工單同步</td><td>試點產線工單下達與完工回報全部自動化，無人工轉檔</td><td class="mono">2、5</td></tr>
+      <tr><td>PLM→SAP BOM 變更</td><td>設計變更核准後 1 小時內同步至 SAP 與 MES，版本一致</td><td class="mono">2</td></tr>
+      <tr><td>批號／UDI 追溯</td><td>任一成品批號 5 分鐘內查出原料、機台、檢驗與出貨對象</td><td class="mono">6</td></tr>
+      <tr><td>每日結算對帳</td><td>連續 10 個工作日差異筆數為 0</td><td class="mono">6</td></tr>
+      <tr><td>斷線補傳</td><td>模擬廠區斷線 4 小時，恢復後自動補傳且無重複</td><td class="mono">5、7</td></tr>
+      <tr><td>來源系統影響</td><td>擷取期間 SAP 與 MES 回應時間增加 ≤ 10%</td><td class="mono">5</td></tr>
+      <tr><td>BI 取數</td><td>既有報表可改由資料湖倉取數且數值一致</td><td class="mono">8</td></tr>
+      <tr><td>稽核軌跡</td><td>所有寫入 SAP 的 API 交易可追溯操作者、時間與內容</td><td class="mono">2、7</td></tr>
+    </tbody>
+  </table></div>
+  <div class="scroll"><table>
+    <thead><tr><th>風險</th><th>影響</th><th>緩解措施</th></tr></thead>
+    <tbody>
+      <tr><td>SAP 版本即將升級</td><td>整合做在即將淘汰的核心上，需重做</td><td>階段 1 確認版本與升級時程；介面走 API 閘道，降低對 SAP 版本的依賴</td></tr>
+      <tr><td>機台品牌與年份不一</td><td>連網成本與時程膨脹</td><td>盤點控制器型號；首批只選一條試點產線</td></tr>
+      <tr><td>醫材法規與客戶稽核</td><td>電子紀錄不符要求，影響客戶認證</td><td>品保參與 PoC；驗收納入稽核軌跡與電子簽章</td></tr>
+      <tr><td>Notes 應用盤點不全</td><td>移轉後遺漏簽核或文件</td><td>新舊並行一段時間，資料完整轉出後才下線</td></tr>
+      <tr><td>同仁兼任工作過量</td><td>日常支援與專案互相排擠</td><td>D02 明定窗口與每週投入時數；日常支援優先</td></tr>
+      <tr><td>維運承接未定</td><td>上線後無人負責</td><td>D05 在 PoC 前確定，承接者參與 PoC</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="decisions">
+  <p class="eyebrow">Executive Decisions</p>
+  <h2>待專案發起人裁示的 6 項決策</h2>
+  <div class="grid3">
+    <div class="card"><span class="k">D01 · 範圍核定 · 期限 W6</span><h3>第一階段優先範圍</h3><p>建議：只做底座（API＋資料湖倉＋首批串接），BI 優化放第二階段。卡住任務 2、3、5、6。</p></div>
+    <div class="card"><span class="k">D02 · 窗口指派 · 期限 W2</span><h3>跨部門對接窗口</h3><p>建議：兩組各一位、品保、製造、財務各一位專責窗口。卡住任務 1。</p></div>
+    <div class="card"><span class="k">D03 · 首批標的 · 期限 W6</span><h3>試點廠與產線</h3><p>建議：一條醫材主力產線試點，資料量與法規要求最具代表性；廠別待盤點後決定。卡住任務 5、8。</p></div>
+    <div class="card"><span class="k">D04 · 預算時程 · 期限 W10</span><h3>預算範圍與路線</h3><p>建議：先核定 PoC 預算，正式建置預算於 PoC 後核定。卡住任務 8 及階段 5。</p></div>
+    <div class="card"><span class="k">D05 · 承接單位 · 期限 W10</span><h3>開發與維運承接</h3><p>選項：內部兩組、SI 廠商或混合。建議 PoC 前確定並讓承接者參與。卡住任務 8、9。</p></div>
+    <div class="card"><span class="k">D06 · 資料落地 · 期限 W10</span><h3>雲端主區與在地留存</h3><p>建議：先完成客戶合約、醫材法規與各國規定檢核，再決定台灣在地或日本東部。卡住任務 3、4、7。</p></div>
+  </div>
+</section>
+
+<section id="phase2">
+  <p class="eyebrow">Phase 2 · Applications</p>
+  <h2>第二階段應用</h2>
+  <p class="note">進入條件：PoC 驗收通過，且試點產線連續 30 天每日結算無差異。第一階段只蒐集需求，不同步建置。</p>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th>工作項目</th><th>主要工作內容</th><th>依賴的資料底座</th></tr></thead>
+    <tbody>
+      <tr><td>10</td><td>BI 戰情室</td><td>南屯、后里兩廠用同一套指標呈現庫存、良率與停機</td><td>Gold 主題層</td></tr>
+      <tr><td>11</td><td>KPI 系統化</td><td>統一指標定義、計算口徑、更新頻率與負責人</td><td>每日結算資料</td></tr>
+      <tr><td>12</td><td>品質與 SPC</td><td>製程能力（Cpk）、管制圖、不良根因分析</td><td>機台與量測資料</td></tr>
+      <tr><td>13</td><td>AI／RAG 製程知識庫</td><td>保存資深師傅經驗，問答時遵守資料分級與權限</td><td>文件知識庫＋權限模型</td></tr>
+      <tr><td>14</td><td>AI 主機與硬體評估</td><td>依應用需求評估地端推論主機或雲端服務</td><td>依 12、13 結果</td></tr>
+      <tr><td>15</td><td>Notes 退場</td><td>最後一批應用移轉或封存，Notes 正式下線</td><td>移轉清單與封存區</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<footer>
+  <span>鐿鈦蜂巢計畫實施藍圖 v1.0 · 規劃：廖倫豪 博士</span>
+  <span>鐿鈦的系統名稱依人資說明（MES、PLM、Notes、SAP）與公開資料推估，版本、機台與網路現況均待到任盤點確認；所有門檻與期程為建議值。</span>
+</footer>
+</div>
+
+<script>
+(function(){
+  var g=document.getElementById('gantt-grid'); if(!g) return;
+  var W=26, html='<div class="h" style="text-align:left;padding-left:10px">工作細項</div>';
+  for(var i=1;i<=W;i++) html+='<div class="h">W'+i+'</div>';
+  var rows=[
+    ['1.0 專案治理',null,1,0,'grp'],
+    ['1.1 範圍與窗口裁示（D01–D03）','b-gov',1,6],
+    ['1.2 RACI 與代理人表','b-gov',1,4],
+    ['1.3 KPI 指標定義','b-gov',3,26],
+    ['1.4 每週例會與月報','b-gov',1,26],
+    ['2.0 現況盤點',null,1,0,'grp'],
+    ['2.1 系統與資料庫清冊','b-inv',1,4],
+    ['2.2 介面與 Notes 應用盤點','b-inv',1,4],
+    ['2.3 網路、OT 與資安盤點','b-inv',2,4],
+    ['2.4 機台連網現況','b-inv',2,5],
+    ['2.5 需求、風險與優先順序','b-inv',3,6],
+    ['3.0 API 平台',null,1,0,'grp'],
+    ['3.1 首批串接情境與範圍','b-api',5,6],
+    ['3.2 目標架構與 API 原則','b-api',5,8],
+    ['3.3 三路線選型與 TCO（D04）','b-api',7,10],
+    ['3.4 PoC 驗證','b-api',11,18],
+    ['3.5 正式建置（依選型）','b-api',19,26],
+    ['4.0 資料湖倉',null,1,0,'grp'],
+    ['4.1 資料來源與納入範圍','b-lake',5,6],
+    ['4.2 分層設計與資料治理','b-lake',5,10],
+    ['4.3 每日結算與批號追溯規則','b-lake',7,12],
+    ['4.4 資料落地與法規檢核（D06）','b-lake',7,10],
+    ['4.5 PoC 驗證','b-lake',11,18],
+    ['決策閘門 D02 · D01/D03 · D04–D06','b-gate',0,0,'gate']
+  ];
+  var gates={2:1,6:1,10:1};
+  rows.forEach(function(r){
+    var cls=r[4]==='grp'?'lab grp':'lab';
+    html+='<div class="'+cls+'" title="'+r[0]+'">'+r[0]+'</div>';
+    for(var w=1;w<=W;w++){
+      var on=false;
+      if(r[4]==='gate') on=!!gates[w]; else if(r[1]) on=(w>=r[2]&&w<=r[3]);
+      html+='<div class="cell">'+(on?'<span class="bar '+r[1]+'"></span>':'')+'</div>';
+    }
+  });
+  g.innerHTML=html;
+})();
+</script>
+
+</body>
+</html>
