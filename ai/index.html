@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex">
 <title>鐿鈦 AI 架構藍圖</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&family=EB+Garamond:ital,wght@0,500;1,500&display=swap">
@@ -127,13 +126,34 @@ td:first-child{color:var(--ink);font-weight:500;white-space:nowrap}
 a{color:var(--green)}
 footer{padding-block:40px;font-size:13px;color:var(--muted)}
 .wm{font-family:var(--latin);font-style:italic}
+
+.cs{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:20px;margin-top:20px}
+@media(max-width:860px){.cs{grid-template-columns:1fr}}
+.cl{display:flex;flex-direction:column;gap:4px;max-height:640px;overflow-y:auto}
+@media(max-width:860px){.cl{max-height:none}}
+.cl button{display:grid;grid-template-columns:34px 1fr;gap:8px;text-align:left;font:inherit;font-size:14px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--c);padding:9px 12px;color:var(--ink);cursor:pointer}
+.cl button .no{font-family:var(--latin);color:var(--hair)}
+.cl button small{display:block;font-size:11.5px;color:var(--muted)}
+.cl button[aria-current="true"]{background:var(--green-soft);border-color:var(--green);border-left-color:var(--c)}
+.cd{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--c,var(--green));padding:22px 24px;align-self:start;position:sticky;top:76px;min-width:0}
+@media(max-width:860px){.cd{position:static}}
+.cd .ct{font-size:12px;letter-spacing:.1em;color:var(--c)}
+.cd h3{font-size:20px;margin:4px 0}
+.cd .sb{font-size:13px;color:var(--muted);margin:0 0 10px}
+.cd dl{margin:0}.cd dt{font-size:12px;letter-spacing:.12em;color:var(--muted);margin-top:10px}.cd dd{margin:2px 0 0}
+.cd ul{padding-left:18px;margin:4px 0}
+.kp{display:flex;flex-wrap:wrap;gap:22px;margin:14px 0;padding-top:12px;border-top:1px solid var(--line)}
+.kp .v{font-family:var(--latin);font-size:30px;color:var(--green);line-height:1}.kp .l{font-size:12px;color:var(--muted)}
+.cd .lt{background:var(--gold-soft);padding:10px 14px;font-size:14px;color:var(--ink)}
+.mute{color:var(--muted);font-size:12px}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
 
 <header class="nav"><div class="wrap">
   <span class="brand">鐿鈦 × AI</span>
-  <a href="#why">產業脈絡</a><a href="#arch">AI 架構</a><a href="#uc">場景組合</a><a href="#cases">實績案例</a><a href="#gov">治理</a><a href="#road">推進</a><a href="#repos">延伸閱讀</a><a href="../">← 回首頁</a>
+  <a href="#why">產業脈絡</a><a href="#arch">AI 架構</a><a href="#uc">場景組合</a><a href="#cases">代表案例</a><a href="#gov">治理</a><a href="#road">推進</a><a href="#repos">延伸閱讀</a><a href="../">← 回首頁</a>
 </div></header>
 
 <div class="hero wrap">
@@ -206,8 +226,22 @@ footer{padding-block:40px;font-size:13px;color:var(--muted)}
 
 <section id="cases"><div class="wrap">
   <div class="num">04 · Proven Cases</div>
-  <h2>做過的案例，以及在鐿鈦怎麼用</h2>
-  <div id="caselist"></div>
+  <h2>代表案例：職涯三案與 15 個 AI 架構專案</h2>
+  <p class="lead">職涯三個代表案例，加上近年的 AI 架構與顧問專案。顧問案客戶基於保密，只以產業描述代稱，不揭露名稱與內部資料。點選清單看處境、作法、成果，以及對鐿鈦的意義。</p>
+  <div class="filters" id="cftabs"><button aria-pressed="true" data-cf="all">全部 <span class="mute">18</span></button><button aria-pressed="false" data-cf="car">職涯代表案例 <span class="mute">3</span></button><button aria-pressed="false" data-cf="plat">企業 AI 平台 <span class="mute">3</span></button><button aria-pressed="false" data-cf="mfg">製造與跨廠藍圖 <span class="mute">3</span></button><button aria-pressed="false" data-cf="ind">產業 AI 案例 <span class="mute">2</span></button><button aria-pressed="false" data-cf="sec">資安與韌性 <span class="mute">2</span></button><button aria-pressed="false" data-cf="gov">治理與組織 <span class="mute">3</span></button><button aria-pressed="false" data-cf="res">前沿研究 <span class="mute">1</span></button><button aria-pressed="false" data-cf="tool">Agent 工具 <span class="mute">1</span></button></div>
+  <div class="cs"><div class="cl" id="clist" role="list" aria-label="案例清單"></div><div class="cd" id="cdetail" aria-live="polite"></div></div>
+  <h3 style="margin-top:36px;font-size:18px">外部實證</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>類型</th><th>內容</th><th>時間</th></tr></thead>
+    <tbody>
+      <tr><td>原廠案例</td><td>國際雲端原廠 APAC 官方客戶成功案例影片：容器平台支撐全球高併發、零停機</td><td>2024.03</td></tr>
+      <tr><td>媒體專訪</td><td>CIO 專業媒體封面專訪：善用公有雲服務，拓展全球市場</td><td>2024.05</td></tr>
+      <tr><td>主題演講</td><td>CIO 年度大會：洞見機遇——雲端管理與實務</td><td>2024.05</td></tr>
+      <tr><td>公部門課程</td><td>行政院人事行政總處 e等公務園＋：雲端管理與實務</td><td>2024.06</td></tr>
+      <tr><td>技術專題</td><td>IT 專業媒體專題：全球資料管理平台建置</td><td>2024.09</td></tr>
+      <tr><td>主題演講</td><td>國際資料庫原廠台北年會主講：全球規模資料管理平台</td><td>2024.09</td></tr>
+    </tbody>
+  </table></div>
 </div></section>
 
 <section id="gov"><div class="wrap">
@@ -303,12 +337,19 @@ function calc(){const c=+c1.value,a=+c2.value,b=+c3.value;if(!(c>0&&a>0&&b>0)){o
  const r=c*(a-b)/365;o1.textContent=r.toFixed(2);o2.textContent=`以 6% 資金成本計，年化效益約 ${(r*0.06*1e4).toFixed(0)} 萬元`}
 [c1,c2,c3].forEach(e=>e.oninput=calc);calc();
 
-const C=[
- {b:'+15%',s:'良率',t:'泓晏科技｜SAP S/4HANA 串接 MES／PLM／APS＋AI 不良預測',d:'Edge AIoT 數據中台涵蓋上千台設備，AI 不良預測與預防保養讓良率提升 15%、OEE 提升 18%，集團 IT 維運成本降 25%。',m:'在鐿鈦：SPC 異常預警、刀具壽命預測（場景 A）'},
- {b:'−30%',s:'雲端 TCO',t:'隆中網絡（6542）｜平台化與多雲治理',d:'把各專案自建環境改為平台提供標準元件，核心服務遷移 GKE 零停機，雲端支出降 30%，通過 ISO 27001，成為國際雲端原廠官方客戶案例。',m:'在鐿鈦：AI 平台共用元件、按部門分攤 Token 與算力'},
- {b:'+55%',s:'自動化效率',t:'盛欣網絡｜ISO 42001 AI 治理＋Agentic 工作流',d:'依 ISO 42001 建立 AI 使用規範與主管特訓，Agentic AI 工作流讓流程自動化效率提升 55%；AI 程式審查 Lead Time −40%、缺陷逃逸 −35%。',m:'在鐿鈦：AI 使用規範、知識庫與單據 OCR 快速勝利（場景 C）'}
-];
-document.getElementById('caselist').innerHTML=C.map(c=>`<div class="case"><div class="big">${c.b}<small>${c.s}</small></div><div><h3>${c.t}</h3><p style="margin:6px 0 0">${c.d}</p><div class="map">→ ${c.m}</div></div></div>`).join('');
+const D=[{"cat": "car", "c": "職涯代表案例", "t": "製造業 AI 建在整合好的核心上", "sb": "泓晏科技 IT Director｜2018.10 – 2022.09", "s": "併購後各廠獨立運作、產能不透明，形成數據孤島與大量呆滯庫存。", "a": ["SAP S/4HANA 標準功能優先（Clean Core），串接 MES、PLM、APS", "Edge AIoT 數據平台涵蓋上千台設備，建立 AI 不良預測與預測性維護", "依 IEC 62443 規劃 OT/IT 分段；建立品牌客戶 B2B EDI"], "r": [["+15%", "良率"], ["+18%", "OEE"], ["−25%", "IT 維運成本"]], "lt": "南屯與后里兩廠的 SAP↔MES↔PLM 串接、SPC 異常預警與刀具壽命預測，直接沿用這套做法。"}, {"cat": "car", "c": "職涯代表案例", "t": "平台化與零停機", "sb": "隆中網絡（6542） 資訊技術處處長｜2022.09 – 2025.04", "s": "每月推出新產品，舊資料庫無法承受高併發，各專案自建環境，維運負擔大。", "a": ["核心服務遷移至 Kubernetes 並導入 CI/CD，發布週期縮短一半", "建立全球資料管理平台與跨區叢集", "推行 FinOps；建立 ISO 27001 與零信任架構"], "r": [["零停機", "核心服務"], ["−30%", "多雲 TCO"], ["×2", "發布速度"]], "lt": "把各部門自行試用的 AI 工具收斂到共用平台，新舊並行、可回退，產線不停。"}, {"cat": "car", "c": "職涯代表案例", "t": "AI 治理與 Agent 上線", "sb": "盛欣／盛碁網絡 技術副總／CIO｜2025.05 – 至今", "s": "跨國雲端資產破碎、資安人才短缺，員工自行使用各種 AI 工具，資料外洩風險高。", "a": ["主持架構審查委員會，訂定 API-first 與整合標準", "DevSecOps 品質關卡＋AI 程式審查與測試生成", "依 ISO 42001 訂定 AI 使用規範與資料分級；主管 AI 工作流特訓", "Agentic AI 工作流，高風險動作 Human-in-the-Loop"], "r": [["+55%", "自動化效率"], ["−40%", "Lead Time"], ["−35%", "缺陷逃逸"]], "lt": "鐿鈦 AI 使用規範、主管特訓與第一批 Agent 上線的直接範本。"}, {"cat": "plat", "c": "企業 AI 平台", "t": "上市生醫製造商｜企業資訊策略與 AI 架構藍圖", "sb": "生醫智能製造・上市櫃合規", "s": "須同時符合生成式 AI 指引與 GMP 數據完整性要求，各部門 AI 應用分散，模型呼叫沒有統一管控。", "a": ["三大支柱：Agent 應用中樞、多模型閘道、預測核心", "雙環資料匯流（Kafka＋MQTT）分發拓撲", "API 閘道與 API 資安防禦拓撲", "全架構視圖，從使用者端向後演進"], "r": [["3", "大支柱"], ["4", "快速勝利場景"]], "lt": "同為受法規監理的製造業：本頁 L2–L3 的三支柱與 ALCOA+ 電子紀錄要求即由此轉寫。"}, {"cat": "plat", "c": "企業 AI 平台", "t": "企業服務代理 AI 平台提案", "sb": "三層架構・多 Agent 執行環境", "s": "各部門各自試用 Agent 工具，缺少統一入口、權限與執行稽核。", "a": ["互動層、編排層、Agent 執行環境三層分離", "整合多種開源 Agent 框架於同一執行環境", "統一入口、權限控管與執行稽核"], "r": [["3", "層架構"]], "lt": "鐿鈦先統一入口與稽核，再開放品保、製造、業務各自建用例。"}, {"cat": "plat", "c": "企業 AI 平台", "t": "企業 AI 平台建置規劃（RFP）", "sb": "AI 閘道・Agentic RAG・流程自動化", "s": "企業需要可招標、可驗收的 AI 平台規格，避免買到無法擴充的單點工具。", "a": ["AI Gateway＋Agentic RAG＋流程自動化", "三階段導入：單一 Agent → 多 Agent 協作 → 企業級治理", "需求規格、評分與驗收標準"], "r": [["3", "導入階段"]], "lt": "可直接轉為鐿鈦 AI 平台選型（對應蜂巢 D04）的評分與驗收框架。"}, {"cat": "mfg", "c": "製造與跨廠藍圖", "t": "跨國製造集團｜IT 營運架構", "sb": "多國工廠・呈報集團高階主管", "s": "多國工廠系統各自建置，資料口徑不一，IT 投資難以衡量回收。", "a": ["六階段決策閘門與跨國全景地圖", "FinOps 投資回收即時試算", "跨國廠區邊緣韌性與連線遙測", "上線門禁檢核與四大主架構拆解"], "r": [["6", "階段閘門"], ["4", "主架構"]], "lt": "六階段閘門與 FinOps 試算，用於台中兩廠、日本子公司與美國新廠的投資審議。"}, {"cat": "mfg", "c": "製造與跨廠藍圖", "t": "鐿鈦蜂巢計畫｜跨廠 API 平台與資料湖倉", "sb": "南屯總部・后里廠・日本子公司・規劃中美國廠", "s": "SAP、MES、PLM、品質系統與 Notes 互不相通，批號追溯仰賴人工。", "a": ["一個 API 平台與一座湖倉，串接 SAP、MES、PLM、QMS 與 Notes", "先串資料再談 AI：BI、KPI、批號追溯的共同底座", "SAP 原生、雲端、開源地端三條路線，依 TCO 呈核", "RACI 治理、第一批裁示事項與 26 週 WBS"], "r": [["6", "階段"], ["26", "週 WBS"], ["4", "據點"]], "lt": "本頁 AI 架構的 L0–L1 資料底座；詳見蜂巢計畫頁。"}, {"cat": "mfg", "c": "製造與跨廠藍圖", "t": "多雲與智慧製造架構實務", "sb": "六雲遙測・OT/IT 融合", "s": "製造現場與高併發平台都需要跨雲穩定、成本可控，以及可信任的 AI。", "a": ["跨六朵雲即時遙測與容災演練", "OT/IT 融合與邊緣良率推論", "ISO 42001 可信任 AI 與企業級 FinOps", "高併發平台的削峰與零停機設計"], "r": [["6", "朵雲"], ["−30%", "雲端成本"]], "lt": "邊緣良率推論可用於后里微波與半導體零組件測試站。"}, {"cat": "ind", "c": "產業 AI 案例", "t": "在宅醫療與居家照護 AI 決策門戶", "sb": "醫療照護場景", "s": "居家端的生理與照護資訊零碎，醫護人力有限，高風險個案難以及早發現。", "a": ["四層 AI 架構與資料行動閉環", "可預警、可分流、可協作、可追蹤（FHIR 審計軌跡）", "臨床決策分流模擬器與 ROI 試算器", "高風險醫療 AI 必備控制"], "r": [["5", "臨床場景"]], "lt": "「預警、分流、人員核可、可追蹤」的閉環，同樣適用於鐿鈦醫材品質異常與 NCR 處理。"}, {"cat": "ind", "c": "產業 AI 案例", "t": "AI 金融分析與防詐情境模擬", "sb": "員工 AI 素養課程", "s": "AI 讓詐騙更逼真，員工需要辨識與判斷的能力。", "a": ["AI 定位為副駕駛，最終決策在人", "LLM 分析提示工程", "真實情境的 AI 對話攻防模擬與結業認證"], "r": [["5", "情境"], ["STOP", "決策剎車流程"]], "lt": "納入鐿鈦全員 AI 素養與社交工程防護訓練。"}, {"cat": "sec", "c": "資安與韌性", "t": "生技製藥業｜CISO 180 天資安韌性計畫", "sb": "勒索事件後的戰時應變", "s": "遭勒索攻擊後，須在維持生產與法規合規的前提下重建資安韌性。", "a": ["NIST CSF 2.0 的 180 天計畫", "UEBA／ITDR AI 行為監測：異常登入、防竊密", "鑑識應變（DFIR）進駐 WBS", "21 CFR Part 11 與 GxP 自動稽核"], "r": [["180", "天計畫"], ["14", "天 DFIR"]], "lt": "鐿鈦的客戶圖面與製程參數同為高價值目標；可作為 AI 平台的資安基線。"}, {"cat": "sec", "c": "資安與韌性", "t": "集團資安長作品集", "sb": "董事會層級資安治理", "s": "董事會需要用經營語言理解資安風險與投資。", "a": ["董事會層級的量化成果呈報", "旗艦架構與資安案例", "資安治理成熟度框架", "ISO 27001／42001 主導稽核員"], "r": [["99.99%", "可用性"], ["−30%", "資安事故"]], "lt": "以經營層看得懂的量化指標，定期報告 AI 平台的風險與成效。"}, {"cat": "gov", "c": "治理與組織", "t": "現職集團｜營運治理標準化（含 AI 治理）", "sb": "ISO／ISMS／AI 治理四階文件", "s": "跨部門交辦仰賴口頭與聊天訊息，責任邊界不清，AI 與 SaaS 使用缺乏規範。", "a": ["四階文件體系與雙向追溯鏈", "L1 政策含 AI／SaaS 使用方針", "RACI 唯一當責、24 小時決策回填", "第一個 90 天快贏計畫"], "r": [["17", "項 L2 程序"], ["11", "份 L1 政策"]], "lt": "把 AI 規範納入鐿鈦既有 ISO 13485／27001 文件體系。"}, {"cat": "gov", "c": "治理與組織", "t": "從零到一的組織突圍", "sb": "35 人工程團隊", "s": "新組建團隊在高壓與資源有限下，必須先證明價值。", "a": ["以商業指標對賭爭取試行空間", "指標字典與跨團隊支援機制", "九階段復盤與差異化帶領"], "r": [["35", "人團隊"]], "lt": "鐿鈦資訊團隊初期以可量化成果爭取信任與資源。"}, {"cat": "gov", "c": "治理與組織", "t": "數位平台業｜內部控制九大循環手冊", "sb": "內控四階全景治理", "s": "新商業模式缺少對應的內部控制，AI 工具導入也沒有控制要求。", "a": ["九大交易循環的四階手冊", "部門職權劃分", "AI 工具導入的內控要求"], "r": [["9", "大循環"]], "lt": "讓 AI 用例符合上市櫃公司內控與稽核要求。"}, {"cat": "res", "c": "前沿研究", "t": "前沿技術論壇與研究", "sb": "C-Level 白皮書與互動簡報", "s": "高階主管需要快速掌握 Agent、推論架構與主權 AI 的變化。", "a": ["AI Agent 新賽局：五大變革（50 頁白皮書）", "AI 答案看起來都對時，員工如何判斷", "推論架構大遷徙", "主權 AI 與數位員工防禦"], "r": [["5", "期專題"], ["50", "頁白皮書"]], "lt": "定期為鐿鈦經營層提供前沿技術簡報，協助投資判斷。"}, {"cat": "tool", "c": "Agent 工具", "t": "個人 Agent 工作區與備援控制台", "sb": "自建 Agent 的知識結構與災難復原", "s": "自建 Agent 累積的記憶與技能需要可靠的備份與復原。", "a": ["經營面向的 Agent 知識目錄", "一鍵備份與原子還原", "每日排程、保留 7 天快照"], "r": [["13", "知識目錄"], ["7", "天快照"]], "lt": "親手建置與維運 Agent，了解平台在記憶、備份與復原上的實際需求。"}];
+const COL={"car": "var(--brick)", "plat": "var(--green)", "mfg": "var(--gold)", "ind": "var(--brick)", "sec": "var(--ink)", "gov": "var(--green)", "res": "var(--gold)", "tool": "var(--brick)"};
+const esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const cl=document.getElementById('clist'),cd=document.getElementById('cdetail');
+cl.innerHTML=D.map((x,i)=>`<button data-ci="${i}" data-cat="${x.cat}" style="--c:${COL[x.cat]}"><span class="no">${String(i+1).padStart(2,'0')}</span><span>${esc(x.t)}<small>${esc(x.c)}</small></span></button>`).join('');
+function showC(i){const x=D[i];cd.style.setProperty('--c',COL[x.cat]);
+ cd.innerHTML=`<div class="ct">${esc(x.c)}</div><h3>${esc(x.t)}</h3><p class="sb">${esc(x.sb)}</p><dl><dt>處境</dt><dd>${esc(x.s)}</dd><dt>作法</dt><dd><ul>${x.a.map(y=>`<li>${esc(y)}</li>`).join('')}</ul></dd></dl><div class="kp">${x.r.map(k=>`<div><div class="v">${esc(k[0])}</div><div class="l">${esc(k[1])}</div></div>`).join('')}</div><div class="lt"><b>對鐿鈦的意義：</b>${esc(x.lt)}</div>`;
+ cl.querySelectorAll('button').forEach(b=>b.setAttribute('aria-current',+b.dataset.ci===i))}
+cl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;showC(+b.dataset.ci);if(innerWidth<=860)cd.scrollIntoView({behavior:'smooth',block:'nearest'})});
+document.getElementById('cftabs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const f=b.dataset.cf;
+ e.currentTarget.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));let first=-1;
+ cl.querySelectorAll('button').forEach(x=>{const ok=f==='all'||x.dataset.cat===f;x.hidden=!ok;if(ok&&first<0)first=+x.dataset.ci});if(first>=0)showC(first)});
+showC(0);
 
 const R=[
  ['4163','鐿鈦應徵首頁','履歷、經歷時間軸與面談重點（中／英／日）。','../'],
