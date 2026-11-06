@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2F4538">
 <title>鐿鈦蜂巢計畫</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,6 +109,22 @@ a{color:var(--teal)}
 @media (max-width:640px){.layer{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
 html{scroll-behavior:smooth}
+
+/* mobile bottom action bar */
+.mbar{display:none}
+@media (max-width:760px){
+ .mbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card,var(--surface));border-top:1px solid var(--line);padding:6px max(8px,env(safe-area-inset-left,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-right,0px));box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+ .mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:48px;color:var(--ink);text-decoration:none;font-size:12.5px;font-weight:600;border-radius:10px}
+ .mbar a b{font-size:18px;line-height:1}
+ .mbar a:active{background:var(--line)}
+ body{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+}
+
+@media (max-width:760px){
+ header.nav .wrap,nav.top .in{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:28px}
+ header.nav a,nav.top a{padding:12px 10px!important;font-size:14px!important}
+}
+html{scroll-padding-top:76px}
 </style>
 </head>
 <body>
@@ -455,5 +472,6 @@ html{scroll-behavior:smooth}
 })();
 </script>
 
+<nav class="mbar" aria-label="快速動作"><a href="../"><b aria-hidden="true">⌂</b>首頁</a><a href="../ai/"><b aria-hidden="true">◎</b>AI 架構</a><a href="../docs/HowardLiao_Intai4163_Report_30p.pdf" target="_blank" rel="noopener"><b aria-hidden="true">⬇</b>30 頁報告</a></nav>
 </body>
 </html>

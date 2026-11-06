@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2F4538">
 <title>鐿鈦 AI 架構藍圖</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&family=EB+Garamond:ital,wght@0,500;1,500&display=swap">
@@ -147,6 +148,22 @@ footer{padding-block:40px;font-size:13px;color:var(--muted)}
 .cd .lt{background:var(--gold-soft);padding:10px 14px;font-size:14px;color:var(--ink)}
 .mute{color:var(--muted);font-size:12px}
 [hidden]{display:none!important}
+
+/* mobile bottom action bar */
+.mbar{display:none}
+@media (max-width:760px){
+ .mbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card,var(--surface));border-top:1px solid var(--line);padding:6px max(8px,env(safe-area-inset-left,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-right,0px));box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+ .mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:48px;color:var(--ink);text-decoration:none;font-size:12.5px;font-weight:600;border-radius:10px}
+ .mbar a b{font-size:18px;line-height:1}
+ .mbar a:active{background:var(--line)}
+ body{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+}
+
+@media (max-width:760px){
+ header.nav .wrap,nav.top .in{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:28px}
+ header.nav a,nav.top a{padding:12px 10px!important;font-size:14px!important}
+}
+html{scroll-padding-top:76px}
 </style>
 </head>
 <body>
@@ -358,5 +375,6 @@ const R=[
 document.getElementById('repolist').innerHTML=R.map(r=>`<div class="repo"><code>${r[0]}</code><h3 style="font-size:16px;margin-top:4px">${r[1]}</h3><p>${r[2]}</p><p><a href="${r[3]}">開啟 →</a></p></div>`).join('');
 </script>
 
+<nav class="mbar" aria-label="快速動作"><a href="../"><b aria-hidden="true">⌂</b>首頁</a><a href="../hive/"><b aria-hidden="true">⬡</b>蜂巢計畫</a><a href="../docs/HowardLiao_Intai4163_Report_30p.pdf" target="_blank" rel="noopener"><b aria-hidden="true">⬇</b>30 頁報告</a></nav>
 </body>
 </html>
