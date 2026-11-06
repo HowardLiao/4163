@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#13233A">
+<title>影音與圖片素材｜廖倫豪 博士 × 鐿鈦科技（4163）</title>
+<meta name="description" content="廖倫豪博士的演講影片、媒體報導、證照、架構圖與形象照，附出處與線上網址。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<style>
+:root{--bg:#F6F4EF;--alt:#ECEFF2;--card:#FFFDF9;--line:#E2DED5;--ink:#13233A;--body:#3E4A59;--muted:#6B7684;--navy:#13233A;--on-navy:#E6EBF0;--copper:#A3561F;--copper-soft:#E39A62;--teal:#1E7A78;--teal-soft:#DFF1EF;
+--serif:'Noto Serif TC',Georgia,serif;--sans:'Noto Sans TC',-apple-system,'PingFang TC','Microsoft JhengHei',Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A2B;--alt:#14223A;--card:#18283F;--line:#26395A;--ink:#EEF1F5;--body:#C3CDD9;--muted:#8FA0B5;--navy:#0A1322;--copper:#E39A62;--teal:#4FB8B4;--teal-soft:#1B3A3D;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1A2B;--alt:#14223A;--card:#18283F;--line:#26395A;--ink:#EEF1F5;--body:#C3CDD9;--muted:#8FA0B5;--navy:#0A1322;--copper:#E39A62;--teal:#4FB8B4;--teal-soft:#1B3A3D;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+img{max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--serif);color:var(--ink);margin:0;text-wrap:balance}
+header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;gap:18px;height:60px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+header.nav .brand{font-weight:700;color:var(--ink);text-decoration:none}
+header.nav .brand span{color:var(--copper)}
+header.nav a.l{color:var(--body);text-decoration:none;font-size:14.5px;padding:8px 6px}
+header.nav a.l:hover{color:var(--ink)}
+.hero{background:var(--navy);color:var(--on-navy);padding-block:56px 44px;border-left:8px solid #C8743A}
+.hero .k{color:var(--copper-soft);font-weight:700;letter-spacing:.12em;font-size:13px}
+.hero h1{color:#F6F4EF;font-size:clamp(28px,4.6vw,44px);margin:10px 0 12px}
+.hero p{max-width:68ch;color:#BFCBD8;margin:0}
+.stats{display:flex;flex-wrap:wrap;gap:30px;margin-top:24px}
+.stats b{font-family:var(--serif);font-size:34px;color:#F6F4EF;display:block;line-height:1.1}
+.stats span{font-size:13px;color:#BFCBD8}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips a{font-size:13.5px;text-decoration:none;color:#F6F4EF;border:1px solid rgba(255,255,255,.25);padding:6px 14px;border-radius:999px}
+section{padding-block:52px;border-bottom:1px solid var(--line)}
+section:nth-of-type(even){background:var(--alt)}
+.num{font-size:12.5px;letter-spacing:.16em;color:var(--copper);font-weight:700}
+h2{font-size:clamp(23px,3vw,30px);margin:6px 0 6px}
+.sub{color:var(--muted);font-size:15px;margin:0 0 22px;max-width:70ch}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.card .ph{background:var(--alt);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:contain;cursor:zoom-in}
+.card video{width:100%;height:100%;object-fit:contain;background:#0A1322}
+.card .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
+.card h3{font-size:16.5px;line-height:1.45}
+.meta{font-size:13px;color:var(--muted)}
+.desc{font-size:14.5px;margin:0}
+.lnk{font-size:13.5px;word-break:break-all;margin-top:auto}
+.tag{display:inline-block;align-self:flex-start;font-size:11.5px;padding:1px 9px;border:1px solid var(--teal);color:var(--teal);border-radius:999px}
+.tag.c{border-color:var(--copper);color:var(--copper)}
+.list{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:96px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.row>div{min-width:0}
+@media(max-width:560px){.row{grid-template-columns:1fr;gap:4px}}
+.row h3{font-size:16px}
+.gal{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.gal figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;cursor:zoom-in}
+.gal figcaption{font-size:12px;color:var(--muted);padding:6px 9px}
+h3.g{font-size:18px;margin:28px 0 12px}
+.cur{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.cur img{width:150px;height:150px;border-radius:50%;object-fit:cover}
+@media(max-width:560px){.cur{grid-template-columns:1fr}.cur img{width:120px;height:120px}}
+dialog{border:none;padding:0;background:transparent;max-width:94vw}
+dialog img{max-width:94vw;max-height:84vh;display:block;border-radius:10px;background:#fff}
+dialog::backdrop{background:rgba(10,19,34,.85)}
+dialog p{color:#fff;text-align:center;font-size:13.5px;margin:10px 0 0}
+dialog button{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer}
+footer{padding-block:30px;font-size:13px;color:var(--muted)}
+.mbar{display:none}
+@media (max-width:760px){
+ header.nav .wrap{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:28px}
+ header.nav a.l{padding:12px 8px}
+ .mbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:1px solid var(--line);padding:6px max(8px,env(safe-area-inset-left,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-right,0px));box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+ .mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:48px;color:var(--ink);text-decoration:none;font-size:12.5px;font-weight:600}
+ .mbar a b{font-size:18px;line-height:1}
+ body{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+ .gal{grid-template-columns:repeat(2,1fr)}
+ .stats{gap:14px 22px}.stats b{font-size:26px}.hero{padding-block:40px 32px}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="brand" href="../">廖倫豪 博士 <span>× 4163</span></a>
+<a class="l" href="#video">影片</a><a class="l" href="#press">報導與演講</a><a class="l" href="#online">論文與連結</a><a class="l" href="#cert">證照</a><a class="l" href="#works">架構圖</a><a class="l" href="#photo">形象照</a><a class="l" href="../">← 回首頁</a>
+</div></header>
+<div class="hero"><div class="wrap">
+<div class="k">MEDIA &amp; SOURCES · HOWARD LIAO, PH.D.</div>
+<h1>影音與圖片素材</h1>
+<p>演講影片、媒體報導、論文、證照、架構圖與形象照，每一項都附出處與可查證的線上網址。重複或同一來源的素材已合併，只保留一份。影片可直接播放，圖片點一下可放大。</p>
+<div class="stats"><div><b>6</b><span>支影片</span></div><div><b>8</b><span>則報導與演講</span></div><div><b>7</b><span>則論文與連結</span></div><div><b>6</b><span>張證照</span></div><div><b>48</b><span>張形象照</span></div></div>
+<div class="chips"><a href="#video">影片</a><a href="#press">報導與演講</a><a href="#online">論文與連結</a><a href="#cert">證照</a><a href="#works">架構圖</a><a href="#photo">形象照</a></div>
+</div></div>
+
+<section id="video"><div class="wrap"><div class="num">01 · VIDEO</div><h2>演講與介紹影片</h2><p class="sub">網頁版為壓縮預覽；Google Cloud 官方案例影片在 YouTube 觀看。</p><div class="grid">
+<div class="card"><div class="ph" style="background:var(--navy)"><a href="https://youtu.be/_kTZSZ_0lNE" target="_blank" rel="noopener" style="color:#F6F4EF;text-align:center;text-decoration:none;padding:20px"><div style="font-size:46px;line-height:1">▶</div><div style="font-family:var(--serif);font-size:19px;margin-top:10px">Google Cloud<br>Customer Story</div></a></div><div class="bd"><span class="tag c">官方案例影片</span><h3>Google Cloud 官方全球客戶成功案例</h3><div class="meta">2024.03.15 · Google Cloud 官方 YouTube</div><p class="desc">隆中網絡（GameSparcs）顛覆全球玩家遊戲體驗：容器平台支撐全球高併發、零停機。</p><a class="lnk" href="https://youtu.be/_kTZSZ_0lNE" target="_blank" rel="noopener">在 YouTube 觀看 ↗</a></div></div>
+<div class="card"><div class="ph"><video controls preload="none" playsinline poster="v/v1.jpg" src="v/v1.mp4"></video></div><div class="bd"><span class="tag">影片</span><h3>「企業上雲」雲端管理講座片段</h3><div class="meta">0:24 · 1080×1080</div><p class="desc">台上主講「企業上雲」，與 2024 CIO 價值學院、e等公務園+ 雲端管理課程同一系列內容。</p></div></div>
+<div class="card"><div class="ph"><video controls preload="none" playsinline poster="v/v2.jpg" src="v/v2.mp4"></video></div><div class="bd"><span class="tag">影片</span><h3>自我介紹短片（雜誌封面風）</h3><div class="meta">0:18 · 1080×1440</div><p class="desc">UOMO 雜誌封面風格的自我介紹動態影片，適合放在個人網站首頁或社群。</p></div></div>
+<div class="card"><div class="ph"><video controls preload="none" playsinline poster="v/v3.jpg" src="v/v3.mp4"></video></div><div class="bd"><span class="tag">影片</span><h3>WAAP 主題演講影片</h3><div class="meta">1:02 · 1920×1080</div><p class="desc">「Let’s Explore WAAP with Howard Liao」：雲端 WAAP 與 API 資安主題演講。</p></div></div>
+<div class="card"><div class="ph"><video controls preload="none" playsinline poster="v/v4.jpg" src="v/v4.mp4"></video></div><div class="bd"><span class="tag">影片</span><h3>個人網站首頁動畫</h3><div class="meta">0:10 · 1080×1350</div><p class="desc">以 ACE 專訪照製作的首頁動畫，「elegance is in the details」。</p></div></div>
+<div class="card"><div class="ph"><video controls preload="none" playsinline poster="v/v5.jpg" src="v/v5.mp4"></video></div><div class="bd"><span class="tag">影片</span><h3>揮手問好短片</h3><div class="meta">0:06 · 480×640</div><p class="desc">數據中心背景的問好動畫，適合當社群或網站開場。</p></div></div>
+</div></div></section>
+<section id="press"><div class="wrap"><div class="num">02 · PRESS &amp; TALKS</div><h2>媒體報導與演講</h2><p class="sub">同一篇報導或同一場活動只保留一張代表圖。</p><div class="grid">
+<div class="card"><div class="ph"><img src="img/t/11a8703c6ddc.jpg" data-full="img/f/11a8703c6ddc.jpg" alt="CIO IT 經理人｜風雲人物專訪" loading="lazy"></div><div class="bd"><h3>CIO IT 經理人｜風雲人物專訪</h3><div class="meta">2024.05 · CIO Taiwan（採訪：施鑫澤；文：林裕洋）</div><p class="desc">【專訪】隆中網絡 GameSparcs IT Director Howard Liao｜善用公有雲服務 搶攻全球遊戲商機</p><a class="lnk" href="https://www.cio.com.tw/interview-howard-liao-online-gamesparcs-it-director/" target="_blank" rel="noopener">閱讀原文 ↗</a></div></div>
+<div class="card"><div class="ph"><img src="img/t/187017519de7.jpg" data-full="img/f/187017519de7.jpg" alt="CIO IT 經理人 2024 年 5 月號封面" loading="lazy"></div><div class="bd"><h3>CIO IT 經理人 2024 年 5 月號封面</h3><div class="meta">2024.05 · CIO IT 經理人雜誌</div><p class="desc">同期雜誌封面，收錄上述專訪。</p></div></div>
+<div class="card"><div class="ph"><img src="img/t/a4b8ba3c5ff9.jpg" data-full="img/f/a4b8ba3c5ff9.jpg" alt="iThome 專題企劃" loading="lazy"></div><div class="bd"><h3>iThome 專題企劃</h3><div class="meta">2024.09.02 · iThome 電腦報</div><p class="desc">隆中網絡運用 MongoDB Atlas 建構遊戲資料管理平台，打造全方位休閒娛樂平台</p><a class="lnk" href="https://www.ithome.com.tw/pr/163534" target="_blank" rel="noopener">閱讀原文 ↗</a></div></div>
+<div class="card"><div class="ph"><img src="img/t/61ec619c5416.jpg" data-full="img/f/61ec619c5416.jpg" alt="MongoDB.local Taipei 2024 主講" loading="lazy"></div><div class="bd"><h3>MongoDB.local Taipei 2024 主講</h3><div class="meta">2024.09 · MongoDB 原廠年會</div><p class="desc">台北年會主講：全球規模資料管理平台。</p><a class="lnk" href="https://www.mongodb.com/events/mongodb-local-taipei" target="_blank" rel="noopener">閱讀原文 ↗</a></div></div>
+<div class="card"><div class="ph"><img src="img/t/ff4f4325dddc.jpg" data-full="img/f/ff4f4325dddc.jpg" alt="Oracle 資深講師議程截圖" loading="lazy"></div><div class="bd"><h3>Oracle 資深講師議程截圖</h3><div class="meta">— · Oracle 資深講師聯盟活動</div><p class="desc">議程「成功案例分享：向上集團如何利用 Oracle AI 快速建立知識助理，品質用與創新」，講者標示 GameSparcs 資訊技術處處長 廖倫豪。</p></div></div>
+<div class="card"><div class="ph"><img src="img/t/c6ead5a4b852.jpg" data-full="img/f/c6ead5a4b852.jpg" alt="「企業上雲」產業交流活動" loading="lazy"></div><div class="bd"><h3>「企業上雲」產業交流活動</h3><div class="meta">2024 · 產業交流講座</div><p class="desc">講者合照（台上主題「企業上雲」）。</p></div></div>
+<div class="card"><div class="ph"><img src="img/t/db25e7192559.jpg" data-full="img/f/db25e7192559.jpg" alt="e等公務園+ 數位課程頁" loading="lazy"></div><div class="bd"><h3>e等公務園+ 數位課程頁</h3><div class="meta">2024.06 · 行政院人事行政總處 e等公務園+</div><p class="desc">《洞見機遇—雲端管理與實務》大師講座數位課程</p><a class="lnk" href="https://elearn.hrd.gov.tw/info/10042804" target="_blank" rel="noopener">閱讀原文 ↗</a></div></div>
+<div class="card"><div class="ph"><img src="img/t/4b7d56aed9ed.jpg" data-full="img/f/4b7d56aed9ed.jpg" alt="ACE 產業專訪" loading="lazy"></div><div class="bd"><h3>ACE 產業專訪</h3><div class="meta">— · ACE 專訪節目</div><p class="desc">「the ACE 讓改變發生」專訪現場。</p></div></div>
+</div></div></section>
+<section id="online"><div class="wrap"><div class="num">03 · PAPERS &amp; LINKS</div><h2>論文、官方案例與其他連結</h2><div class="list">
+<div class="row"><div><span class="tag">案例頁</span><div class="meta" style="margin-top:6px">2024</div></div><div><h3>Google Cloud 官方客戶案例頁</h3><div class="meta">Google Cloud</div><p class="desc">GameSparcs 客戶案例頁。</p><a class="lnk" href="https://cloud.google.com/customers/gamesparcs" target="_blank" rel="noopener">cloud.google.com/customers/gamesparcs ↗</a></div></div>
+<div class="row"><div><span class="tag">報導</span><div class="meta" style="margin-top:6px">2024.09.15</div></div><div><h3>DIGITIMES：MongoDB 8.0 問世，助企業接軌生成式 AI</h3><div class="meta">DIGITIMES 科技網</div><p class="desc">報導中引用隆中網絡等企業案例。</p><a class="lnk" href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000704377_KI14VVDK6CQ8TB8OXC3GJ" target="_blank" rel="noopener">www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000704377_KI14VVDK6CQ8TB8OXC3GJ ↗</a></div></div>
+<div class="row"><div><span class="tag">演講</span><div class="meta" style="margin-top:6px">2024.05.20</div></div><div><h3>CIO Taiwan 價值學院 第十七屆大會 Keynote</h3><div class="meta">CIO Taiwan 價值學院</div><p class="desc">《洞見機遇—雲端管理與實務》主題演講。</p><a class="lnk" href="https://www.cio.com.tw/events/value-index-2/" target="_blank" rel="noopener">www.cio.com.tw/events/value-index-2/ ↗</a></div></div>
+<div class="row"><div><span class="tag">論文</span><div class="meta" style="margin-top:6px">2014</div></div><div><h3>Springer SCI 期刊論文</h3><div class="meta">Springer Nature｜Multimedia Tools and Applications</div><p class="desc">Reversible secret-image sharing with high visual quality（DOI 10.1007/s11042-012-1190-1）</p><a class="lnk" href="https://link.springer.com/article/10.1007/s11042-012-1190-1" target="_blank" rel="noopener">link.springer.com/article/10.1007/s11042-012-1190-1 ↗</a></div></div>
+<div class="row"><div><span class="tag">論文</span><div class="meta" style="margin-top:6px">2014</div></div><div><h3>博士論文（國家圖書館典藏）</h3><div class="meta">臺灣博碩士論文知識加值系統</div><p class="desc">《整合系統的商業自助式入口網站植基於調適性服務導向架構資訊科技治理之研究》</p><a class="lnk" href="https://ndltd.ncl.edu.tw/" target="_blank" rel="noopener">ndltd.ncl.edu.tw/ ↗</a></div></div>
+<div class="row"><div><span class="tag">公益</span><div class="meta" style="margin-top:6px">2024–</div></div><div><h3>財團法人康善基金會</h3><div class="meta">康善基金會</div><p class="desc">董事兼資訊長：數位公益、便當童話劇與 CSR 永續專案。</p><a class="lnk" href="https://www.cancer-nono.org.tw/web/about/page.php?lang=zh_tw&amp;scid=7&amp;sid=5" target="_blank" rel="noopener">www.cancer-nono.org.tw/web/about/page.php?lang=zh_tw&amp;scid=7&amp;sid=5 ↗</a></div></div>
+<div class="row"><div><span class="tag">社群</span><div class="meta" style="margin-top:6px">—</div></div><div><h3>LinkedIn 個人頁</h3><div class="meta">LinkedIn</div><p class="desc">howardliao78</p><a class="lnk" href="https://www.linkedin.com/in/howardliao78/" target="_blank" rel="noopener">www.linkedin.com/in/howardliao78/ ↗</a></div></div>
+</div></div></section>
+<section id="cert"><div class="wrap"><div class="num">04 · CERTIFICATES</div><h2>證照與學習紀錄</h2><div class="grid">
+<div class="card"><div class="ph"><img src="img/t/8742e22de4ce.jpg" data-full="img/f/8742e22de4ce.jpg" alt="GS1 條碼管理師" loading="lazy"></div><div class="bd"><h3>GS1 條碼管理師</h3><div class="meta">2015 · 財團法人中華民國商品條碼策進會（GS1 Taiwan）</div></div></div>
+<div class="card"><div class="ph"><img src="img/t/95c42ce34f48.jpg" data-full="img/f/95c42ce34f48.jpg" alt="Oracle EBS R12 供應鏈模組結業" loading="lazy"></div><div class="bd"><h3>Oracle EBS R12 供應鏈模組結業</h3><div class="meta">2012 · Oracle University</div></div></div>
+<div class="card"><div class="ph"><img src="img/t/03003dca2f80.jpg" data-full="img/f/03003dca2f80.jpg" alt="Oracle EBS R12 製造模組結業" loading="lazy"></div><div class="bd"><h3>Oracle EBS R12 製造模組結業</h3><div class="meta">2012 · Oracle University</div></div></div>
+<div class="card"><div class="ph"><img src="img/t/d9e8baef8b08.jpg" data-full="img/f/d9e8baef8b08.jpg" alt="Oracle AI 講師議程" loading="lazy"></div><div class="bd"><h3>Oracle AI 講師議程</h3><div class="meta">— · Oracle 資深講師聯盟</div></div></div>
+<div class="card"><div class="ph"><img src="img/t/4773b44f425c.jpg" data-full="img/f/4773b44f425c.jpg" alt="WBSA 行銷企劃師" loading="lazy"></div><div class="bd"><h3>WBSA 行銷企劃師</h3><div class="meta">2007 · World Business Strategic Association</div></div></div>
+<div class="card"><div class="ph"><img src="img/t/f048f3a9b1b4.jpg" data-full="img/f/f048f3a9b1b4.jpg" alt="台灣金融研訓院 線上課程與測驗紀錄" loading="lazy"></div><div class="bd"><h3>台灣金融研訓院 線上課程與測驗紀錄</h3><div class="meta">2025 · 台灣金融研訓院（TABF）</div></div></div>
+</div></div></section>
+<section id="works"><div class="wrap"><div class="num">05 · DIAGRAMS</div><h2>架構圖與作品</h2><div class="grid">
+<div class="card"><div class="ph"><img src="img/t/409ca8285ceb.jpg" data-full="img/f/409ca8285ceb.jpg" alt="Digital Transformation Operating Model（數位轉型營運模式）" loading="lazy"></div><div class="bd"><h3>Digital Transformation Operating Model（數位轉型營運模式）</h3><p class="desc">自繪架構圖：Business-Led、Enterprise-Governed、Group IT-Enabled。</p></div></div>
+<div class="card"><div class="ph"><img src="img/t/38dfee110124.jpg" data-full="img/f/38dfee110124.jpg" alt="龍蝦群（Hermes-Agent）互相聯繫，完成任務" loading="lazy"></div><div class="bd"><h3>龍蝦群（Hermes-Agent）互相聯繫，完成任務</h3><p class="desc">個人 Agent 群協作架構示意圖。</p></div></div>
+<div class="card"><div class="ph"><img src="img/t/45f8ca878ba0.jpg" data-full="img/f/45f8ca878ba0.jpg" alt="「與其等待別人相信你」勵志圖卡" loading="lazy"></div><div class="bd"><h3>「與其等待別人相信你」勵志圖卡</h3><p class="desc">社群用四格勵志圖。</p></div></div>
+<div class="card"><div class="ph"><img src="img/t/35c3e484755e.jpg" data-full="img/f/35c3e484755e.jpg" alt="問題比答案重要" loading="lazy"></div><div class="bd"><h3>問題比答案重要</h3><p class="desc">方法論配圖（迷宮與問號）。</p></div></div>
+<div class="card"><div class="ph"><img src="img/t/79dc20e4082c.jpg" data-full="img/f/79dc20e4082c.jpg" alt="IT 領袖數位轉型推手（漫畫海報）" loading="lazy"></div><div class="bd"><h3>IT 領袖數位轉型推手（漫畫海報）</h3><p class="desc">漫畫風個人海報。</p></div></div>
+<div class="card"><div class="ph"><img src="img/t/3f3c69ba2337.jpg" data-full="img/f/3f3c69ba2337.jpg" alt="3D 公仔展示照" loading="lazy"></div><div class="bd"><h3>3D 公仔展示照</h3><p class="desc">公仔與包裝盒展示。</p></div></div>
+</div></div></section>
+<section id="photo"><div class="wrap"><div class="num">06 · PORTRAITS</div><h2>形象照</h2><p class="sub">同一張照片的不同檔案、只差一點的版本已去除，共 48 張；點圖可放大。</p>
+<div class="cur"><img src="img/t/current_headshot.jpg" alt="正式大頭照"><div><span class="tag">正式大頭照</span><h3 style="margin-top:6px">網站與應徵文件統一使用（2026.11）</h3><p class="desc">自薦網站、30 頁報告、履歷與人員資料卡皆使用此張。</p></div></div>
+<h3 class="g">證件與大頭照（2 張）</h3><div class="gal">
+<figure><img src="img/t/38f4d77d2c47.jpg" data-full="img/f/38f4d77d2c47.jpg" alt="廖倫豪 證件與大頭照 2026.07.12" loading="lazy"><figcaption>2026.07.12</figcaption></figure>
+<figure><img src="img/t/dedf692c3555.jpg" data-full="img/f/dedf692c3555.jpg" alt="廖倫豪 證件與大頭照 2026.07.12" loading="lazy"><figcaption>2026.07.12</figcaption></figure>
+</div>
+<h3 class="g">專業形象照（27 張）</h3><div class="gal">
+<figure><img src="img/t/186a4d9ea24b.jpg" data-full="img/f/186a4d9ea24b.jpg" alt="廖倫豪 專業形象照 2025.11.27" loading="lazy"><figcaption>2025.11.27</figcaption></figure>
+<figure><img src="img/t/2b95782e3c35.jpg" data-full="img/f/2b95782e3c35.jpg" alt="廖倫豪 專業形象照 2025.11.27" loading="lazy"><figcaption>2025.11.27</figcaption></figure>
+<figure><img src="img/t/503401d7ecee.jpg" data-full="img/f/503401d7ecee.jpg" alt="廖倫豪 專業形象照 2025.11.27" loading="lazy"><figcaption>2025.11.27</figcaption></figure>
+<figure><img src="img/t/708305eeefd8.jpg" data-full="img/f/708305eeefd8.jpg" alt="廖倫豪 專業形象照 2025.11.27" loading="lazy"><figcaption>2025.11.27</figcaption></figure>
+<figure><img src="img/t/e8b64b00ca20.jpg" data-full="img/f/e8b64b00ca20.jpg" alt="廖倫豪 專業形象照 2025.11.27" loading="lazy"><figcaption>2025.11.27</figcaption></figure>
+<figure><img src="img/t/bb84abc469cc.jpg" data-full="img/f/bb84abc469cc.jpg" alt="廖倫豪 專業形象照 2025.11.27" loading="lazy"><figcaption>2025.11.27</figcaption></figure>
+<figure><img src="img/t/de35ba0cc59d.jpg" data-full="img/f/de35ba0cc59d.jpg" alt="廖倫豪 專業形象照 2025.12.01" loading="lazy"><figcaption>2025.12.01</figcaption></figure>
+<figure><img src="img/t/1ef13411288d.jpg" data-full="img/f/1ef13411288d.jpg" alt="廖倫豪 專業形象照 2025.12.01" loading="lazy"><figcaption>2025.12.01</figcaption></figure>
+<figure><img src="img/t/f30909b9cb7d.jpg" data-full="img/f/f30909b9cb7d.jpg" alt="廖倫豪 專業形象照 2025.12.01" loading="lazy"><figcaption>2025.12.01</figcaption></figure>
+<figure><img src="img/t/8edee86c8cda.jpg" data-full="img/f/8edee86c8cda.jpg" alt="廖倫豪 專業形象照 2025.12.01" loading="lazy"><figcaption>2025.12.01</figcaption></figure>
+<figure><img src="img/t/4b86775c70c0.jpg" data-full="img/f/4b86775c70c0.jpg" alt="廖倫豪 專業形象照 2025.12.01" loading="lazy"><figcaption>2025.12.01</figcaption></figure>
+<figure><img src="img/t/74a6edf628ff.jpg" data-full="img/f/74a6edf628ff.jpg" alt="廖倫豪 專業形象照 2025.12.01" loading="lazy"><figcaption>2025.12.01</figcaption></figure>
+<figure><img src="img/t/dc571de0d944.jpg" data-full="img/f/dc571de0d944.jpg" alt="廖倫豪 專業形象照 2025.12.01" loading="lazy"><figcaption>2025.12.01</figcaption></figure>
+<figure><img src="img/t/14bd414ba95f.jpg" data-full="img/f/14bd414ba95f.jpg" alt="廖倫豪 專業形象照 2025.12.01" loading="lazy"><figcaption>2025.12.01</figcaption></figure>
+<figure><img src="img/t/cd2afcb260d7.jpg" data-full="img/f/cd2afcb260d7.jpg" alt="廖倫豪 專業形象照 2025.12.01" loading="lazy"><figcaption>2025.12.01</figcaption></figure>
+<figure><img src="img/t/55b14a0cd35b.jpg" data-full="img/f/55b14a0cd35b.jpg" alt="廖倫豪 專業形象照 2026.04.24" loading="lazy"><figcaption>2026.04.24</figcaption></figure>
+<figure><img src="img/t/93529cd6770d.jpg" data-full="img/f/93529cd6770d.jpg" alt="廖倫豪 專業形象照 2026.04.24" loading="lazy"><figcaption>2026.04.24</figcaption></figure>
+<figure><img src="img/t/7ee6b277bf7c.jpg" data-full="img/f/7ee6b277bf7c.jpg" alt="廖倫豪 專業形象照 2026.04.24" loading="lazy"><figcaption>2026.04.24</figcaption></figure>
+<figure><img src="img/t/95114432f120.jpg" data-full="img/f/95114432f120.jpg" alt="廖倫豪 專業形象照 2026.04" loading="lazy"><figcaption>2026.04</figcaption></figure>
+<figure><img src="img/t/94e4b8e1b087.jpg" data-full="img/f/94e4b8e1b087.jpg" alt="廖倫豪 專業形象照 2026.04" loading="lazy"><figcaption>2026.04</figcaption></figure>
+<figure><img src="img/t/a3afec4ac534.jpg" data-full="img/f/a3afec4ac534.jpg" alt="廖倫豪 專業形象照 2026.05.18" loading="lazy"><figcaption>2026.05.18</figcaption></figure>
+<figure><img src="img/t/b05fa1632c83.jpg" data-full="img/f/b05fa1632c83.jpg" alt="廖倫豪 專業形象照 2026.05.18" loading="lazy"><figcaption>2026.05.18</figcaption></figure>
+<figure><img src="img/t/02b5629b6250.jpg" data-full="img/f/02b5629b6250.jpg" alt="廖倫豪 專業形象照 2026.05.18" loading="lazy"><figcaption>2026.05.18</figcaption></figure>
+<figure><img src="img/t/2cb1ca4d962d.jpg" data-full="img/f/2cb1ca4d962d.jpg" alt="廖倫豪 專業形象照 2026.05.18" loading="lazy"><figcaption>2026.05.18</figcaption></figure>
+<figure><img src="img/t/26bb9f4d6262.jpg" data-full="img/f/26bb9f4d6262.jpg" alt="廖倫豪 專業形象照 2026.05.19" loading="lazy"><figcaption>2026.05.19</figcaption></figure>
+<figure><img src="img/t/6d64605ebed6.jpg" data-full="img/f/6d64605ebed6.jpg" alt="廖倫豪 專業形象照 2026.09" loading="lazy"><figcaption>2026.09</figcaption></figure>
+<figure><img src="img/t/cf0e6d56bc5b.jpg" data-full="img/f/cf0e6d56bc5b.jpg" alt="廖倫豪 專業形象照 " loading="lazy"><figcaption>—</figcaption></figure>
+</div>
+<h3 class="g">雜誌風與創意（19 張）</h3><div class="gal">
+<figure><img src="img/t/fd00784581aa.jpg" data-full="img/f/fd00784581aa.jpg" alt="廖倫豪 雜誌風與創意 2024.04" loading="lazy"><figcaption>2024.04</figcaption></figure>
+<figure><img src="img/t/1ec71e9a2f81.jpg" data-full="img/f/1ec71e9a2f81.jpg" alt="廖倫豪 雜誌風與創意 2025.12.02" loading="lazy"><figcaption>2025.12.02</figcaption></figure>
+<figure><img src="img/t/4f960ef7349f.jpg" data-full="img/f/4f960ef7349f.jpg" alt="廖倫豪 雜誌風與創意 2026.04.24" loading="lazy"><figcaption>2026.04.24</figcaption></figure>
+<figure><img src="img/t/5993ad51162c.jpg" data-full="img/f/5993ad51162c.jpg" alt="廖倫豪 雜誌風與創意 2026.04" loading="lazy"><figcaption>2026.04</figcaption></figure>
+<figure><img src="img/t/d4b10e539814.jpg" data-full="img/f/d4b10e539814.jpg" alt="廖倫豪 雜誌風與創意 2026.04" loading="lazy"><figcaption>2026.04</figcaption></figure>
+<figure><img src="img/t/70dad8b19ca8.jpg" data-full="img/f/70dad8b19ca8.jpg" alt="廖倫豪 雜誌風與創意 2026.05.25" loading="lazy"><figcaption>2026.05.25</figcaption></figure>
+<figure><img src="img/t/7b918a2e8cce.jpg" data-full="img/f/7b918a2e8cce.jpg" alt="廖倫豪 雜誌風與創意 2026.05" loading="lazy"><figcaption>2026.05</figcaption></figure>
+<figure><img src="img/t/87c78cf52967.jpg" data-full="img/f/87c78cf52967.jpg" alt="廖倫豪 雜誌風與創意 2026.05" loading="lazy"><figcaption>2026.05</figcaption></figure>
+<figure><img src="img/t/26b2e2721620.jpg" data-full="img/f/26b2e2721620.jpg" alt="廖倫豪 雜誌風與創意 2026.05" loading="lazy"><figcaption>2026.05</figcaption></figure>
+<figure><img src="img/t/e7293b6594c8.jpg" data-full="img/f/e7293b6594c8.jpg" alt="廖倫豪 雜誌風與創意 2026.09.24" loading="lazy"><figcaption>2026.09.24</figcaption></figure>
+<figure><img src="img/t/3d150a3b3303.jpg" data-full="img/f/3d150a3b3303.jpg" alt="廖倫豪 雜誌風與創意 " loading="lazy"><figcaption>—</figcaption></figure>
+<figure><img src="img/t/988a61b77360.jpg" data-full="img/f/988a61b77360.jpg" alt="廖倫豪 雜誌風與創意 " loading="lazy"><figcaption>—</figcaption></figure>
+<figure><img src="img/t/1f85c8dc8a04.jpg" data-full="img/f/1f85c8dc8a04.jpg" alt="廖倫豪 雜誌風與創意 " loading="lazy"><figcaption>—</figcaption></figure>
+<figure><img src="img/t/a7483919ed6a.jpg" data-full="img/f/a7483919ed6a.jpg" alt="廖倫豪 雜誌風與創意 " loading="lazy"><figcaption>—</figcaption></figure>
+<figure><img src="img/t/236cc425e71f.jpg" data-full="img/f/236cc425e71f.jpg" alt="廖倫豪 雜誌風與創意 " loading="lazy"><figcaption>—</figcaption></figure>
+<figure><img src="img/t/8d87fc2336bf.jpg" data-full="img/f/8d87fc2336bf.jpg" alt="廖倫豪 雜誌風與創意 " loading="lazy"><figcaption>—</figcaption></figure>
+<figure><img src="img/t/a83b71f03d31.jpg" data-full="img/f/a83b71f03d31.jpg" alt="廖倫豪 雜誌風與創意 " loading="lazy"><figcaption>—</figcaption></figure>
+<figure><img src="img/t/1f6bb5c666a6.jpg" data-full="img/f/1f6bb5c666a6.jpg" alt="廖倫豪 雜誌風與創意 " loading="lazy"><figcaption>—</figcaption></figure>
+<figure><img src="img/t/cbbb96153d20.jpg" data-full="img/f/cbbb96153d20.jpg" alt="廖倫豪 雜誌風與創意 " loading="lazy"><figcaption>—</figcaption></figure>
+</div>
+</div></section>
+<footer><div class="wrap">© 2026 廖倫豪 博士 / Dr. Howard Liao · <a href="../">自薦網站首頁</a> · <a href="../ai/">AI 架構</a> · <a href="../hive/">蜂巢計畫</a></div></footer>
+<nav class="mbar" aria-label="快速動作"><a href="../"><b aria-hidden="true">⌂</b>首頁</a><a href="../ai/"><b aria-hidden="true">◎</b>AI 架構</a><a href="../docs/HowardLiao_Intai4163_Report_30p.pdf" target="_blank" rel="noopener"><b aria-hidden="true">⬇</b>30 頁報告</a></nav>
+<dialog id="zoom"><button type="button" aria-label="關閉">×</button><img alt=""><p></p></dialog>
+<script>
+(function(){var d=document.getElementById('zoom'),im=d.querySelector('img'),cp=d.querySelector('p');
+document.addEventListener('click',function(e){var t=e.target;
+ if(t.tagName==='IMG'&&t.dataset.full){im.src=t.dataset.full;im.alt=t.alt;cp.textContent=t.alt;if(d.showModal)d.showModal();}
+ else if(d.open&&(t===d||t.tagName==='BUTTON'||t===im)){d.close();}});})();
+</script>
+</body>
+</html>
