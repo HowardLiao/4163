@@ -232,7 +232,7 @@ html{scroll-padding-top:76px}
   </div>
   <div id="uml" style="margin-top:28px">
     <span class="tag g">UML 2.x · draw.io</span>
-    <h3 style="margin-top:8px">平台設計圖：架構總覽＋UML 2.x 全 14 種圖型</h3>
+    <h3 style="margin-top:8px">平台設計圖：UML 2.x 全 14 種圖型（結構 7＋行為 7）＋架構總覽</h3>
     <p style="font-size:14px;margin:8px 0">以鐿鈦品保情境（NCR／CAPA、SPC 預警、Part 11 電子簽核、IEC 62443 分區）描述三核心。點圖可開原尺寸。</p>
     <p class="k2" style="display:flex;flex-wrap:wrap;gap:14px"><a href="../docs/HowardLiao_Intai_AI_UML2_14diagrams.pdf" target="_blank" rel="noopener">⬇ PDF（15 頁）</a><a href="../docs/HowardLiao_Intai_AI_UML2_14diagrams.drawio" download>⬇ draw.io 原始檔</a></p>
     <h4 style="margin:22px 0 10px;font-size:15px;color:var(--green,#2F4538)">總覽</h4>
@@ -249,13 +249,14 @@ html{scroll-padding-top:76px}
       <figure class="card"><a href="../docs/uml/uml07.png" target="_blank" rel="noopener"><img src="../docs/uml/uml07.png" alt="部署圖 Deployment：南屯資料中心、地端 GPU、工業 DMZ、后里 OT 區、雲端 LLM" loading="lazy"></a><figcaption><b>07 部署圖</b> <span>Deployment</span><br>南屯資料中心、地端 GPU、工業 DMZ、后里 OT 區、雲端 LLM</figcaption></figure>
       <figure class="card"><a href="../docs/uml/uml08.png" target="_blank" rel="noopener"><img src="../docs/uml/uml08.png" alt="剖面圖 Profile：IntaiAI 自訂構造型：«AIAgent»«ModelGateway»«PredictionCore»«OtZone»" loading="lazy"></a><figcaption><b>08 剖面圖</b> <span>Profile</span><br>IntaiAI 自訂構造型：«AIAgent»«ModelGateway»«PredictionCore»«OtZone»</figcaption></figure>
     </div>
-    <h4 style="margin:22px 0 10px;font-size:15px;color:var(--green,#2F4538)">行為圖 Behavior（3 種）</h4>
+    <h4 style="margin:22px 0 10px;font-size:15px;color:var(--green,#2F4538)">行為圖 Behavior（7 種＝一般行為 3 種＋互動圖 4 種）</h4>
+    <p style="font-size:13px;margin:0 0 10px">一般行為圖</p>
     <div class="umlg">
       <figure class="card"><a href="../docs/uml/uml01.png" target="_blank" rel="noopener"><img src="../docs/uml/uml01.png" alt="使用案例圖 Use Case：品保、製造、業務、主管、資訊五類角色與平台功能" loading="lazy"></a><figcaption><b>01 使用案例圖</b> <span>Use Case</span><br>品保、製造、業務、主管、資訊五類角色與平台功能</figcaption></figure>
       <figure class="card"><a href="../docs/uml/uml09.png" target="_blank" rel="noopener"><img src="../docs/uml/uml09.png" alt="活動圖 Activity：NCR／CAPA 初稿產生、備援切換、核可與寫回泳道" loading="lazy"></a><figcaption><b>09 活動圖</b> <span>Activity</span><br>NCR／CAPA 初稿產生、備援切換、核可與寫回泳道</figcaption></figure>
       <figure class="card"><a href="../docs/uml/uml10.png" target="_blank" rel="noopener"><img src="../docs/uml/uml10.png" alt="狀態機圖 State Machine：AgentTask 生命週期，寫回前必經人員核可" loading="lazy"></a><figcaption><b>10 狀態機圖</b> <span>State Machine</span><br>AgentTask 生命週期，寫回前必經人員核可</figcaption></figure>
     </div>
-    <h4 style="margin:22px 0 10px;font-size:15px;color:var(--green,#2F4538)">互動圖 Interaction（4 種）</h4>
+    <p style="font-size:13px;margin:16px 0 10px">互動圖 Interaction（行為圖的子類，4 種）</p>
     <div class="umlg">
       <figure class="card"><a href="../docs/uml/uml11.png" target="_blank" rel="noopener"><img src="../docs/uml/uml11.png" alt="循序圖 Sequence：NCR 初稿從提問、選路、生成到核可寫回（loop／alt／opt）" loading="lazy"></a><figcaption><b>11 循序圖</b> <span>Sequence</span><br>NCR 初稿從提問、選路、生成到核可寫回（loop／alt／opt）</figcaption></figure>
       <figure class="card"><a href="../docs/uml/uml12.png" target="_blank" rel="noopener"><img src="../docs/uml/uml12.png" alt="通訊圖 Communication：同一情境的物件連結與訊息編號" loading="lazy"></a><figcaption><b>12 通訊圖</b> <span>Communication</span><br>同一情境的物件連結與訊息編號</figcaption></figure>
