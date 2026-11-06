@@ -238,6 +238,18 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
 .letter p{font-size:18px}
 .sign{font-family:var(--serif);font-size:20px;color:var(--ink)!important}
 @media print{.nav,.theme{display:none}section.s{break-inside:avoid-page;padding:40px 0}}
+.hero-stats{grid-template-columns:repeat(6,1fr)}
+.hero-stats small{display:block;font-size:12px;color:var(--on-navy-muted);opacity:.75;margin-top:2px}
+@media (max-width:1000px){.hero-stats{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:700px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
+.issue .ans{margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--line);font-size:14.5px}
+.issue .ans b{color:var(--copper)}
+.issue .ans span{display:block;color:var(--teal);font-weight:700}
+.tl .d{font-size:13px;color:var(--muted);line-height:1.55;margin-top:6px}
+.closing-grid img.round{width:200px;height:200px;object-fit:contain;border:none;border-radius:50%}
+@media (max-width:700px){.closing-grid img.round{width:150px;height:150px}}
+@media (max-width:480px){.nav .theme{display:none}.nav .langs{margin-left:auto!important;gap:8px!important}}
+.nav .theme{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -249,7 +261,6 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
       <li><a class="l" href="#letter">致經營團隊</a></li>
       <li><a class="l" href="#intai">鐿鈦</a></li>
       <li><a class="l" href="#issues">課題</a></li>
-      <li><a class="l" href="#match">對照</a></li>
       <li><a class="l" href="#career">職涯</a></li>
       <li><a class="l" href="#cases">案例</a></li>
       <li><a class="l" href="#plans">方案</a></li>
@@ -285,10 +296,12 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
    <img class="hero-photo" src="img/portrait.jpg" alt="廖倫豪博士形象照" width="864" height="1184">
    </div>
     <div class="hero-stats">
-      <div><b>+15%</b><span>製造業產線良率</span></div>
-      <div><b>−30%</b><span>年度雲端支出</span></div>
-      <div><b>−30%</b><span>資安事故年減</span></div>
-      <div><b>+55%</b><span>流程自動化效率</span></div>
+      <div><b>+15%</b><span>產線良率</span><small>泓晏科技</small></div>
+      <div><b>−25%</b><span>IT 維運成本</span><small>泓晏科技</small></div>
+      <div><b>−30%</b><span>年度雲端支出</span><small>隆中網絡</small></div>
+      <div><b>零停機</b><span>核心服務</span><small>隆中網絡</small></div>
+      <div><b>−30%</b><span>資安事故年減</span><small>盛欣網絡</small></div>
+      <div><b>+55%</b><span>流程自動化效率</span><small>盛欣網絡</small></div>
     </div>
   </div>
 </header>
@@ -300,8 +313,7 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
   <div class="wrap">
     <p class="num">01　致用人主管</p>
     <h2>貴公司要的兩件事，我都親手做過</h2>
-    <div class="grid g2" style="align-items:start">
-      <div class="letter">
+    <div class="letter" style="max-width:780px">
         <p>主管您好：</p>
         <p>感謝人資同仁說明此職務的內容。資訊部門有 10 位同仁、運作超過 10 年，負責硬體設備與程式系統；公司期待的是系統優化整合，以及 AI 導入各部門。</p>
         <p><b>系統整合。</b>我在泓晏科技（跨國電子製造）主導 SAP S/4HANA 導入，串接 MES、PLM、APS，產線良率提升 15%，集團 IT 維運成本降低 25%。二十多年前，我在健信科技（4502）帶過 Lotus Notes，了解 Notes 應用的結構與遷移時的難處。</p>
@@ -309,17 +321,6 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
         <p><b>為什麼是鐿鈦。</b>鐿鈦離我家非常近，可以長期穩定投入；我長期在台中榮民總醫院擔任顧問，看好醫材產業，也認同鐿鈦的定位；現職需要常年出差、負責多個國家，我希望把心力集中在一家公司、一個團隊。</p>
         <p class="sign">廖倫豪 博士 敬上</p>
       </div>
-      <div class="tscroll">
-        <table class="tbl">
-          <tr><th style="width:30%">一頁摘要</th><th>重點</th></tr>
-          <tr><td>公司期待</td><td>優化並整合 MES、PLM、Notes、SAP；評估並推動 AI 導入各部門</td></tr>
-          <tr><td>系統整合實績</td><td>泓晏科技導入 SAP S/4HANA 並串接 MES、PLM、APS，良率 +15%、IT 維運成本 −25%；早年於健信科技帶過 Lotus Notes</td></tr>
-          <tr><td>AI 導入實績</td><td>依 ISO 42001 推動 AI 導入各部門，流程自動化效率 +55%</td></tr>
-          <tr><td>帶領團隊</td><td>尊重部門十年累積，保留硬體與程式分工，增設整合窗口與 AI 種子同仁</td></tr>
-          <tr><td>為什麼是鐿鈦</td><td>住家鄰近可長期常駐；長期擔任台中榮總顧問，看好醫材並認同鐿鈦；不再常年跨國出差</td></tr>
-        </table>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -367,8 +368,9 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
 <!-- 3 growth & issues -->
 <section class="s" id="issues">
   <div class="wrap">
-    <p class="num">03　資訊課題</p>
-    <h2>資訊部門接下來要回答的五個問題</h2>
+    <p class="num">03　資訊課題與對應實績</p>
+    <h2>五個資訊課題，以及我做過的答案</h2>
+    <p class="lead">我在製造業做過 SAP、MES、PLM 的實際整合，近年負責 AI 導入與治理；每個課題下方列出我做過的事與成果。</p>
     <div class="tscroll" style="margin-bottom:40px">
       <table class="tbl">
         <tr><th style="width:42%">成長動能</th><th>對資訊系統的新需求</th></tr>
@@ -379,67 +381,41 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
       </table>
     </div>
     <div class="grid" style="gap:14px">
-      <div class="issue"><span class="n">1</span><div><h3>系統之間串得起來嗎</h3><p>MES、PLM、SAP 之間的資料，是否還靠人工轉檔與重複輸入？</p></div></div>
-      <div class="issue"><span class="n">2</span><div><h3>Notes 的下一步</h3><p>Notes 通常累積了多年的簽核流程與文件。哪些要保留、哪些移到 SAP 或新平台、哪些可以淘汰？</p></div></div>
-      <div class="issue"><span class="n">3</span><div><h3>數據看得見嗎</h3><p>存貨周轉約 222 天。庫存、良率與停機能否即時呈現給主管？</p></div></div>
-      <div class="issue"><span class="n">4</span><div><h3>AI 從哪個部門開始</h3><p>如何挑對題目，又不讓設計圖與客戶資料外流？</p></div></div>
-      <div class="issue"><span class="n">5</span><div><h3>團隊如何跟上</h3><p>10 位同仁如何從日常維運延伸到整合與 AI，而不打亂現有支援？</p></div></div>
+      <div class="issue"><span class="n">1</span><div><h3>系統之間串得起來嗎</h3><p>MES、PLM、SAP 之間的資料，是否還靠人工轉檔與重複輸入？</p><p class="ans"><b>我做過：</b>泓晏科技導入 SAP S/4HANA，以加密 API 串接 MES、PLM、APS<span>→ 良率 +15%、IT 維運成本 −25%</span></p></div></div>
+      <div class="issue"><span class="n">2</span><div><h3>Notes 的下一步</h3><p>Notes 通常累積了多年的簽核流程與文件。哪些要保留、哪些移到 SAP 或新平台、哪些可以淘汰？</p><p class="ans"><b>我做過：</b>早年以顧問身分協助健信科技（4502）導入 Lotus Notes<span>→ 熟悉 Notes 應用結構與遷移卡點</span></p></div></div>
+      <div class="issue"><span class="n">3</span><div><h3>數據看得見嗎</h3><p>存貨周轉約 222 天。庫存、良率與停機能否即時呈現給主管？</p><p class="ans"><b>我做過：</b>泓晏科技建置 BI 戰情室，即時呈現 OEE、良率與停機<span>→ 化解數億元呆滯庫存</span></p></div></div>
+      <div class="issue"><span class="n">4</span><div><h3>AI 從哪個部門開始</h3><p>如何挑對題目，又不讓設計圖與客戶資料外流？</p><p class="ans"><b>我做過：</b>盛欣網絡依 ISO 42001 建立規範，開設主管 AI 工作流課程<span>→ 流程自動化效率 +55%</span></p></div></div>
+      <div class="issue"><span class="n">5</span><div><h3>團隊如何跟上</h3><p>10 位同仁如何從日常維運延伸到整合與 AI，而不打亂現有支援？</p><p class="ans"><b>我做過：</b>凌網科技亞太區與盛欣網絡跨國團隊，建立知識管理與 SOP<span>→ 稽核合規 100%、縮短新人學習曲線</span></p></div></div>
     </div>
     <p class="note">依人資說明與公開資料推論；存貨天數取自 FindBillion（2026 Q1）。面談時希望先與主管確認優先順序。</p>
   </div>
 </section>
 
-<!-- 4 match -->
-<section class="s dark" id="match">
-  <div class="wrap">
-    <p class="num" style="color:var(--copper-soft)">04　需求與實績對照</p>
-    <h2>五個問題，我都有做過的答案</h2>
-    <p class="lead">我在製造業做過 SAP、MES、PLM 的實際整合，也在近年負責 AI 導入與治理。鐿鈦現在同時需要這兩種能力，也需要一位願意長期留在台中、帶好現有團隊的主管。</p>
-    <div class="tscroll">
-      <table class="tbl">
-        <tr><th style="width:20%">課題</th><th style="width:48%">我做過的事</th><th>成果</th></tr>
-        <tr><td>系統整合</td><td>泓晏科技導入 SAP S/4HANA，串接 MES、PLM、APS，以加密 API 介接</td><td>產線良率 +15%；IT 維運成本 −25%</td></tr>
-        <tr><td>Notes 的下一步</td><td>二十多年前在健信科技（4502）帶領 Lotus Notes；豐辰集團整合多套系統與 ERP 主檔</td><td>熟悉 Notes 應用結構與遷移難處</td></tr>
-        <tr><td>數據看得見</td><td>泓晏科技建置 BI 戰情室，即時呈現 OEE、良率與停機</td><td>化解數億元呆滯庫存</td></tr>
-        <tr><td>AI 導入各部門</td><td>盛欣網絡依 ISO 42001 建立規範，開設主管 AI 工作流課程</td><td>流程自動化效率 +55%</td></tr>
-        <tr><td>團隊跟上</td><td>凌網科技亞太區 IT 團隊；盛欣網絡跨國團隊；建立知識管理與 SOP</td><td>稽核合規 100%；縮短新人學習曲線</td></tr>
-      </table>
-    </div>
-  </div>
-</section>
+
 
 <!-- 5 career -->
 <section class="s" id="career">
   <div class="wrap">
-    <p class="num">05　職涯總覽</p>
+    <p class="num">04　職涯總覽</p>
     <h2>25+ 年，橫跨外商軟體、製造業與雲端平台</h2>
-    <p class="lead">從資料庫底層架構走到集團資訊主管；銅色標示的是與鐿鈦需求最接近的三段經歷。另以顧問身分，早年協助健信科技工業（4502）導入 Lotus Notes。</p>
+    <p class="lead">從資料庫底層架構走到集團資訊主管；銅色標示的是與鐿鈦需求最接近的三段經歷，詳見下方代表案例。</p>
     <div class="tl">
-      <div class="item"><div class="y">2003</div><div class="c">美商 Sybase／Borland</div><div class="r">技術經理</div></div>
-      <div class="item"><div class="y">2007</div><div class="c">凌網科技（5212）</div><div class="r">部門主管</div></div>
-      <div class="item"><div class="y">2010</div><div class="c">Chiffon Group</div><div class="r">資訊長</div></div>
-      <div class="item key"><div class="y">2018</div><div class="c">泓晏科技</div><div class="r">IT Director</div></div>
-      <div class="item key"><div class="y">2022</div><div class="c">隆中網絡（6542）</div><div class="r">資訊技術處處長</div></div>
-      <div class="item key"><div class="y">2025</div><div class="c">盛欣／盛碁網絡</div><div class="r">技術副總／CIO</div></div>
+      <div class="item"><div class="y">2003</div><div class="c">美商 Sybase／Borland</div><div class="r">技術經理</div><div class="d">電信級資料庫調校、高可用架構與 ALM 平台</div></div>
+      <div class="item"><div class="y">2007</div><div class="c">凌網科技（5212）</div><div class="r">部門主管</div><div class="d">亞太區資料中心整合、統一 AD，稽核合規 100%</div></div>
+      <div class="item"><div class="y">2010</div><div class="c">Chiffon Group</div><div class="r">資訊長</div><div class="d">台、中、美多廠區資訊策略與系統治理</div></div>
+      <div class="item key"><div class="y">2018</div><div class="c">泓晏科技</div><div class="r">IT Director</div><div class="d">SAP S/4HANA 串接 MES／PLM／APS、BI 戰情室</div></div>
+      <div class="item key"><div class="y">2022</div><div class="c">隆中網絡（6542）</div><div class="r">資訊技術處處長</div><div class="d">GKE 遷移零停機、FinOps、ISO 27001</div></div>
+      <div class="item key"><div class="y">2025</div><div class="c">盛欣／盛碁網絡</div><div class="r">技術副總／CIO</div><div class="d">ISO 42001 AI 治理、零信任、Agentic AI</div></div>
     </div>
 
-    <h3 style="font-size:24px;margin:64px 0 24px">六個數字，說明我交付的是結果</h3>
-    <div class="grid g3" style="gap:36px 28px">
-      <div class="big"><b>+15%</b><h3>產線良率</h3><span>泓晏科技，跨廠區數據透明化</span></div>
-      <div class="big"><b>−25%</b><h3>集團年度 IT 維運成本</h3><span>泓晏科技，併購後系統整併</span></div>
-      <div class="big"><b>−30%</b><h3>年度雲端支出</h3><span>隆中網絡，GKE 與 FinOps</span></div>
-      <div class="big cu"><b>零停機</b><h3>核心服務 Zero Outage</h3><span>隆中網絡，MongoDB Atlas 全球平台</span></div>
-      <div class="big cu"><b>−30%</b><h3>資安事故（年減）</h3><span>盛欣網絡，零信任架構</span></div>
-      <div class="big cu"><b>+55%</b><h3>流程自動化效率</h3><span>盛欣網絡，Agentic AI 工作流</span></div>
-    </div>
-    <p class="note">每個數字都可在面談時說明基準、做法與期間，並可提供佐證資料與推薦人。</p>
+    <p class="note" style="margin-top:28px">頁首六項成果數字，都可在面談時說明基準、做法與期間，並提供佐證資料與推薦人。</p>
   </div>
 </section>
 
 <!-- 6 cases -->
 <section class="s alt" id="cases">
   <div class="wrap">
-    <p class="num">06　代表案例</p>
+    <p class="num">05　代表案例</p>
     <h2>三個案例，分別對應製造數據、資安治理與 AI 導入</h2>
 
     <article class="case">
@@ -489,14 +465,8 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
 <!-- 7 foundation & method -->
 <section class="s" id="foundation">
   <div class="wrap">
-    <p class="num">07　管理基石與方法論</p>
-    <h2>從資料庫底層到跨國併購整合</h2>
-    <div class="grid g2" style="margin-bottom:56px">
-      <div class="card"><h3>美商 Sybase／Borland｜2003–2007</h3><p>電信級資料庫效能調校與高可用架構，並推動軟體開發生命週期（ALM）平台。</p><p class="out" style="color:var(--teal);font-weight:700;margin:0">→ 關鍵系統的穩定度與軟體開發管理</p></div>
-      <div class="card"><h3>凌網科技｜2007–2010</h3><p>亞太區資料中心整合、高可用備援、統一 AD；以 PMP 管理專案，稽核合規 100%。</p><p style="color:var(--teal);font-weight:700;margin:0">→ 美國、日本據點的統一治理</p></div>
-      <div class="card"><h3>Chiffon Group｜2010–2018</h3><p>擔任資訊長，負責台灣、中國與美國多廠區的資訊策略、系統治理與資訊團隊。</p><p style="color:var(--teal);font-weight:700;margin:0">→ 多廠區製造的資訊治理</p></div>
-      <div class="card"><h3>豐辰集團｜正職</h3><p>跨國併購期間的數據清洗與 ERP 主檔整併，整合多套 POS、CRM，確保業務連續。</p><p style="color:var(--teal);font-weight:700;margin:0">→ 策略股東合作下的系統整合</p></div>
-    </div>
+    <p class="num">06　管理基石與方法論</p>
+    <h2>治理框架與工作方法</h2>
     <h3 style="font-size:24px;margin-bottom:12px">我的治理框架：數位轉型營運模式</h3>
     <p>業務主導、企業治理、集團 IT 賦能。五道治理護欄（AI、資料、資安、架構、法遵）套用在每個數位專案，需求依「部門審查 → 需求門檻 → 數位指導委員會 → 核准投資組合 → 執行治理」排定優先順序。用在鐿鈦，可讓醫材、工業與微波開關三事業的 IT 需求用同一套門檻決策。</p>
     <figure class="wide-fig"><img src="img/dt-model.jpg" alt="Digital Transformation Operating Model 架構圖：企業治理護欄與五階段需求決策流程" width="1536" height="1024" data-lb><figcaption>Digital Transformation Operating Model｜本人設計，圖中數字僅為示意（點擊放大）</figcaption></figure>
@@ -512,7 +482,7 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
 <!-- 8 plans -->
 <section class="s alt" id="plans">
   <div class="wrap">
-    <p class="num">08　為鐿鈦規劃的四個方案</p>
+    <p class="num">07　為鐿鈦規劃的四個方案</p>
     <h2>串接系統、處理 Notes、導入 AI，以資安為底線</h2>
 
     <span class="tag">方案一</span>
@@ -538,7 +508,7 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
       <div class="card phase"><div class="d">2</div><h3>分類</h3><p>每個應用歸為<b>保留</b>（暫時維持）、<b>移轉</b>（移到 SAP 或新平台）、<b>淘汰</b>（封存後下線）三類。</p></div>
       <div class="card phase"><div class="d">3</div><h3>分批移轉</h3><p>先處理使用量高、風險高的應用；與 SAP、MES 重複的功能回歸核心系統。</p></div>
     </div>
-    <p class="note" style="margin-bottom:56px">新舊平台並行一段時間，資料與簽核紀錄完整移轉後才下線。二十多年前在健信科技帶過 Lotus Notes，讓我了解 Notes 應用的結構與遷移時常卡在哪裡。新平台選型待盤點後依需求與預算評估。</p>
+    <p class="note" style="margin-bottom:56px">新舊平台並行一段時間，資料與簽核紀錄完整移轉後才下線。新平台選型待盤點後依需求與預算評估。</p>
 
     <span class="tag">方案三</span>
     <h3 style="font-size:24px">AI 導入各部門：先立規範，再挑對題目</h3>
@@ -553,7 +523,7 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
         <tr><td>資訊部門</td><td>程式開發與維運輔助</td></tr>
       </table></div>
     </div>
-    <p class="note" style="margin-bottom:56px">各部門的題目，會在到任前 60 天訪談後才確定。</p>
+    <p class="note" style="margin-bottom:56px">各部門的題目，會在到任後 60 天內訪談後確定。</p>
 
     <span class="tag">方案四</span>
     <h3 style="font-size:24px">資安是整合與 AI 的底線</h3>
@@ -564,7 +534,7 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
 <!-- 9 roadmap -->
 <section class="s" id="roadmap">
   <div class="wrap">
-    <p class="num">09　到任計畫、指標與團隊</p>
+    <p class="num">08　到任計畫、指標與團隊</p>
     <h2>前 90 天：先聽、再定、後動</h2>
     <div class="grid g3" style="margin-bottom:56px">
       <div class="card phase"><div class="d">30 天</div><h3>盤點與傾聽</h3><ul><li>與主管、各部門訪談需求</li><li>與 10 位同仁一對一</li><li>盤點 MES、PLM、Notes、SAP 的介接與資料流</li></ul><p class="out">交付：現況診斷報告</p></div>
@@ -599,9 +569,9 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
 <!-- media -->
 <section class="s" id="media">
   <div class="wrap">
-    <p class="num">10　媒體報導與演講</p>
+    <p class="num">09　媒體報導與演講</p>
     <h2>產業媒體、原廠與公部門的公開紀錄</h2>
-    <p class="lead">隆中網絡任內的成果獲 CIO IT 經理人、iThome 與 MongoDB 報導；演講場合涵蓋原廠大會、產業活動與公務人員課程。點擊圖片可放大。</p>
+    <p class="lead">隆中網絡任內的成果獲 CIO IT 經理人、iThome 與 MongoDB 報導；演講場合涵蓋原廠大會、產業活動與公務人員課程。點擊圖片可放大。另於 CIO 價值學院、資安高峰論壇（2024）擔任講者。</p>
     <div class="gallery">
       <figure class="fig tall"><button type="button"><img src="img/cio-cover.jpg" alt="CIO IT 經理人風雲人物專訪：引進多雲方案 克服管理挑戰" loading="lazy" data-lb></button><figcaption><b>CIO IT 經理人</b>風雲人物專訪：多雲管理</figcaption></figure>
       <figure class="fig tall"><button type="button"><img src="img/itmanager-cover.jpg" alt="CIO IT 經理人雜誌 2024 年 5 月號封面" loading="lazy" data-lb></button><figcaption><b>CIO IT 經理人雜誌</b>2024 年 5 月號</figcaption></figure>
@@ -614,7 +584,20 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
       <figure class="fig"><button type="button"><img src="img/cloud-event.jpg" alt="企業上雲產業活動合影" loading="lazy" data-lb></button><figcaption><b>企業上雲</b>產業交流活動</figcaption></figure>
       <figure class="fig doc"><button type="button"><img src="img/egov-course.jpg" alt="行政院人事總處 e等公務園＋ 洞見機遇：雲端管理與實務 課程頁面" loading="lazy" data-lb></button><figcaption><b>e等公務園＋</b>洞見機遇：雲端管理與實務</figcaption></figure>
     </div>
-    <h3 style="font-size:24px;margin:56px 0 18px">證照佐證</h3>
+  </div>
+</section>
+
+<!-- 10 credentials -->
+<section class="s alt" id="credentials">
+  <div class="wrap">
+    <p class="num">10　學歷、證照與社會參與</p>
+    <h2>學理、國際認證與實戰兼具</h2>
+    <div class="grid g3">
+      <div class="card"><h3>學歷</h3><p><b style="color:var(--ink)">博士</b>（Ph.D. in Information Management）<br>企業資訊架構現代化、混合雲資安治理</p><p><b style="color:var(--ink)">碩士</b>（M.S. in Info Science）<br>國立中興大學｜密碼學、資料探勘、資料治理</p></div>
+      <div class="card"><h3>專業認證</h3><ul><li>ISO 27001 資訊安全主導稽核員</li><li>ISO 42001 AI 管理系統認證</li><li>PMP 國際專案管理師</li><li>Scrum Master（CSM）</li><li>Oracle OCP &amp; OCA</li><li>ESG 永續管理師、WBSA</li><li>GS1 條碼管理師</li><li>Oracle EBS 供應鏈模組結業</li></ul></div>
+      <div class="card"><h3>社會參與</h3><ul><li>台中榮總顧問（長期）</li><li>康善基金會常務董事</li></ul></div>
+    </div>
+    <h3 style="font-size:24px;margin:48px 0 18px">證照佐證</h3>
     <div class="gallery g3">
       <figure class="fig doc"><button type="button"><img src="img/cert-gs1.jpg" alt="GS1 條碼管理師證書" loading="lazy" data-lb></button><figcaption><b>GS1 條碼管理師</b>供應鏈條碼與產品追溯，直接對應醫材批號管理</figcaption></figure>
       <figure class="fig doc"><button type="button"><img src="img/cert-oracle.jpg" alt="Oracle University 供應鏈模組結業證書" loading="lazy" data-lb></button><figcaption><b>Oracle 供應鏈模組結業</b>Oracle EBS 採購、庫存、訂單模組</figcaption></figure>
@@ -624,28 +607,15 @@ footer{padding:36px 0;font-size:14px;color:var(--muted)}
   </div>
 </section>
 
-<!-- 10 credentials -->
-<section class="s alt" id="credentials">
-  <div class="wrap">
-    <p class="num">11　學歷、證照與產業影響力</p>
-    <h2>學理、國際認證與實戰兼具</h2>
-    <div class="grid g3">
-      <div class="card"><h3>學歷</h3><p><b style="color:var(--ink)">博士</b>（Ph.D. in Information Management）<br>企業資訊架構現代化、混合雲資安治理</p><p><b style="color:var(--ink)">碩士</b>（M.S. in Info Science）<br>國立中興大學｜密碼學、資料探勘、資料治理</p></div>
-      <div class="card"><h3>專業認證</h3><ul><li>ISO 27001 資訊安全主導稽核員</li><li>ISO 42001 AI 管理系統認證</li><li>PMP 國際專案管理師</li><li>Scrum Master（CSM）</li><li>Oracle OCP &amp; OCA</li><li>ESG 永續管理師、WBSA</li></ul></div>
-      <div class="card"><h3>產業影響力</h3><ul><li>MongoDB.local Taipei 主講（2024）</li><li>CIO 價值學院主講（2024）</li><li>資安高峰論壇（2024）</li><li>Google Cloud 官方客戶案例</li><li>台中榮總顧問（長期）</li><li>康善基金會常務董事</li></ul></div>
-    </div>
-  </div>
-</section>
-
 <!-- 11 closing -->
 <section class="s dark" id="contact">
   <div class="wrap">
-    <p class="num" style="color:var(--copper-soft)">12　結語</p>
+    <p class="num" style="color:var(--copper-soft)">11　結語</p>
     <div class="closing-grid">
-      <img src="img/headshot.jpg" alt="廖倫豪博士大頭照" loading="lazy">
+      <img class="round" src="img/headshot.png" alt="廖倫豪博士大頭照" width="400" height="400" loading="lazy">
       <p class="quote" style="margin:0">最好的技術主管，是把技術語言翻譯成經營與風險語言的人。</p>
     </div>
-    <p class="lead">我希望用 25 年以上的系統整合經驗，協助鐿鈦整合 MES、PLM、Notes、SAP，並把 AI 導入每一個部門。長期在台中榮總擔任顧問，讓我更看好醫材產業，也更認同鐿鈦；住家鄰近，讓我能長期穩定投入。若主管方便，我很樂意安排面談。</p>
+    <p class="lead">我希望用 25 年以上的系統整合經驗，協助鐿鈦整合 MES、PLM、Notes、SAP，並把 AI 導入每一個部門。若主管方便，我很樂意安排面談。</p>
     <div class="contact">
       <div><small>電話</small><a href="tel:+886975323161">+886-975-323161</a></div>
       <div><small>電子郵件</small><a href="mailto:Liao.Howard@gmail.com">Liao.Howard@gmail.com</a></div>
