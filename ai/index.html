@@ -164,6 +164,12 @@ footer{padding-block:40px;font-size:13px;color:var(--muted)}
  header.nav a,nav.top a{padding:12px 10px!important;font-size:14px!important}
 }
 html{scroll-padding-top:76px}
+.umlg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:760px){.umlg{grid-template-columns:1fr}}
+.umlg figure{margin:0;padding:10px}
+.umlg img{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--line,#ddd);border-radius:6px;background:#FAF7F2}
+.umlg figcaption{font-size:13px;margin-top:8px;line-height:1.5}
+.umlg figcaption span{color:var(--muted,#777);font-size:12px}
 .comp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
 @media(max-width:860px){.comp{grid-template-columns:1fr}}
 .comp ul{padding-left:18px;margin:8px 0;font-size:14px}
@@ -224,13 +230,38 @@ html{scroll-padding-top:76px}
     <div class="layers" id="layers"></div>
     <div class="detail" id="detail" aria-live="polite"></div>
   </div>
-  <div class="card" id="uml" style="margin-top:22px">
+  <div id="uml" style="margin-top:28px">
     <span class="tag g">UML 2.x · draw.io</span>
-    <h3 style="margin-top:8px">平台架構總覽圖＋UML 2.x 全 14 種圖型</h3>
-    <a href="../docs/HowardLiao_Intai_AI_Architecture.png" target="_blank" rel="noopener" style="display:block;margin:12px 0;overflow-x:auto"><img src="../docs/HowardLiao_Intai_AI_Architecture.png" alt="鐿鈦 AI 平台總體架構：L0 雙環匯流排、L1 資料產品、L2 HowardRoute 與 HowardPro、L3 HowardAGent、L4 AI 產品、L5 使用者入口，右側治理與安全主軸" style="width:100%;max-width:100%;height:auto;border:1px solid var(--line,#ddd);border-radius:8px" loading="lazy"></a>
-    <p style="font-size:14px;margin:8px 0">以鐿鈦品保情境（NCR／CAPA、SPC 預警、Part 11 電子簽核、IEC 62443 分區）描述 HowardAGent、HowardRoute、HowardPro 三核心。</p>
-    <p style="font-size:13px;margin:8px 0;color:var(--muted,#555)"><b>結構</b>：類別、物件、元件、組合結構、套件、部署、Profile　<b>行為</b>：使用案例、活動、狀態機　<b>互動</b>：循序、通訊、互動概觀、時序</p>
-    <p class="k2" style="display:flex;flex-wrap:wrap;gap:14px"><a href="../docs/HowardLiao_Intai_AI_UML2_14diagrams.pdf" target="_blank" rel="noopener">⬇ PDF（架構總覽＋14 種 UML，共 15 頁）</a><a href="../docs/HowardLiao_Intai_AI_UML2_14diagrams.drawio" download>⬇ draw.io 原始檔</a></p>
+    <h3 style="margin-top:8px">平台設計圖：架構總覽＋UML 2.x 全 14 種圖型</h3>
+    <p style="font-size:14px;margin:8px 0">以鐿鈦品保情境（NCR／CAPA、SPC 預警、Part 11 電子簽核、IEC 62443 分區）描述三核心。點圖可開原尺寸。</p>
+    <p class="k2" style="display:flex;flex-wrap:wrap;gap:14px"><a href="../docs/HowardLiao_Intai_AI_UML2_14diagrams.pdf" target="_blank" rel="noopener">⬇ PDF（15 頁）</a><a href="../docs/HowardLiao_Intai_AI_UML2_14diagrams.drawio" download>⬇ draw.io 原始檔</a></p>
+    <h4 style="margin:22px 0 10px;font-size:15px;color:var(--green,#2F4538)">總覽</h4>
+    <div class="umlg">
+      <figure class="card"><a href="../docs/uml/uml00.png" target="_blank" rel="noopener"><img src="../docs/uml/uml00.png" alt="架構總覽 Architecture：L0–L5 六層＋治理主軸，三核心位置一目了然" loading="lazy"></a><figcaption><b>00 架構總覽</b> <span>Architecture</span><br>L0–L5 六層＋治理主軸，三核心位置一目了然</figcaption></figure>
+    </div>
+    <h4 style="margin:22px 0 10px;font-size:15px;color:var(--green,#2F4538)">結構圖 Structure（7 種）</h4>
+    <div class="umlg">
+      <figure class="card"><a href="../docs/uml/uml02.png" target="_blank" rel="noopener"><img src="../docs/uml/uml02.png" alt="類別圖 Class：Agent 任務、工具、路由政策、模型供應商、預測模型的類別與關係" loading="lazy"></a><figcaption><b>02 類別圖</b> <span>Class</span><br>Agent 任務、工具、路由政策、模型供應商、預測模型的類別與關係</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml03.png" target="_blank" rel="noopener"><img src="../docs/uml/uml03.png" alt="物件圖 Object：NCR 初稿請求 t-2261 在 09:42 的執行快照" loading="lazy"></a><figcaption><b>03 物件圖</b> <span>Object</span><br>NCR 初稿請求 t-2261 在 09:42 的執行快照</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml04.png" target="_blank" rel="noopener"><img src="../docs/uml/uml04.png" alt="元件圖 Component：HowardAGent／HowardRoute／HowardPro 與資料平台的提供與需求介面" loading="lazy"></a><figcaption><b>04 元件圖</b> <span>Component</span><br>HowardAGent／HowardRoute／HowardPro 與資料平台的提供與需求介面</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml05.png" target="_blank" rel="noopener"><img src="../docs/uml/uml05.png" alt="組合結構圖 Composite Structure：HowardRoute 內部零件：遮罩、政策、路由、熔斷、計量、稽核與對外埠" loading="lazy"></a><figcaption><b>05 組合結構圖</b> <span>Composite Structure</span><br>HowardRoute 內部零件：遮罩、政策、路由、熔斷、計量、稽核與對外埠</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml06.png" target="_blank" rel="noopener"><img src="../docs/uml/uml06.png" alt="套件圖 Package：L0–L5 分層套件與治理套件的 import／access／apply 相依" loading="lazy"></a><figcaption><b>06 套件圖</b> <span>Package</span><br>L0–L5 分層套件與治理套件的 import／access／apply 相依</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml07.png" target="_blank" rel="noopener"><img src="../docs/uml/uml07.png" alt="部署圖 Deployment：南屯資料中心、地端 GPU、工業 DMZ、后里 OT 區、雲端 LLM" loading="lazy"></a><figcaption><b>07 部署圖</b> <span>Deployment</span><br>南屯資料中心、地端 GPU、工業 DMZ、后里 OT 區、雲端 LLM</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml08.png" target="_blank" rel="noopener"><img src="../docs/uml/uml08.png" alt="剖面圖 Profile：IntaiAI 自訂構造型：«AIAgent»«ModelGateway»«PredictionCore»«OtZone»" loading="lazy"></a><figcaption><b>08 剖面圖</b> <span>Profile</span><br>IntaiAI 自訂構造型：«AIAgent»«ModelGateway»«PredictionCore»«OtZone»</figcaption></figure>
+    </div>
+    <h4 style="margin:22px 0 10px;font-size:15px;color:var(--green,#2F4538)">行為圖 Behavior（3 種）</h4>
+    <div class="umlg">
+      <figure class="card"><a href="../docs/uml/uml01.png" target="_blank" rel="noopener"><img src="../docs/uml/uml01.png" alt="使用案例圖 Use Case：品保、製造、業務、主管、資訊五類角色與平台功能" loading="lazy"></a><figcaption><b>01 使用案例圖</b> <span>Use Case</span><br>品保、製造、業務、主管、資訊五類角色與平台功能</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml09.png" target="_blank" rel="noopener"><img src="../docs/uml/uml09.png" alt="活動圖 Activity：NCR／CAPA 初稿產生、備援切換、核可與寫回泳道" loading="lazy"></a><figcaption><b>09 活動圖</b> <span>Activity</span><br>NCR／CAPA 初稿產生、備援切換、核可與寫回泳道</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml10.png" target="_blank" rel="noopener"><img src="../docs/uml/uml10.png" alt="狀態機圖 State Machine：AgentTask 生命週期，寫回前必經人員核可" loading="lazy"></a><figcaption><b>10 狀態機圖</b> <span>State Machine</span><br>AgentTask 生命週期，寫回前必經人員核可</figcaption></figure>
+    </div>
+    <h4 style="margin:22px 0 10px;font-size:15px;color:var(--green,#2F4538)">互動圖 Interaction（4 種）</h4>
+    <div class="umlg">
+      <figure class="card"><a href="../docs/uml/uml11.png" target="_blank" rel="noopener"><img src="../docs/uml/uml11.png" alt="循序圖 Sequence：NCR 初稿從提問、選路、生成到核可寫回（loop／alt／opt）" loading="lazy"></a><figcaption><b>11 循序圖</b> <span>Sequence</span><br>NCR 初稿從提問、選路、生成到核可寫回（loop／alt／opt）</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml12.png" target="_blank" rel="noopener"><img src="../docs/uml/uml12.png" alt="通訊圖 Communication：同一情境的物件連結與訊息編號" loading="lazy"></a><figcaption><b>12 通訊圖</b> <span>Communication</span><br>同一情境的物件連結與訊息編號</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml13.png" target="_blank" rel="noopener"><img src="../docs/uml/uml13.png" alt="互動概觀圖 Interaction Overview：SPC 預警後分流：NCR 或參數調整建議" loading="lazy"></a><figcaption><b>13 互動概觀圖</b> <span>Interaction Overview</span><br>SPC 預警後分流：NCR 或參數調整建議</figcaption></figure>
+      <figure class="card"><a href="../docs/uml/uml14.png" target="_blank" rel="noopener"><img src="../docs/uml/uml14.png" alt="時序圖 Timing：SPC 異常 → 預警 → 處置的時間約束（SLO）" loading="lazy"></a><figcaption><b>14 時序圖</b> <span>Timing</span><br>SPC 異常 → 預警 → 處置的時間約束（SLO）</figcaption></figure>
+    </div>
   </div>
 </div></section>
 
